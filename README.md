@@ -12,18 +12,18 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 
 ## Charts
 
-[x] How many tracks are in each file?
-[] What kind of formats?
-[] What kind of audio codecs?
-[] What kind of video codecs?
-[] What are the duration outliers (videos very short or very long)?
-[] What are the dimensions?
-[] What are the color spaces?
-[] What are the bit depths (color)?
-[] What are the bit dephts (audio)?
-[] Which files have timecodes?
-[] Standard? (NTSC, PAL, Other)
-[] Any files in which audio duration and video duration differ?
+- [x] How many tracks are in each file?
+- [] What kind of formats?
+- [] What kind of audio codecs?
+- [] What kind of video codecs?
+- [] What are the duration outliers (videos very short or very long)?
+- [] What are the dimensions?
+- [] What are the color spaces?
+- [] What are the bit depths (color)?
+- [] What are the bit dephts (audio)?
+- [] Which files have timecodes?
+- [] Standard? (NTSC, PAL, Other)
+- [] Any files in which audio duration and video duration differ?
 
 ## TODO list
 
