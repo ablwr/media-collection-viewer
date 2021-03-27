@@ -10,6 +10,14 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 
 **WIP -- Only one chart so far! 😅**
 
+## Project goals
+
+- Fast (and not fall over or freeze trying to process data)
+- Sturdy (not needing a lot of assistance)
+- Client-side only / no sending data anywhere (safe to use without contacting your org's lawyers)
+- Deployable for free (no breaking my bank)
+- Easy to use (anyone with the right data should be able to use)
+
 ## Charts
 
 - [x] How many tracks are in each file?
