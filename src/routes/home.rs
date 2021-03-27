@@ -120,7 +120,8 @@ impl Component for Home {
             <div class="app">
                 <header class="app-header">
                     <h1>{"media collection viewer"}</h1>
-                    <tagline>{"work in progress - upload collection export of mediainfo.json and see charts!"}</tagline>
+                    <tagline>{"work in progress! - upload collection export of mediainfo.json and see charts!"}</tagline>
+                    <small>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></small>
                     <input type="file" 
                         id="jsonImport" 
                         accept="application/JSON" 
@@ -138,6 +139,7 @@ impl Component for Home {
                         <canvas id="myChart" width="400" height="400"></canvas>
                     </div>
                 </header>
+                <footer></footer>
             </div>
         }
     }
