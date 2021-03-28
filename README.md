@@ -35,16 +35,19 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 
 ## TODO list
 
-✔ Test uploaded JS can roundtrip through WASM to Rust and back to browser  
-✔ Build JSON in Rust to send to browser  
-✔ Build chart out of delivered JSON  
-- refactor!
-- cleaner delivery of JS objects to charts
-- utilize 'about' page
-- implement json fields for Tracks
-- investigate other visualization options -- not totally sold on chart.js, a rust library would be cool!
-- See src/routes/home.rs for additional features/charts to build out after proof of concept has been tested
-- Move TODOs to Issues tracker
+- [x] Test uploaded JS can roundtrip through WASM to Rust and back to browser  
+- [x] Build JSON in Rust to send to browser  
+- [x] Build chart out of delivered JSON
+- [x] warn if not getting desired input
+- [x] let user know when file is loading and loaded
+- [] refactor!
+- [] cleaner delivery of JS objects to charts
+- [] cleaner display of charts (update, not overwrite)
+- [] utilize 'about' page
+- [] implement json fields for Tracks
+- [] investigate other visualization options -- not totally sold on chart.js, a rust library would be cool!
+- [] See src/routes/home.rs for additional features/charts to build out after proof of concept has been tested
+- [] Move TODOs to Issues tracker
 
 ## Code
 - Rust

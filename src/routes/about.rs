@@ -23,8 +23,11 @@ impl Component for About {
         html! {
             <div class="app">
                 <header class="app-header">
+                    <h1>{"media collection viewer"}</h1>
                     <p>
-                        { "TODO" }
+                        { "Upload a mediainfo.json (" }
+                        <code>{ "mediainfo path/to/files/ --Output=JSON > mediainfo.json" }</code>
+                        { ") to get charts that provide you with a high-level overview of your collections." }
                     </p>
                 </header>
             </div>
