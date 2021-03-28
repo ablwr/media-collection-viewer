@@ -26,21 +26,22 @@ pub struct Home {
     link: ComponentLink<Self>,
     tasks: Vec<ReaderTask>,
     json_filename: String,
-    chart_tracks: serde_json::Value,
+    tracks: serde_json::Value,
+    formats: serde_json::Value,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct MediaInfo {
+pub struct MediaInfo {
     media: Media,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Media {
+pub struct Media {
     track: Vec<Value>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct Track {
+pub struct Track {
     // Can work on these next:
     Format: String,
     FileSize: String,
@@ -56,7 +57,8 @@ impl Component for Home {
             link,
             json_filename: String::new(),
             tasks: vec![],
-            chart_tracks: json!(null),
+            tracks: json!(null),
+            formats: json!(null),
         }
     }
 
@@ -66,15 +68,13 @@ impl Component for Home {
 
     fn update(&mut self, msg: Self::Message) -> ShouldRender {
 
-
-        fn number_of_tracks(v: Vec<MediaInfo>) -> serde_json::Value {
-
-            let mut chart_tracks = json!({ "labels": [], "data": []});
+// gotta move these guys!
+        fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
             // could potentially use an array with known length here
             let mut track_numbers = Vec::new();
             for elem in v.iter() {
                 track_numbers.push(elem.media.track.len().to_string());
-            }
+            };
 
             let mut value_counts : HashMap<String, i32> = HashMap::new();
             for item in track_numbers.iter() {
@@ -86,13 +86,43 @@ impl Component for Home {
             string_value_counts
         }
 
+
+        fn format_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+            // fileData: MediaInfo { media: Media { track: [Track { Format: "Matroska", Duration: "10.000" } ...
+            let mut medias = Vec::new();
+            for elem in v.iter() {
+                medias.push(&elem.media);
+            };
+            let mut tracks = Vec::new();
+            for t in &medias {
+                tracks.push(&t.track);
+            };
+            let mut ttracks = Vec::new();
+            for tt in &tracks {
+                // First track is General
+                ttracks.push(tt[0]["Format"].to_string());
+            };
+
+
+
+            let mut value_counts : HashMap<String, i32> = HashMap::new();
+            for item in ttracks.iter() {
+                *value_counts.entry(String::from(item)).or_insert(0) += 1;
+            };
+
+            #[derive(Deserialize)]
+            let formats = json!(value_counts);
+            formats
+        }
+
+
         match msg {
             Msg::SendJson(value) => {
                 self.json_filename = format!("File loading . . .");
                 let file = value.first().unwrap().clone();
                 let callback = self.link.callback(Msg::FileLoaded);
-                let j = ReaderService::default().read_file(file, callback);
-                self.tasks.push(j.unwrap());
+                let j = ReaderService::default().read_file(file, callback).unwrap();
+                self.tasks.push(j);
                 true
             }
             Msg::FileLoaded(file) => {
@@ -103,7 +133,8 @@ impl Component for Home {
                     self.json_filename = "Err, are you sure that is MediaInfo JSON you got there?".to_string()
                 } else {
                     // bring the action
-                    self.chart_tracks = number_of_tracks(v);
+                    self.tracks = number_of_tracks(&v);
+                    self.formats= format_codec_types(&v);
                 };
                 true
             }
@@ -139,11 +170,15 @@ impl Component for Home {
                     // <p>{ "JSON results:" }
                     // <textarea id="result"></textarea>
                     // </p>
-                    <div style="max-width:400px">
-                        { "How many tracks are in each file?" }
+                    <div id="all_the_charts">
                         // TODO: Throw this over to the JS in a proper way
-                        <span style="display:none;" id="chart_tracks">{ &self.chart_tracks.to_string() }</span>
-                        <canvas id="myChart" width="400" height="400"></canvas>
+                        <span style="display:none;" id="chart_tracks">{ &self.tracks.to_string() }</span>
+                        <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
+                        { "How many tracks are in each file?" }
+                        <canvas id="tracks"></canvas>
+                        <br/>
+                        { "What formats are in the collection?" }
+                        <canvas id="formats"></canvas>
                     </div>
                 </header>
                 <footer></footer>
@@ -154,13 +189,6 @@ impl Component for Home {
 
 impl Home {
 // fileData: MediaInfo { media: Media { track: [Track { Format: "Matroska", Duration: "10.000" } ...
-
-    // fn format_codec_types() {
-    //   println!("what kinds of formats?");
-    //           for t in elem.media.track.iter() {
-    //               log::info!("fileData: {:?}", t.Format);
-    //           }
-    // }
 
     // fn audio_codec_types() {
     //   println!("what kinds of audio codecs?");

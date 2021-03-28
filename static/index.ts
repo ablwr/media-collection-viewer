@@ -17,10 +17,10 @@ document.getElementById('jsonStart').onclick = function() {
   // }
   // fr.readAsText(files.item(0));
 
-let ctx = document.getElementById('myChart').getContext('2d');
+let ctx_tracks = document.getElementById('tracks').getContext('2d');
 let chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
 
-var myChart = new Chart(ctx, {
+let tracks = new Chart(ctx_tracks, {
       type: 'pie',
       data: {
         labels: Object.keys(chart_tracks),
@@ -39,6 +39,28 @@ var myChart = new Chart(ctx, {
       
     });
 
+
+let ctx_formats = document.getElementById('formats').getContext('2d');
+let chart_formats = JSON.parse(document.getElementById("chart_formats").textContent);
+
+let formats = new Chart(ctx_formats, {
+      type: 'pie',
+      data: {
+        labels: Object.keys(chart_formats),
+        datasets: [{
+            label: 'Formats in collection',
+            data: Object.values(chart_formats),
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 230, 255, 1)',
+            ],
+            borderWidth: 0,
+        }]},
+        options: { legend: {display: true, position: "bottom", labels: {fontColor: "white", fontStyle: "bold"}}},
+      
+    });
 
 
 };

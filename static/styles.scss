@@ -68,3 +68,7 @@ nav li {
 small {
   font-size: 0.75em;
 }
+
+#all_the_charts > canvas {
+  max-width: 400px;
+}
