@@ -88,6 +88,7 @@ impl Component for Home {
 
         match msg {
             Msg::SendJson(value) => {
+                self.json_filename = format!("File loading . . .");
                 let file = value.first().unwrap().clone();
                 let callback = self.link.callback(Msg::FileLoaded);
                 let j = ReaderService::default().read_file(file, callback);
@@ -95,7 +96,7 @@ impl Component for Home {
                 true
             }
             Msg::FileLoaded(file) => {
-                self.json_filename = file.name;
+                self.json_filename = format!("File loaded: {:?}", file.name);
                 let content = serde_json::from_slice(&*file.content).unwrap_or(vec![]);
                 let v: Vec<MediaInfo> = content;
                 if v.is_empty() {
@@ -133,7 +134,7 @@ impl Component for Home {
                         accept="application/JSON" 
                         multiple=false 
                         onchange=callback/>
-                    <p>{ "Filename appears here when loaded: " }{ &self.json_filename.to_string() }</p>
+                    <p>{ &self.json_filename.to_string() }</p>
                     <button id="jsonStart">{ "Press this button to build charts" }</button>
                     // <p>{ "JSON results:" }
                     // <textarea id="result"></textarea>
