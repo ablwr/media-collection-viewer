@@ -6,7 +6,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #367e59;
+    background-color: #355070;
   }
   
 code {
@@ -22,6 +22,14 @@ nav li {
   display: block;
   float: right;
   padding: 10px;
+}
+
+a, a:visited {
+  color: #eaac8b;
+}
+
+a:hover {
+  color: white;
 }
 
 .app {
@@ -52,9 +60,9 @@ small {
   letter-spacing: .05rem;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #f57f4f;
+  background-color: #eaac8b;
   text-transform: none;
-  border: 1px solid #74402a;
+  border: 1px solid white;
   cursor: pointer;
   box-sizing: border-box;
   color: black;
