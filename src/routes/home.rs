@@ -1,6 +1,6 @@
 use wasm_bindgen::prelude::*;
 use serde::{Deserialize, Serialize};
-use serde_json::{json, Map, Value};
+use serde_json::{json, Value};
 use std::collections::HashMap;
 use yew::{html, ChangeData, Component, ComponentLink, Html, ShouldRender};
 use yew::services::reader::{File, FileData, ReaderService, ReaderTask};
@@ -36,14 +36,15 @@ struct MediaInfo {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Media {
-    track: Vec<Track>,
+    track: Vec<Value>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
 struct Track {
     // Can work on these next:
-    // Format: String,
-    // Duration: String,
+    Format: String,
+    FileSize: String,
+    Duration: String,
 }
 
 impl Component for Home {
@@ -86,20 +87,23 @@ impl Component for Home {
         }
 
         match msg {
-            // TODO handle error for malformed mediainfo
             Msg::SendJson(value) => {
                 let file = value.first().unwrap().clone();
                 let callback = self.link.callback(Msg::FileLoaded);
-                let j = ReaderService::default().read_file(file, callback).unwrap();
-                log::info!("{:?}", &j);
-                self.tasks.push(j);
+                let j = ReaderService::default().read_file(file, callback);
+                self.tasks.push(j.unwrap());
                 true
             }
             Msg::FileLoaded(file) => {
                 self.json_filename = file.name;
-                let v: Vec<MediaInfo> = serde_json::from_reader(&*file.content).unwrap();
-                self.chart_tracks = number_of_tracks(v);
-                // log::info!("{:?}", &self.chart_tracks);
+                let content = serde_json::from_slice(&*file.content).unwrap_or(vec![]);
+                let v: Vec<MediaInfo> = content;
+                if v.is_empty() {
+                    self.json_filename = "Err, are you sure that is MediaInfo JSON you got there?".to_string()
+                } else {
+                    // bring the action
+                    self.chart_tracks = number_of_tracks(v);
+                };
                 true
             }
         }
@@ -108,13 +112,15 @@ impl Component for Home {
     fn view(&self) -> Html {
 
         let callback = self.link.callback(move |value| {
-                        let mut result = Vec::new();
-                        if let ChangeData::Files(files) = value {
+                         let mut result = Vec::new();
+                         if let ChangeData::Files(files) = value {
                             let files = js_sys::try_iter(&files)
                                 .unwrap().unwrap()
                                 .map(|v| File::from(v.unwrap()));
                             result.extend(files);
-                        } Msg::SendJson(result)});
+                         } 
+                         Msg::SendJson(result)
+                       });
 
         html! {
             <div class="app">
@@ -128,7 +134,7 @@ impl Component for Home {
                         multiple=false 
                         onchange=callback/>
                     <p>{ "Filename appears here when loaded: " }{ &self.json_filename.to_string() }</p>
-                    <button id="jsonStart">{ "Press this button for charts" }</button>
+                    <button id="jsonStart">{ "Press this button to build charts" }</button>
                     // <p>{ "JSON results:" }
                     // <textarea id="result"></textarea>
                     // </p>
