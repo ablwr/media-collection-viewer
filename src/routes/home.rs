@@ -102,7 +102,7 @@ impl Component for Home {
                 // First track is General
                 ttracks.push(tt[0]["Format"].to_string());
             };
-            
+
             let mut value_counts : HashMap<String, i32> = HashMap::new();
             for item in ttracks.iter() {
                 *value_counts.entry(String::from(item)).or_insert(0) += 1;
@@ -156,29 +156,34 @@ impl Component for Home {
             <div class="app">
                 <header class="app-header">
                     <h1>{"media collection viewer"}</h1>
-                    <tagline>{"work in progress! - upload collection export of mediainfo.json and see charts!"}</tagline>
-                    <small>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></small>
-                    <input type="file" 
-                        id="jsonImport" 
-                        accept="application/JSON" 
-                        multiple=false 
-                        onchange=callback/>
-                    <p>{ &self.json_filename.to_string() }</p>
-                    <button id="jsonStart">{ "Press this button to build charts" }</button>
-                    // <p>{ "JSON results:" }
-                    // <textarea id="result"></textarea>
-                    // </p>
-                    <div id="all_the_charts">
-                        // TODO: Throw this over to the JS in a proper way
+                        <tagline>{"work in progress! - upload collection export of mediainfo.json and see charts!"}</tagline>
+                        <small>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></small>
+                    </header>
+                    <main>
+                        <input type="file" 
+                            id="jsonImport" 
+                            accept="application/JSON" 
+                            multiple=false 
+                            onchange=callback/>
+                        <p>{ &self.json_filename.to_string() }</p>
+                        <button class="button" id="jsonStart">{ "Press this button to build charts" }</button>
+                        // <p>{ "JSON results:" }
+                        // <textarea id="result"></textarea>
+                        // </p>
                         <span style="display:none;" id="chart_tracks">{ &self.tracks.to_string() }</span>
                         <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
-                        { "How many tracks are in each file?" }
-                        <canvas id="tracks"></canvas>
-                        <br/>
-                        { "What formats are in the collection?" }
-                        <canvas id="formats"></canvas>
-                    </div>
-                </header>
+                        <div id="all_the_charts">
+                            // TODO: Throw this over to the JS in a proper way
+                            <div>
+                                { "How many tracks are in each file?" }
+                                <canvas id="tracks"></canvas>
+                            </div>
+                            <div>
+                                { "What formats are in the collection?" }
+                                <canvas id="formats"></canvas>
+                            </div>                            
+                        </div>
+                    </main>
                 <footer></footer>
             </div>
         }

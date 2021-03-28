@@ -1,5 +1,6 @@
 body {
     padding: 10px;
+    color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
@@ -27,23 +28,7 @@ nav li {
   text-align: center;
 }
 
-.app-logo {
-  display: block;
-  pointer-events: none;
-  width: 200px;
-  height: 200px;
-  background: url(./logo.svg);
-  background-size: 200px 200px;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .app-logo {
-    animation: app-logo-spin infinite 20s linear;
-  }
-}
-
 .app-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,19 +41,38 @@ nav li {
   color: #61dafb;
 }
 
-@keyframes app-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 small {
   font-size: 0.75em;
 }
 
-#all_the_charts > canvas {
-  max-width: 750px;
+.button {
+  padding: 0.1em 1rem 0.1rem 1rem;
+  text-align: center;
+  line-height: 3rem;
+  letter-spacing: .05rem;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: #f57f4f;
+  text-transform: none;
+  border: 1px solid #74402a;
+  cursor: pointer;
+  box-sizing: border-box;
+  color: black;
 }
+
+.button:hover {
+  transform: translate(0px, 2px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+#all_the_charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: auto;
+}
+
+#all_the_charts > div {
+  border: 1px solid white;
+  margin: 0.5em;
+}
+
