@@ -102,9 +102,7 @@ impl Component for Home {
                 // First track is General
                 ttracks.push(tt[0]["Format"].to_string());
             };
-
-
-
+            
             let mut value_counts : HashMap<String, i32> = HashMap::new();
             for item in ttracks.iter() {
                 *value_counts.entry(String::from(item)).or_insert(0) += 1;
