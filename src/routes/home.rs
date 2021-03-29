@@ -72,111 +72,6 @@ impl Component for Home {
 
     fn update(&mut self, msg: Self::Message) -> ShouldRender {
 
-// gotta move these guys!
-        fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
-            // could potentially use an array with known length here
-            let mut track_numbers = Vec::new();
-            for elem in v.iter() {
-                track_numbers.push(elem.media.track.len().to_string());
-            };
-
-            let mut value_counts : HashMap<String, i32> = HashMap::new();
-            for item in track_numbers.iter() {
-                *value_counts.entry(String::from(item)).or_insert(0) += 1;
-            };
-
-            #[derive(Deserialize)]
-            let result = json!(value_counts);
-            result
-        }
-
-
-        fn formats_in_collection(v: &Vec<MediaInfo>) -> serde_json::Value {
-            let mut medias = Vec::new();
-            for elem in v.iter() {
-                medias.push(&elem.media);
-            };
-            let mut tracks = Vec::new();
-            for t in &medias {
-                tracks.push(&t.track);
-            };
-            let mut ttracks = Vec::new();
-            for tt in &tracks {
-                // First track is General
-                ttracks.push(tt[0]["Format"].to_string());
-            };
-
-            let mut value_counts : HashMap<String, i32> = HashMap::new();
-            for item in ttracks.iter() {
-                *value_counts.entry(String::from(item)).or_insert(0) += 1;
-            };
-
-            #[derive(Deserialize)]
-            let result = json!(value_counts);
-            result
-        }
-
-        fn audio_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-            let mut medias = Vec::new();
-            for elem in v.iter() {
-                medias.push(&elem.media);
-            };
-            let mut tracks = Vec::new();
-            for t in &medias {
-                tracks.push(&t.track);
-            };
-            let mut ttracks = Vec::new();
-            for tt in tracks.iter() {
-                for ttt in tt.iter() {
-                    if ttt.get("@type").unwrap() == "Audio" {
-                        ttt.get("Format");
-                        ttracks.push(ttt.get("Format").unwrap().to_string());
-                    }
-                }
-            };
-
-            let mut value_counts : HashMap<String, i32> = HashMap::new();
-            for item in ttracks.iter() {
-                *value_counts.entry(String::from(item)).or_insert(0) += 1;
-            };
-
-            #[derive(Deserialize)]
-            let result = json!(value_counts);
-            result
-        }
-
-
-        fn video_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-            let mut medias = Vec::new();
-            for elem in v.iter() {
-                medias.push(&elem.media);
-            };
-            let mut tracks = Vec::new();
-            for t in &medias {
-                tracks.push(&t.track);
-            };
-            let mut ttracks = Vec::new();
-            for tt in tracks.iter() {
-                for ttt in tt.iter() {
-                    if ttt.get("@type").unwrap() == "Video" {
-                        ttt.get("Format");
-                        ttracks.push(ttt.get("Format").unwrap().to_string());
-                    }
-                }
-            };
-
-            let mut value_counts : HashMap<String, i32> = HashMap::new();
-            for item in ttracks.iter() {
-                *value_counts.entry(String::from(item)).or_insert(0) += 1;
-            };
-
-            #[derive(Deserialize)]
-            let result = json!(value_counts);
-            result
-        }
-
-
-
         match msg {
             Msg::SendJson(value) => {
                 // log::info!("");
@@ -195,10 +90,10 @@ impl Component for Home {
                     self.json_filename = "Err, are you sure that is MediaInfo JSON you got there?".to_string()
                 } else {
                     // bring the action
-                    self.tracks = number_of_tracks(&v);
-                    self.formats = formats_in_collection(&v);
-                    self.audio_codecs = audio_codec_types(&v);
-                    self.video_codecs = video_codec_types(&v);
+                    self.tracks = Home::number_of_tracks(&v);
+                    self.formats = Home::formats_in_collection(&v);
+                    self.audio_codecs = Home::audio_codec_types(&v);
+                    self.video_codecs = Home::video_codec_types(&v);
                 };
                 true
             }
@@ -266,30 +161,109 @@ impl Component for Home {
 }
 
 impl Home {
-// fileData: MediaInfo { media: Media { track: [Track { Format: "Matroska", Duration: "10.000" } ...
 
-    // fn audio_codec_types() {
-    //   println!("what kinds of audio codecs?");
-    // }
+    fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
+        // could potentially use an array with known length here
+        let mut track_numbers = Vec::new();
+        for elem in v.iter() {
+            track_numbers.push(elem.media.track.len().to_string());
+        };
 
-    // fn video_codec_types() {
-    //   println!("what kinds of video codecs?");
-    // }
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in track_numbers.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
 
-    // fn dimensions() {
-    //   println!("What are the dimensions (paired width+height)?");
-    // }
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
 
-    // fn color_spaces() {
-    //   println!("What are the color spaces?");
-    // }
 
-    // fn durations() {
-    //  // Need to loop through every Media/General
-    //  // then establish a range for durations 
-    //  // then establish any outliers
-    //   println!("what kind of durations?");
-    // }
+    fn formats_in_collection(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in &tracks {
+            // First track is General
+            ttracks.push(tt[0]["Format"].to_string());
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+
+    fn audio_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Audio" {
+                    ttt.get("Format");
+                    ttracks.push(ttt.get("Format").unwrap().to_string());
+                }
+            }
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+
+    fn video_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Video" {
+                    ttt.get("Format");
+                    ttracks.push(ttt.get("Format").unwrap().to_string());
+                }
+            }
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
 }
 
 fn main() {

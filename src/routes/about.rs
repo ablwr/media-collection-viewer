@@ -39,8 +39,7 @@ impl Component for About {
                     <p>
                         { "Upload a mediainfo.json. You can make one by running something like this: " }
                         <code>{ "mediainfo path/to/files/ --Output=JSON > mediainfo.json" }</code>
-                        { "After successful loading, press the button to build charts that provide you with 
-                        a high-level overview of your collections." }
+                        { " After confirmation of successful loading, press the button to build charts." }
                     </p>
                 </div>
                 <div>
