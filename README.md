@@ -8,7 +8,7 @@ Demo is [live](http://bits.ashleyblewer.com/media-collection-viewer/index.html)
 
 Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON > mediainfo.json`) to get charts that provide you with a high-level overview of your collections.
 
-**WIP -- Only one chart so far! 😅**
+**WIP -- can't guarantee success! 😅**
 
 ## Project goals
 
@@ -40,14 +40,13 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] Build chart out of delivered JSON
 - [x] warn if not getting desired input
 - [x] let user know when file is loading and loaded
+- [x] utilize 'about' page
+- [x] investigate other visualization options
 - [] refactor!
-- [] cleaner delivery of JS objects to charts
+- [] cleaner delivery of JS objects to charts (right now is so "lol")
 - [] cleaner display of charts (update, not overwrite)
-- [] utilize 'about' page
 - [] implement json fields for Tracks
-- [] investigate other visualization options -- not totally sold on chart.js, a rust library would be cool!
-- [] See src/routes/home.rs for additional features/charts to build out after proof of concept has been tested
-- [] Move TODOs to Issues tracker
+- [] Move TODOs to Issues tracker when at a reasonable beta stage
 
 ## Code
 - Rust
