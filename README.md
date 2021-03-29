@@ -21,9 +21,9 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 ## Charts
 
 - [x] How many tracks are in each file?
-- [] What kind of formats?
-- [] What kind of audio codecs?
-- [] What kind of video codecs?
+- [x] What kind of formats?
+- [x] What kind of audio codecs?
+- [x] What kind of video codecs?
 - [] What are the duration outliers (videos very short or very long)?
 - [] What are the dimensions?
 - [] What are the color spaces?

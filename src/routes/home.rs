@@ -28,6 +28,8 @@ pub struct Home {
     json_filename: String,
     tracks: serde_json::Value,
     formats: serde_json::Value,
+    audio_codecs: serde_json::Value,
+    video_codecs: serde_json::Value,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
@@ -59,6 +61,8 @@ impl Component for Home {
             tasks: vec![],
             tracks: json!(null),
             formats: json!(null),
+            audio_codecs: json!(null),
+            video_codecs: json!(null)
         }
     }
 
@@ -82,13 +86,12 @@ impl Component for Home {
             };
 
             #[derive(Deserialize)]
-            let string_value_counts = json!(value_counts);
-            string_value_counts
+            let result = json!(value_counts);
+            result
         }
 
 
-        fn format_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-            // fileData: MediaInfo { media: Media { track: [Track { Format: "Matroska", Duration: "10.000" } ...
+        fn formats_in_collection(v: &Vec<MediaInfo>) -> serde_json::Value {
             let mut medias = Vec::new();
             for elem in v.iter() {
                 medias.push(&elem.media);
@@ -109,13 +112,74 @@ impl Component for Home {
             };
 
             #[derive(Deserialize)]
-            let formats = json!(value_counts);
-            formats
+            let result = json!(value_counts);
+            result
         }
+
+        fn audio_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+            let mut medias = Vec::new();
+            for elem in v.iter() {
+                medias.push(&elem.media);
+            };
+            let mut tracks = Vec::new();
+            for t in &medias {
+                tracks.push(&t.track);
+            };
+            let mut ttracks = Vec::new();
+            for tt in tracks.iter() {
+                for ttt in tt.iter() {
+                    if ttt.get("@type").unwrap() == "Audio" {
+                        ttt.get("Format");
+                        ttracks.push(ttt.get("Format").unwrap().to_string());
+                    }
+                }
+            };
+
+            let mut value_counts : HashMap<String, i32> = HashMap::new();
+            for item in ttracks.iter() {
+                *value_counts.entry(String::from(item)).or_insert(0) += 1;
+            };
+
+            #[derive(Deserialize)]
+            let result = json!(value_counts);
+            result
+        }
+
+
+        fn video_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+            let mut medias = Vec::new();
+            for elem in v.iter() {
+                medias.push(&elem.media);
+            };
+            let mut tracks = Vec::new();
+            for t in &medias {
+                tracks.push(&t.track);
+            };
+            let mut ttracks = Vec::new();
+            for tt in tracks.iter() {
+                for ttt in tt.iter() {
+                    if ttt.get("@type").unwrap() == "Video" {
+                        ttt.get("Format");
+                        ttracks.push(ttt.get("Format").unwrap().to_string());
+                    }
+                }
+            };
+
+            let mut value_counts : HashMap<String, i32> = HashMap::new();
+            for item in ttracks.iter() {
+                *value_counts.entry(String::from(item)).or_insert(0) += 1;
+            };
+
+            #[derive(Deserialize)]
+            let result = json!(value_counts);
+            result
+        }
+
 
 
         match msg {
             Msg::SendJson(value) => {
+                // log::info!("");
                 self.json_filename = format!("File loading . . .");
                 let file = value.first().unwrap().clone();
                 let callback = self.link.callback(Msg::FileLoaded);
@@ -132,7 +196,9 @@ impl Component for Home {
                 } else {
                     // bring the action
                     self.tracks = number_of_tracks(&v);
-                    self.formats= format_codec_types(&v);
+                    self.formats = formats_in_collection(&v);
+                    self.audio_codecs = audio_codec_types(&v);
+                    self.video_codecs = video_codec_types(&v);
                 };
                 true
             }
@@ -171,6 +237,8 @@ impl Component for Home {
                     // </p>
                     <span style="display:none;" id="chart_tracks">{ &self.tracks.to_string() }</span>
                     <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
+                    <span style="display:none;" id="chart_audio_codecs">{ &self.audio_codecs.to_string() }</span>
+                    <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
                     <div id="all_the_charts">
                         // TODO: Throw this over to the JS in a proper way
                         <div>
@@ -180,6 +248,14 @@ impl Component for Home {
                         <div>
                             { "What formats are in the collection?" }
                             <canvas id="formats"></canvas>
+                        </div>
+                        <div>
+                            { "What audio codecs are in the collection?" }
+                            <canvas id="audio_codecs"></canvas>
+                        </div>
+                        <div>
+                            { "What video codecs are in the collection?" }
+                            <canvas id="video_codecs"></canvas>
                         </div>                            
                     </div>
                 </main>
