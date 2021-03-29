@@ -22180,21 +22180,20 @@ var chart_js_1 = __importDefault(require("chart.js")); // Start the show
 
 
 Cargo_toml_1.run();
+var opts = {
+  legend: {
+    display: true,
+    position: "bottom",
+    labels: {
+      fontColor: "white",
+      fontStyle: "bold"
+    }
+  }
+};
+var randCols = ["#25CCF7", "#FD7272", "#54a0ff", "#00d2d3", "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d", "#55efc4", "#81ecec", "#74b9ff", "#a29bfe", "#dfe6e9", "#00b894", "#00cec9", "#0984e3", "#6c5ce7", "#ffeaa7", "#fab1a0", "#ff7675", "#fd79a8", "#fdcb6e", "#e17055", "#d63031", "#feca57", "#5f27cd", "#54a0ff", "#01a3a4"];
 
 document.getElementById('jsonStart').onclick = function () {
-  // For debugging, can remove when not needed:
-  // var files = document.getElementById('jsonImport').files;
-  // if (files.length <= 0) {return false;}
-  // let fr = new FileReader();
-  // fr.onload = function(e) { 
-  // console.log("File preview/debug loaded via JS");
-  // var result = JSON.parse(e.target.result);
-  // var formatted = JSON.stringify(result, null, 2);
-  //   document.getElementById('result').value = formatted;
-  // }
-  // fr.readAsText(files.item(0));
-  var randCols = ["#25CCF7", "#FD7272", "#54a0ff", "#00d2d3", "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d", "#55efc4", "#81ecec", "#74b9ff", "#a29bfe", "#dfe6e9", "#00b894", "#00cec9", "#0984e3", "#6c5ce7", "#ffeaa7", "#fab1a0", "#ff7675", "#fd79a8", "#fdcb6e", "#e17055", "#d63031", "#feca57", "#5f27cd", "#54a0ff", "#01a3a4"]; // tracks 
-
+  // tracks 
   var ctx_tracks = document.getElementById('tracks').getContext('2d');
   var chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
   var tracks = new chart_js_1.default(ctx_tracks, {
@@ -22208,16 +22207,7 @@ document.getElementById('jsonStart').onclick = function () {
         borderWidth: 0
       }]
     },
-    options: {
-      legend: {
-        display: true,
-        position: "bottom",
-        labels: {
-          fontColor: "white",
-          fontStyle: "bold"
-        }
-      }
-    }
+    options: opts
   }); // formats
 
   var ctx_formats = document.getElementById('formats').getContext('2d');
@@ -22233,16 +22223,7 @@ document.getElementById('jsonStart').onclick = function () {
         borderWidth: 0
       }]
     },
-    options: {
-      legend: {
-        display: true,
-        position: "bottom",
-        labels: {
-          fontColor: "white",
-          fontStyle: "bold"
-        }
-      }
-    }
+    options: opts
   }); // audio_codecs
 
   var ctx_audio_codecs = document.getElementById('audio_codecs').getContext('2d');
@@ -22258,16 +22239,7 @@ document.getElementById('jsonStart').onclick = function () {
         borderWidth: 0
       }]
     },
-    options: {
-      legend: {
-        display: true,
-        position: "bottom",
-        labels: {
-          fontColor: "white",
-          fontStyle: "bold"
-        }
-      }
-    }
+    options: opts
   }); // video_codecs
 
   var ctx_video_codecs = document.getElementById('video_codecs').getContext('2d');
@@ -22283,16 +22255,7 @@ document.getElementById('jsonStart').onclick = function () {
         borderWidth: 0
       }]
     },
-    options: {
-      legend: {
-        display: true,
-        position: "bottom",
-        labels: {
-          fontColor: "white",
-          fontStyle: "bold"
-        }
-      }
-    }
+    options: opts
   });
 };
 },{"../Cargo.toml":"../Cargo.toml","chart.js":"../node_modules/chart.js/dist/Chart.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -22323,7 +22286,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38533" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40013" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
