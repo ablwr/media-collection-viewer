@@ -84,3 +84,11 @@ small {
   margin: 0.5em;
 }
 
+#about {
+  display: grid;
+  grid-template-columns: repeat(3, 0.75fr); 
+  grid-template-rows: auto; 
+  grid-gap: 4em;
+  padding: 4em;
+  text-align: left;
+}
