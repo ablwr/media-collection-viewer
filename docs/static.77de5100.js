@@ -22197,11 +22197,10 @@ document.getElementById('jsonStart').onclick = function () {
   var ctx_tracks = document.getElementById('tracks').getContext('2d');
   var chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
   var tracks = new chart_js_1.default(ctx_tracks, {
-    type: 'pie',
+    type: 'bar',
     data: {
       labels: Object.keys(chart_tracks),
       datasets: [{
-        label: '# of Tracks per file',
         data: Object.values(chart_tracks),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22217,7 +22216,6 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_formats),
       datasets: [{
-        label: 'Formats in collection',
         data: Object.values(chart_formats),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22233,7 +22231,6 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_color_spaces),
       datasets: [{
-        label: 'color_spaces in collection',
         data: Object.values(chart_color_spaces),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22249,7 +22246,6 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_audio_codecs),
       datasets: [{
-        label: 'audio_codecs in collection',
         data: Object.values(chart_audio_codecs),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22265,7 +22261,6 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_video_codecs),
       datasets: [{
-        label: 'video_codecs in collection',
         data: Object.values(chart_video_codecs),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22277,11 +22272,10 @@ document.getElementById('jsonStart').onclick = function () {
   var ctx_audio_bitdepths = document.getElementById('audio_bitdepths').getContext('2d');
   var chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
   var audio_bitdepths = new chart_js_1.default(ctx_audio_bitdepths, {
-    type: 'pie',
+    type: 'bar',
     data: {
       labels: Object.keys(chart_audio_bitdepths),
       datasets: [{
-        label: 'audio_bitdepths in collection',
         data: Object.values(chart_audio_bitdepths),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22293,11 +22287,10 @@ document.getElementById('jsonStart').onclick = function () {
   var ctx_video_bitdepths = document.getElementById('video_bitdepths').getContext('2d');
   var chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
   var video_bitdepths = new chart_js_1.default(ctx_video_bitdepths, {
-    type: 'pie',
+    type: 'bar',
     data: {
       labels: Object.keys(chart_video_bitdepths),
       datasets: [{
-        label: 'video_bitdepths in collection',
         data: Object.values(chart_video_bitdepths),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22334,7 +22327,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36539" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41669" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
