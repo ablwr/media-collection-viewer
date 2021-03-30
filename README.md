@@ -24,11 +24,11 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] What kind of formats?
 - [x] What kind of audio codecs?
 - [x] What kind of video codecs?
+- [x] What are the bit depths (color)?
+- [x] What are the bit depths (audio)?
+- [] What are the color spaces?
 - [] What are the duration outliers (videos very short or very long)?
 - [] What are the dimensions?
-- [] What are the color spaces?
-- [] What are the bit depths (color)?
-- [] What are the bit depths (audio)?
 - [] Which files have timecodes?
 - [] Standard? (NTSC, PAL, Other)
 - [] Any files in which audio duration and video duration differ?
@@ -42,9 +42,12 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] let user know when file is loading and loaded
 - [x] utilize 'about' page
 - [x] investigate other visualization options
-- [] refactor!
+- [] handle mediainfo.json that contains only one file (no array, just object)
+- [] refactor!!!! for the love of god
 - [] cleaner delivery of JS objects to charts (right now is so "lol")
 - [] cleaner display of charts (update, not overwrite)
+- [] create chart-builder mechanism to reduce LOC
+- [] build charts on load rather than with button click
 - [] Figure out how to display which files are in certain categories
 - [] Move TODOs to Issues tracker when at a reasonable beta stage
 

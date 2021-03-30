@@ -28,6 +28,7 @@ pub struct Home {
     json_filename: String,
     tracks: serde_json::Value,
     formats: serde_json::Value,
+    color_spaces: serde_json::Value,
     audio_codecs: serde_json::Value,
     video_codecs: serde_json::Value,
     audio_bitdepths: serde_json::Value,
@@ -64,6 +65,7 @@ impl Component for Home {
             tasks: vec![],
             tracks: json!(null),
             formats: json!(null),
+            color_spaces: json!(null),
             audio_codecs: json!(null),
             video_codecs: json!(null),
             audio_bitdepths: json!(null),
@@ -97,6 +99,7 @@ impl Component for Home {
                     // bring the action
                     self.tracks = Home::number_of_tracks(&v);
                     self.formats = Home::formats_in_collection(&v);
+                    self.color_spaces = Home::color_spaces_types(&v);
                     self.audio_codecs = Home::audio_codec_types(&v);
                     self.video_codecs = Home::video_codec_types(&v);
                     self.audio_bitdepths = Home::audio_bitdepth_types(&v);
@@ -124,7 +127,7 @@ impl Component for Home {
             <div class="app">
                 <header class="app-header">
                     <h1>{"media collection viewer"}</h1>
-                        <tagline>{"work in progress! - upload collection export of mediainfo.json and see charts!"}</tagline>
+                        <tagline>{"work in progress! - upload a mediainfo.json and see charts!"}</tagline>
                 </header>
                 <main>
                     <input type="file" 
@@ -136,34 +139,39 @@ impl Component for Home {
                     <button class="button" id="jsonStart">{ "Build charts" }</button>
                     <span style="display:none;" id="chart_tracks">{ &self.tracks.to_string() }</span>
                     <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
+                    <span style="display:none;" id="chart_color_spaces">{ &self.color_spaces.to_string() }</span>
                     <span style="display:none;" id="chart_audio_codecs">{ &self.audio_codecs.to_string() }</span>
-                    <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_audio_bitdepths">{ &self.audio_bitdepths.to_string() }</span>
+                    <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
                     <div id="all_the_charts">
                         // TODO: Throw this over to the JS in a proper way
                         <div>
-                            { "How many tracks are in each file?" }
+                            { "Tracks per file" }
                             <canvas id="tracks"></canvas>
                         </div>
                         <div>
-                            { "What formats are in the collection?" }
+                            { "Formats" }
                             <canvas id="formats"></canvas>
                         </div>
                         <div>
-                            { "What audio codecs are in the collection?" }
+                            { "Color spaces" }
+                            <canvas id="color_spaces"></canvas>
+                        </div>
+                        <div>
+                            { "Audio codecs" }
                             <canvas id="audio_codecs"></canvas>
                         </div>
                         <div>
-                            { "What video codecs are in the collection?" }
-                            <canvas id="video_codecs"></canvas>
-                        </div>
-                        <div>
-                            { "What audio bitdepths are in the collection?" }
+                            { "Audio bit depths" }
                             <canvas id="audio_bitdepths"></canvas>
                         </div>
                         <div>
-                            { "What video bitdepths are in the collection?" }
+                            { "Video codecs" }
+                            <canvas id="video_codecs"></canvas>
+                        </div>
+                        <div>
+                            { "Video color depths" }
                             <canvas id="video_bitdepths"></canvas>
                         </div>                          
                     </div>
@@ -208,6 +216,41 @@ impl Home {
         for tt in &tracks {
             // First track is General
             ttracks.push(tt[0]["Format"].to_string());
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+
+    fn color_spaces_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Video" {
+                    ttt.get("ColorSpace");
+                    if ttt.get("ColorSpace") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("ColorSpace").unwrap().to_string());
+
+                    }
+                }
+            }
         };
 
         let mut value_counts : HashMap<String, i32> = HashMap::new();

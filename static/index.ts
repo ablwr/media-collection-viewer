@@ -53,6 +53,23 @@ document.getElementById('jsonStart').onclick = function() {
           options: opts,     
       });
 
+  // color_spaces
+  let ctx_color_spaces = document.getElementById('color_spaces').getContext('2d');
+  let chart_color_spaces = JSON.parse(document.getElementById("chart_color_spaces").textContent);
+
+  let color_spaces = new Chart(ctx_color_spaces, {
+        type: 'pie',
+        data: {
+          labels: Object.keys(chart_color_spaces),
+          datasets: [{
+              label: 'color_spaces in collection',
+              data: Object.values(chart_color_spaces),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: opts,     
+      });
+
   // audio_codecs
   let ctx_audio_codecs = document.getElementById('audio_codecs').getContext('2d');
   let chart_audio_codecs = JSON.parse(document.getElementById("chart_audio_codecs").textContent);
