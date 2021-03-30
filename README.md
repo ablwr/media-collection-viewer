@@ -28,7 +28,7 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [] What are the dimensions?
 - [] What are the color spaces?
 - [] What are the bit depths (color)?
-- [] What are the bit dephts (audio)?
+- [] What are the bit depths (audio)?
 - [] Which files have timecodes?
 - [] Standard? (NTSC, PAL, Other)
 - [] Any files in which audio duration and video duration differ?

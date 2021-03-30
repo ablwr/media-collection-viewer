@@ -30,6 +30,8 @@ pub struct Home {
     formats: serde_json::Value,
     audio_codecs: serde_json::Value,
     video_codecs: serde_json::Value,
+    audio_bitdepths: serde_json::Value,
+    video_bitdepths: serde_json::Value,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -48,6 +50,7 @@ pub struct Track {
     Format: String,
     FileSize: String,
     Duration: String,
+    BitDepth: String,
 }
 
 impl Component for Home {
@@ -62,7 +65,9 @@ impl Component for Home {
             tracks: json!(null),
             formats: json!(null),
             audio_codecs: json!(null),
-            video_codecs: json!(null)
+            video_codecs: json!(null),
+            audio_bitdepths: json!(null),
+            video_bitdepths: json!(null)
         }
     }
 
@@ -94,6 +99,8 @@ impl Component for Home {
                     self.formats = Home::formats_in_collection(&v);
                     self.audio_codecs = Home::audio_codec_types(&v);
                     self.video_codecs = Home::video_codec_types(&v);
+                    self.audio_bitdepths = Home::audio_bitdepth_types(&v);
+                    self.video_bitdepths = Home::video_bitdepth_types(&v);
                 };
                 true
             }
@@ -131,6 +138,8 @@ impl Component for Home {
                     <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
                     <span style="display:none;" id="chart_audio_codecs">{ &self.audio_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
+                    <span style="display:none;" id="chart_audio_bitdepths">{ &self.audio_bitdepths.to_string() }</span>
+                    <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
                     <div id="all_the_charts">
                         // TODO: Throw this over to the JS in a proper way
                         <div>
@@ -148,7 +157,15 @@ impl Component for Home {
                         <div>
                             { "What video codecs are in the collection?" }
                             <canvas id="video_codecs"></canvas>
-                        </div>                            
+                        </div>
+                        <div>
+                            { "What audio bitdepths are in the collection?" }
+                            <canvas id="audio_bitdepths"></canvas>
+                        </div>
+                        <div>
+                            { "What video bitdepths are in the collection?" }
+                            <canvas id="video_bitdepths"></canvas>
+                        </div>                          
                     </div>
                 </main>
                 <footer>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></footer>
@@ -262,6 +279,78 @@ impl Home {
         let result = json!(value_counts);
         result
     }
+
+
+    fn audio_bitdepth_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Audio" {
+                    ttt.get("BitDepth");
+                    if ttt.get("BitDepth") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("BitDepth").unwrap().to_string());
+
+                    }
+                }
+            }
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+
+    fn video_bitdepth_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Video" {
+                    ttt.get("BitDepth");
+                    if ttt.get("BitDepth") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("BitDepth").unwrap().to_string());
+
+                    }
+                }
+            }
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+
 }
 
 fn main() {

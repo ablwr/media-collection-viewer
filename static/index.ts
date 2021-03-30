@@ -90,6 +90,42 @@ document.getElementById('jsonStart').onclick = function() {
       });
 
 
+  // audio_bitdepths
+  let ctx_audio_bitdepths = document.getElementById('audio_bitdepths').getContext('2d');
+  let chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
+
+  let audio_bitdepths = new Chart(ctx_audio_bitdepths, {
+        type: 'pie',
+        data: {
+          labels: Object.keys(chart_audio_bitdepths),
+          datasets: [{
+              label: 'audio_bitdepths in collection',
+              data: Object.values(chart_audio_bitdepths),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: opts,     
+      });
+
+
+  // video_bitdepths
+  let ctx_video_bitdepths = document.getElementById('video_bitdepths').getContext('2d');
+  let chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
+
+  let video_bitdepths = new Chart(ctx_video_bitdepths, {
+        type: 'pie',
+        data: {
+          labels: Object.keys(chart_video_bitdepths),
+          datasets: [{
+              label: 'video_bitdepths in collection',
+              data: Object.values(chart_video_bitdepths),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: opts,
+       
+      });
+
 };
 
 
