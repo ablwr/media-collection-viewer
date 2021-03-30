@@ -123,7 +123,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Home = exports.__wbindgen_closure_wrapper6266 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_preventDefault_f80a4c61466e816c = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
+exports.Home = exports.__wbindgen_closure_wrapper6267 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_preventDefault_f80a4c61466e816c = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
 
 var _media_collection_viewer_bg = _interopRequireDefault(require("./pkg/media_collection_viewer_bg.wasm"));
 
@@ -307,8 +307,8 @@ var __wbindgen_rethrow = _media_collection_viewer_bg.default.__wbindgen_rethrow;
 exports.__wbindgen_rethrow = __wbindgen_rethrow;
 var __wbindgen_memory = _media_collection_viewer_bg.default.__wbindgen_memory;
 exports.__wbindgen_memory = __wbindgen_memory;
-var __wbindgen_closure_wrapper6266 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper6266;
-exports.__wbindgen_closure_wrapper6266 = __wbindgen_closure_wrapper6266;
+var __wbindgen_closure_wrapper6267 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper6267;
+exports.__wbindgen_closure_wrapper6267 = __wbindgen_closure_wrapper6267;
 var Home = _media_collection_viewer_bg.default.Home;
 exports.Home = Home;
 },{"./pkg/media_collection_viewer_bg.wasm":"../pkg/media_collection_viewer_bg.wasm"}],"../node_modules/moment/moment.js":[function(require,module,exports) {
@@ -22224,6 +22224,22 @@ document.getElementById('jsonStart').onclick = function () {
       }]
     },
     options: opts
+  }); // color_spaces
+
+  var ctx_color_spaces = document.getElementById('color_spaces').getContext('2d');
+  var chart_color_spaces = JSON.parse(document.getElementById("chart_color_spaces").textContent);
+  var color_spaces = new chart_js_1.default(ctx_color_spaces, {
+    type: 'pie',
+    data: {
+      labels: Object.keys(chart_color_spaces),
+      datasets: [{
+        label: 'color_spaces in collection',
+        data: Object.values(chart_color_spaces),
+        backgroundColor: randCols,
+        borderWidth: 0
+      }]
+    },
+    options: opts
   }); // audio_codecs
 
   var ctx_audio_codecs = document.getElementById('audio_codecs').getContext('2d');
@@ -22318,7 +22334,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39899" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36539" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -23380,7 +23396,7 @@ __exports.__wbindgen_memory = function() {
     return addHeapObject(ret);
 };
 
-__exports.__wbindgen_closure_wrapper6266 = logError(function(arg0, arg1, arg2) {
+__exports.__wbindgen_closure_wrapper6267 = logError(function(arg0, arg1, arg2) {
     var ret = makeMutClosure(arg0, arg1, 242, __wbg_adapter_26);
     return addHeapObject(ret);
 });

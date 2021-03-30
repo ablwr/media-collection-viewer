@@ -78,13 +78,14 @@ h1 {
 
 #all_the_charts {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
 
 #all_the_charts > div {
-  border: 1px solid white;
+  border: 2px solid white;
   margin: 0.5em;
+  font-weight: bold;
 }
 
 #about {
