@@ -5,6 +5,8 @@ import Chart from 'chart.js';
 run()
 
 const opts = { legend: {display: true, position: "bottom", labels: {fontColor: "white", fontStyle: "bold"}}};
+const bar_opts = { legend: {display: false }, scales: {xAxes: [{ticks: {fontColor: "white",fontStyle: "bold"}}]}};
+
 const randCols = [
     "#25CCF7","#FD7272","#54a0ff","#00d2d3",
     "#1abc9c","#2ecc71","#3498db","#9b59b6","#34495e",
@@ -28,11 +30,12 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_tracks),
           datasets: [{
+              label: '# of Tracks per file',
               data: Object.values(chart_tracks),
               backgroundColor: randCols,
               borderWidth: 0,
           }]},
-          options: opts,    
+          options: bar_opts,    
       });
 
   // formats
@@ -44,6 +47,7 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_formats),
           datasets: [{
+              label: 'Formats',
               data: Object.values(chart_formats),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -60,6 +64,7 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_color_spaces),
           datasets: [{
+              label: 'Colorspaces',
               data: Object.values(chart_color_spaces),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -76,6 +81,7 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_audio_codecs),
           datasets: [{
+              label: 'Audio codecs',
               data: Object.values(chart_audio_codecs),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -93,6 +99,7 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_video_codecs),
           datasets: [{
+              label: 'Video codecs',
               data: Object.values(chart_video_codecs),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -111,11 +118,12 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_audio_bitdepths),
           datasets: [{
+              label: 'Audio bit depths',
               data: Object.values(chart_audio_bitdepths),
               backgroundColor: randCols,
               borderWidth: 0,
           }]},
-          options: opts,     
+          options: bar_opts,     
       });
 
 
@@ -128,11 +136,12 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_video_bitdepths),
           datasets: [{
+              label: 'Color depths',
               data: Object.values(chart_video_bitdepths),
               backgroundColor: randCols,
               borderWidth: 0,
           }]},
-          options: opts,
+          options: bar_opts,
        
       });
 

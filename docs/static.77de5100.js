@@ -22190,6 +22190,19 @@ var opts = {
     }
   }
 };
+var bar_opts = {
+  legend: {
+    display: false
+  },
+  scales: {
+    xAxes: [{
+      ticks: {
+        fontColor: "white",
+        fontStyle: "bold"
+      }
+    }]
+  }
+};
 var randCols = ["#25CCF7", "#FD7272", "#54a0ff", "#00d2d3", "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d", "#55efc4", "#81ecec", "#74b9ff", "#a29bfe", "#dfe6e9", "#00b894", "#00cec9", "#0984e3", "#6c5ce7", "#ffeaa7", "#fab1a0", "#ff7675", "#fd79a8", "#fdcb6e", "#e17055", "#d63031", "#feca57", "#5f27cd", "#54a0ff", "#01a3a4"];
 
 document.getElementById('jsonStart').onclick = function () {
@@ -22201,12 +22214,13 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_tracks),
       datasets: [{
+        label: '# of Tracks per file',
         data: Object.values(chart_tracks),
         backgroundColor: randCols,
         borderWidth: 0
       }]
     },
-    options: opts
+    options: bar_opts
   }); // formats
 
   var ctx_formats = document.getElementById('formats').getContext('2d');
@@ -22216,6 +22230,7 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_formats),
       datasets: [{
+        label: 'Formats',
         data: Object.values(chart_formats),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22231,6 +22246,7 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_color_spaces),
       datasets: [{
+        label: 'Colorspaces',
         data: Object.values(chart_color_spaces),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22246,6 +22262,7 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_audio_codecs),
       datasets: [{
+        label: 'Audio codecs',
         data: Object.values(chart_audio_codecs),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22261,6 +22278,7 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_video_codecs),
       datasets: [{
+        label: 'Video codecs',
         data: Object.values(chart_video_codecs),
         backgroundColor: randCols,
         borderWidth: 0
@@ -22276,12 +22294,13 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_audio_bitdepths),
       datasets: [{
+        label: 'Audio bit depths',
         data: Object.values(chart_audio_bitdepths),
         backgroundColor: randCols,
         borderWidth: 0
       }]
     },
-    options: opts
+    options: bar_opts
   }); // video_bitdepths
 
   var ctx_video_bitdepths = document.getElementById('video_bitdepths').getContext('2d');
@@ -22291,12 +22310,13 @@ document.getElementById('jsonStart').onclick = function () {
     data: {
       labels: Object.keys(chart_video_bitdepths),
       datasets: [{
+        label: 'Color depths',
         data: Object.values(chart_video_bitdepths),
         backgroundColor: randCols,
         borderWidth: 0
       }]
     },
-    options: opts
+    options: bar_opts
   });
 };
 },{"../Cargo.toml":"../Cargo.toml","chart.js":"../node_modules/chart.js/dist/Chart.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -22327,7 +22347,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41669" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43885" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
