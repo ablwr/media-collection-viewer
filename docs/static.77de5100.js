@@ -123,195 +123,195 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Home = exports.__wbindgen_closure_wrapper6216 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_preventDefault_f80a4c61466e816c = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
+exports.Home = exports.__wbindgen_closure_wrapper6266 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_preventDefault_f80a4c61466e816c = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
 
-var _yew_app_bg = _interopRequireDefault(require("./pkg/yew_app_bg.wasm"));
+var _media_collection_viewer_bg = _interopRequireDefault(require("./pkg/media_collection_viewer_bg.wasm"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _default = _yew_app_bg.default;
+var _default = _media_collection_viewer_bg.default;
 exports.default = _default;
-var run = _yew_app_bg.default.run;
+var run = _media_collection_viewer_bg.default.run;
 exports.run = run;
-var __wbindgen_string_new = _yew_app_bg.default.__wbindgen_string_new;
+var __wbindgen_string_new = _media_collection_viewer_bg.default.__wbindgen_string_new;
 exports.__wbindgen_string_new = __wbindgen_string_new;
-var __wbindgen_object_clone_ref = _yew_app_bg.default.__wbindgen_object_clone_ref;
+var __wbindgen_object_clone_ref = _media_collection_viewer_bg.default.__wbindgen_object_clone_ref;
 exports.__wbindgen_object_clone_ref = __wbindgen_object_clone_ref;
-var __wbindgen_is_undefined = _yew_app_bg.default.__wbindgen_is_undefined;
+var __wbindgen_is_undefined = _media_collection_viewer_bg.default.__wbindgen_is_undefined;
 exports.__wbindgen_is_undefined = __wbindgen_is_undefined;
-var __wbindgen_cb_drop = _yew_app_bg.default.__wbindgen_cb_drop;
+var __wbindgen_cb_drop = _media_collection_viewer_bg.default.__wbindgen_cb_drop;
 exports.__wbindgen_cb_drop = __wbindgen_cb_drop;
-var __wbg_error_4bb6c2a97407129a = _yew_app_bg.default.__wbg_error_4bb6c2a97407129a;
+var __wbg_error_4bb6c2a97407129a = _media_collection_viewer_bg.default.__wbg_error_4bb6c2a97407129a;
 exports.__wbg_error_4bb6c2a97407129a = __wbg_error_4bb6c2a97407129a;
-var __wbg_new_59cb74e423758ede = _yew_app_bg.default.__wbg_new_59cb74e423758ede;
+var __wbg_new_59cb74e423758ede = _media_collection_viewer_bg.default.__wbg_new_59cb74e423758ede;
 exports.__wbg_new_59cb74e423758ede = __wbg_new_59cb74e423758ede;
-var __wbg_stack_558ba5917b466edd = _yew_app_bg.default.__wbg_stack_558ba5917b466edd;
+var __wbg_stack_558ba5917b466edd = _media_collection_viewer_bg.default.__wbg_stack_558ba5917b466edd;
 exports.__wbg_stack_558ba5917b466edd = __wbg_stack_558ba5917b466edd;
-var __wbindgen_object_drop_ref = _yew_app_bg.default.__wbindgen_object_drop_ref;
+var __wbindgen_object_drop_ref = _media_collection_viewer_bg.default.__wbindgen_object_drop_ref;
 exports.__wbindgen_object_drop_ref = __wbindgen_object_drop_ref;
-var __wbg_instanceof_Window_5993230e7331f098 = _yew_app_bg.default.__wbg_instanceof_Window_5993230e7331f098;
+var __wbg_instanceof_Window_5993230e7331f098 = _media_collection_viewer_bg.default.__wbg_instanceof_Window_5993230e7331f098;
 exports.__wbg_instanceof_Window_5993230e7331f098 = __wbg_instanceof_Window_5993230e7331f098;
-var __wbg_document_85584f745133c6ad = _yew_app_bg.default.__wbg_document_85584f745133c6ad;
+var __wbg_document_85584f745133c6ad = _media_collection_viewer_bg.default.__wbg_document_85584f745133c6ad;
 exports.__wbg_document_85584f745133c6ad = __wbg_document_85584f745133c6ad;
-var __wbg_location_778c846b1cb79400 = _yew_app_bg.default.__wbg_location_778c846b1cb79400;
+var __wbg_location_778c846b1cb79400 = _media_collection_viewer_bg.default.__wbg_location_778c846b1cb79400;
 exports.__wbg_location_778c846b1cb79400 = __wbg_location_778c846b1cb79400;
-var __wbg_history_38e3ca3e154afe9e = _yew_app_bg.default.__wbg_history_38e3ca3e154afe9e;
+var __wbg_history_38e3ca3e154afe9e = _media_collection_viewer_bg.default.__wbg_history_38e3ca3e154afe9e;
 exports.__wbg_history_38e3ca3e154afe9e = __wbg_history_38e3ca3e154afe9e;
-var __wbg_createElement_9291c0306f179f1e = _yew_app_bg.default.__wbg_createElement_9291c0306f179f1e;
+var __wbg_createElement_9291c0306f179f1e = _media_collection_viewer_bg.default.__wbg_createElement_9291c0306f179f1e;
 exports.__wbg_createElement_9291c0306f179f1e = __wbg_createElement_9291c0306f179f1e;
-var __wbg_createElementNS_ecbbee6419005089 = _yew_app_bg.default.__wbg_createElementNS_ecbbee6419005089;
+var __wbg_createElementNS_ecbbee6419005089 = _media_collection_viewer_bg.default.__wbg_createElementNS_ecbbee6419005089;
 exports.__wbg_createElementNS_ecbbee6419005089 = __wbg_createElementNS_ecbbee6419005089;
-var __wbg_createTextNode_cd0249d33c7e5c4a = _yew_app_bg.default.__wbg_createTextNode_cd0249d33c7e5c4a;
+var __wbg_createTextNode_cd0249d33c7e5c4a = _media_collection_viewer_bg.default.__wbg_createTextNode_cd0249d33c7e5c4a;
 exports.__wbg_createTextNode_cd0249d33c7e5c4a = __wbg_createTextNode_cd0249d33c7e5c4a;
-var __wbg_querySelector_8ff6e717f918ac47 = _yew_app_bg.default.__wbg_querySelector_8ff6e717f918ac47;
+var __wbg_querySelector_8ff6e717f918ac47 = _media_collection_viewer_bg.default.__wbg_querySelector_8ff6e717f918ac47;
 exports.__wbg_querySelector_8ff6e717f918ac47 = __wbg_querySelector_8ff6e717f918ac47;
-var __wbg_instanceof_HtmlSelectElement_de6f753927121f12 = _yew_app_bg.default.__wbg_instanceof_HtmlSelectElement_de6f753927121f12;
-exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = __wbg_instanceof_HtmlSelectElement_de6f753927121f12;
-var __wbg_readyState_bbd368f2445baa64 = _yew_app_bg.default.__wbg_readyState_bbd368f2445baa64;
-exports.__wbg_readyState_bbd368f2445baa64 = __wbg_readyState_bbd368f2445baa64;
-var __wbg_result_4b2fe68f50eb97b2 = _yew_app_bg.default.__wbg_result_4b2fe68f50eb97b2;
-exports.__wbg_result_4b2fe68f50eb97b2 = __wbg_result_4b2fe68f50eb97b2;
-var __wbg_new_1aec7e30c22078b2 = _yew_app_bg.default.__wbg_new_1aec7e30c22078b2;
-exports.__wbg_new_1aec7e30c22078b2 = __wbg_new_1aec7e30c22078b2;
-var __wbg_abort_28298b60cd255be3 = _yew_app_bg.default.__wbg_abort_28298b60cd255be3;
-exports.__wbg_abort_28298b60cd255be3 = __wbg_abort_28298b60cd255be3;
-var __wbg_readAsArrayBuffer_20b419fbd2426286 = _yew_app_bg.default.__wbg_readAsArrayBuffer_20b419fbd2426286;
-exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = __wbg_readAsArrayBuffer_20b419fbd2426286;
-var __wbg_instanceof_HtmlButtonElement_87846abf00da2deb = _yew_app_bg.default.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb;
-exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = __wbg_instanceof_HtmlButtonElement_87846abf00da2deb;
-var __wbg_settype_1772a824336d2b26 = _yew_app_bg.default.__wbg_settype_1772a824336d2b26;
-exports.__wbg_settype_1772a824336d2b26 = __wbg_settype_1772a824336d2b26;
-var __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = _yew_app_bg.default.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
+var __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
 exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
-var __wbg_value_4797b74b15a0bc19 = _yew_app_bg.default.__wbg_value_4797b74b15a0bc19;
+var __wbg_value_4797b74b15a0bc19 = _media_collection_viewer_bg.default.__wbg_value_4797b74b15a0bc19;
 exports.__wbg_value_4797b74b15a0bc19 = __wbg_value_4797b74b15a0bc19;
-var __wbg_setvalue_3ee783318a1b301d = _yew_app_bg.default.__wbg_setvalue_3ee783318a1b301d;
+var __wbg_setvalue_3ee783318a1b301d = _media_collection_viewer_bg.default.__wbg_setvalue_3ee783318a1b301d;
 exports.__wbg_setvalue_3ee783318a1b301d = __wbg_setvalue_3ee783318a1b301d;
-var __wbg_addEventListener_c11a938b8469ab06 = _yew_app_bg.default.__wbg_addEventListener_c11a938b8469ab06;
+var __wbg_readyState_bbd368f2445baa64 = _media_collection_viewer_bg.default.__wbg_readyState_bbd368f2445baa64;
+exports.__wbg_readyState_bbd368f2445baa64 = __wbg_readyState_bbd368f2445baa64;
+var __wbg_result_4b2fe68f50eb97b2 = _media_collection_viewer_bg.default.__wbg_result_4b2fe68f50eb97b2;
+exports.__wbg_result_4b2fe68f50eb97b2 = __wbg_result_4b2fe68f50eb97b2;
+var __wbg_new_1aec7e30c22078b2 = _media_collection_viewer_bg.default.__wbg_new_1aec7e30c22078b2;
+exports.__wbg_new_1aec7e30c22078b2 = __wbg_new_1aec7e30c22078b2;
+var __wbg_abort_28298b60cd255be3 = _media_collection_viewer_bg.default.__wbg_abort_28298b60cd255be3;
+exports.__wbg_abort_28298b60cd255be3 = __wbg_abort_28298b60cd255be3;
+var __wbg_readAsArrayBuffer_20b419fbd2426286 = _media_collection_viewer_bg.default.__wbg_readAsArrayBuffer_20b419fbd2426286;
+exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = __wbg_readAsArrayBuffer_20b419fbd2426286;
+var __wbg_instanceof_HtmlButtonElement_87846abf00da2deb = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb;
+exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = __wbg_instanceof_HtmlButtonElement_87846abf00da2deb;
+var __wbg_settype_1772a824336d2b26 = _media_collection_viewer_bg.default.__wbg_settype_1772a824336d2b26;
+exports.__wbg_settype_1772a824336d2b26 = __wbg_settype_1772a824336d2b26;
+var __wbg_addEventListener_c11a938b8469ab06 = _media_collection_viewer_bg.default.__wbg_addEventListener_c11a938b8469ab06;
 exports.__wbg_addEventListener_c11a938b8469ab06 = __wbg_addEventListener_c11a938b8469ab06;
-var __wbg_removeEventListener_992337883d25d832 = _yew_app_bg.default.__wbg_removeEventListener_992337883d25d832;
+var __wbg_removeEventListener_992337883d25d832 = _media_collection_viewer_bg.default.__wbg_removeEventListener_992337883d25d832;
 exports.__wbg_removeEventListener_992337883d25d832 = __wbg_removeEventListener_992337883d25d832;
-var __wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = _yew_app_bg.default.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897;
+var __wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897;
 exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = __wbg_instanceof_HtmlInputElement_631f8bb677bb0897;
-var __wbg_setchecked_e9a4b8ce0e28b973 = _yew_app_bg.default.__wbg_setchecked_e9a4b8ce0e28b973;
+var __wbg_setchecked_e9a4b8ce0e28b973 = _media_collection_viewer_bg.default.__wbg_setchecked_e9a4b8ce0e28b973;
 exports.__wbg_setchecked_e9a4b8ce0e28b973 = __wbg_setchecked_e9a4b8ce0e28b973;
-var __wbg_files_da35b00935138e11 = _yew_app_bg.default.__wbg_files_da35b00935138e11;
+var __wbg_files_da35b00935138e11 = _media_collection_viewer_bg.default.__wbg_files_da35b00935138e11;
 exports.__wbg_files_da35b00935138e11 = __wbg_files_da35b00935138e11;
-var __wbg_settype_dfbbea62b5fa060d = _yew_app_bg.default.__wbg_settype_dfbbea62b5fa060d;
+var __wbg_settype_dfbbea62b5fa060d = _media_collection_viewer_bg.default.__wbg_settype_dfbbea62b5fa060d;
 exports.__wbg_settype_dfbbea62b5fa060d = __wbg_settype_dfbbea62b5fa060d;
-var __wbg_value_98044d455b0093f7 = _yew_app_bg.default.__wbg_value_98044d455b0093f7;
+var __wbg_value_98044d455b0093f7 = _media_collection_viewer_bg.default.__wbg_value_98044d455b0093f7;
 exports.__wbg_value_98044d455b0093f7 = __wbg_value_98044d455b0093f7;
-var __wbg_setvalue_2924913056a0a03c = _yew_app_bg.default.__wbg_setvalue_2924913056a0a03c;
+var __wbg_setvalue_2924913056a0a03c = _media_collection_viewer_bg.default.__wbg_setvalue_2924913056a0a03c;
 exports.__wbg_setvalue_2924913056a0a03c = __wbg_setvalue_2924913056a0a03c;
-var __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = _yew_app_bg.default.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
-exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
-var __wbg_state_2aaa93b4df2a0dfb = _yew_app_bg.default.__wbg_state_2aaa93b4df2a0dfb;
-exports.__wbg_state_2aaa93b4df2a0dfb = __wbg_state_2aaa93b4df2a0dfb;
-var __wbg_namespaceURI_ba0083a6b53a9753 = _yew_app_bg.default.__wbg_namespaceURI_ba0083a6b53a9753;
+var __wbg_namespaceURI_ba0083a6b53a9753 = _media_collection_viewer_bg.default.__wbg_namespaceURI_ba0083a6b53a9753;
 exports.__wbg_namespaceURI_ba0083a6b53a9753 = __wbg_namespaceURI_ba0083a6b53a9753;
-var __wbg_getAttribute_6667be6e53765116 = _yew_app_bg.default.__wbg_getAttribute_6667be6e53765116;
+var __wbg_getAttribute_6667be6e53765116 = _media_collection_viewer_bg.default.__wbg_getAttribute_6667be6e53765116;
 exports.__wbg_getAttribute_6667be6e53765116 = __wbg_getAttribute_6667be6e53765116;
-var __wbg_removeAttribute_ab52d40b0c7386a7 = _yew_app_bg.default.__wbg_removeAttribute_ab52d40b0c7386a7;
+var __wbg_removeAttribute_ab52d40b0c7386a7 = _media_collection_viewer_bg.default.__wbg_removeAttribute_ab52d40b0c7386a7;
 exports.__wbg_removeAttribute_ab52d40b0c7386a7 = __wbg_removeAttribute_ab52d40b0c7386a7;
-var __wbg_setAttribute_5349d84c3833cecd = _yew_app_bg.default.__wbg_setAttribute_5349d84c3833cecd;
+var __wbg_setAttribute_5349d84c3833cecd = _media_collection_viewer_bg.default.__wbg_setAttribute_5349d84c3833cecd;
 exports.__wbg_setAttribute_5349d84c3833cecd = __wbg_setAttribute_5349d84c3833cecd;
-var __wbg_debug_0f124e055a86b759 = _yew_app_bg.default.__wbg_debug_0f124e055a86b759;
+var __wbg_debug_0f124e055a86b759 = _media_collection_viewer_bg.default.__wbg_debug_0f124e055a86b759;
 exports.__wbg_debug_0f124e055a86b759 = __wbg_debug_0f124e055a86b759;
-var __wbg_error_e25c602bf2cc97d2 = _yew_app_bg.default.__wbg_error_e25c602bf2cc97d2;
+var __wbg_error_e25c602bf2cc97d2 = _media_collection_viewer_bg.default.__wbg_error_e25c602bf2cc97d2;
 exports.__wbg_error_e25c602bf2cc97d2 = __wbg_error_e25c602bf2cc97d2;
-var __wbg_error_331a3f8d096876a6 = _yew_app_bg.default.__wbg_error_331a3f8d096876a6;
+var __wbg_error_331a3f8d096876a6 = _media_collection_viewer_bg.default.__wbg_error_331a3f8d096876a6;
 exports.__wbg_error_331a3f8d096876a6 = __wbg_error_331a3f8d096876a6;
-var __wbg_info_07dc241a251b7f5c = _yew_app_bg.default.__wbg_info_07dc241a251b7f5c;
+var __wbg_info_07dc241a251b7f5c = _media_collection_viewer_bg.default.__wbg_info_07dc241a251b7f5c;
 exports.__wbg_info_07dc241a251b7f5c = __wbg_info_07dc241a251b7f5c;
-var __wbg_log_85c7cea9571ff239 = _yew_app_bg.default.__wbg_log_85c7cea9571ff239;
+var __wbg_log_85c7cea9571ff239 = _media_collection_viewer_bg.default.__wbg_log_85c7cea9571ff239;
 exports.__wbg_log_85c7cea9571ff239 = __wbg_log_85c7cea9571ff239;
-var __wbg_warn_d690657941b2fb03 = _yew_app_bg.default.__wbg_warn_d690657941b2fb03;
+var __wbg_warn_d690657941b2fb03 = _media_collection_viewer_bg.default.__wbg_warn_d690657941b2fb03;
 exports.__wbg_warn_d690657941b2fb03 = __wbg_warn_d690657941b2fb03;
-var __wbg_preventDefault_f80a4c61466e816c = _yew_app_bg.default.__wbg_preventDefault_f80a4c61466e816c;
+var __wbg_preventDefault_f80a4c61466e816c = _media_collection_viewer_bg.default.__wbg_preventDefault_f80a4c61466e816c;
 exports.__wbg_preventDefault_f80a4c61466e816c = __wbg_preventDefault_f80a4c61466e816c;
-var __wbg_name_7fb80412dbdda69f = _yew_app_bg.default.__wbg_name_7fb80412dbdda69f;
+var __wbg_name_7fb80412dbdda69f = _media_collection_viewer_bg.default.__wbg_name_7fb80412dbdda69f;
 exports.__wbg_name_7fb80412dbdda69f = __wbg_name_7fb80412dbdda69f;
-var __wbg_state_c5f09613223fcf75 = _yew_app_bg.default.__wbg_state_c5f09613223fcf75;
+var __wbg_state_c5f09613223fcf75 = _media_collection_viewer_bg.default.__wbg_state_c5f09613223fcf75;
 exports.__wbg_state_c5f09613223fcf75 = __wbg_state_c5f09613223fcf75;
-var __wbg_pushState_eab490ab8ea16a5c = _yew_app_bg.default.__wbg_pushState_eab490ab8ea16a5c;
+var __wbg_pushState_eab490ab8ea16a5c = _media_collection_viewer_bg.default.__wbg_pushState_eab490ab8ea16a5c;
 exports.__wbg_pushState_eab490ab8ea16a5c = __wbg_pushState_eab490ab8ea16a5c;
-var __wbg_replaceState_e09f9e7b6a27ff98 = _yew_app_bg.default.__wbg_replaceState_e09f9e7b6a27ff98;
+var __wbg_replaceState_e09f9e7b6a27ff98 = _media_collection_viewer_bg.default.__wbg_replaceState_e09f9e7b6a27ff98;
 exports.__wbg_replaceState_e09f9e7b6a27ff98 = __wbg_replaceState_e09f9e7b6a27ff98;
-var __wbg_pathname_8af495f99520840d = _yew_app_bg.default.__wbg_pathname_8af495f99520840d;
-exports.__wbg_pathname_8af495f99520840d = __wbg_pathname_8af495f99520840d;
-var __wbg_search_a349e283f79846d3 = _yew_app_bg.default.__wbg_search_a349e283f79846d3;
-exports.__wbg_search_a349e283f79846d3 = __wbg_search_a349e283f79846d3;
-var __wbg_hash_5216e2863cc43a1d = _yew_app_bg.default.__wbg_hash_5216e2863cc43a1d;
-exports.__wbg_hash_5216e2863cc43a1d = __wbg_hash_5216e2863cc43a1d;
-var __wbg_nodeName_26b7083312486f0b = _yew_app_bg.default.__wbg_nodeName_26b7083312486f0b;
+var __wbg_nodeName_26b7083312486f0b = _media_collection_viewer_bg.default.__wbg_nodeName_26b7083312486f0b;
 exports.__wbg_nodeName_26b7083312486f0b = __wbg_nodeName_26b7083312486f0b;
-var __wbg_lastChild_d4077e79715ffef3 = _yew_app_bg.default.__wbg_lastChild_d4077e79715ffef3;
+var __wbg_lastChild_d4077e79715ffef3 = _media_collection_viewer_bg.default.__wbg_lastChild_d4077e79715ffef3;
 exports.__wbg_lastChild_d4077e79715ffef3 = __wbg_lastChild_d4077e79715ffef3;
-var __wbg_setnodeValue_83c9aa40c199e1ba = _yew_app_bg.default.__wbg_setnodeValue_83c9aa40c199e1ba;
+var __wbg_setnodeValue_83c9aa40c199e1ba = _media_collection_viewer_bg.default.__wbg_setnodeValue_83c9aa40c199e1ba;
 exports.__wbg_setnodeValue_83c9aa40c199e1ba = __wbg_setnodeValue_83c9aa40c199e1ba;
-var __wbg_appendChild_57f30a01b30ec33c = _yew_app_bg.default.__wbg_appendChild_57f30a01b30ec33c;
+var __wbg_appendChild_57f30a01b30ec33c = _media_collection_viewer_bg.default.__wbg_appendChild_57f30a01b30ec33c;
 exports.__wbg_appendChild_57f30a01b30ec33c = __wbg_appendChild_57f30a01b30ec33c;
-var __wbg_insertBefore_30d17168293fa763 = _yew_app_bg.default.__wbg_insertBefore_30d17168293fa763;
+var __wbg_insertBefore_30d17168293fa763 = _media_collection_viewer_bg.default.__wbg_insertBefore_30d17168293fa763;
 exports.__wbg_insertBefore_30d17168293fa763 = __wbg_insertBefore_30d17168293fa763;
-var __wbg_removeChild_77c0b65b7396e214 = _yew_app_bg.default.__wbg_removeChild_77c0b65b7396e214;
+var __wbg_removeChild_77c0b65b7396e214 = _media_collection_viewer_bg.default.__wbg_removeChild_77c0b65b7396e214;
 exports.__wbg_removeChild_77c0b65b7396e214 = __wbg_removeChild_77c0b65b7396e214;
-var __wbg_newnoargs_2349ba6aefe72376 = _yew_app_bg.default.__wbg_newnoargs_2349ba6aefe72376;
+var __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = _media_collection_viewer_bg.default.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
+exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
+var __wbg_state_2aaa93b4df2a0dfb = _media_collection_viewer_bg.default.__wbg_state_2aaa93b4df2a0dfb;
+exports.__wbg_state_2aaa93b4df2a0dfb = __wbg_state_2aaa93b4df2a0dfb;
+var __wbg_pathname_8af495f99520840d = _media_collection_viewer_bg.default.__wbg_pathname_8af495f99520840d;
+exports.__wbg_pathname_8af495f99520840d = __wbg_pathname_8af495f99520840d;
+var __wbg_search_a349e283f79846d3 = _media_collection_viewer_bg.default.__wbg_search_a349e283f79846d3;
+exports.__wbg_search_a349e283f79846d3 = __wbg_search_a349e283f79846d3;
+var __wbg_hash_5216e2863cc43a1d = _media_collection_viewer_bg.default.__wbg_hash_5216e2863cc43a1d;
+exports.__wbg_hash_5216e2863cc43a1d = __wbg_hash_5216e2863cc43a1d;
+var __wbg_instanceof_HtmlSelectElement_de6f753927121f12 = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlSelectElement_de6f753927121f12;
+exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = __wbg_instanceof_HtmlSelectElement_de6f753927121f12;
+var __wbg_newnoargs_2349ba6aefe72376 = _media_collection_viewer_bg.default.__wbg_newnoargs_2349ba6aefe72376;
 exports.__wbg_newnoargs_2349ba6aefe72376 = __wbg_newnoargs_2349ba6aefe72376;
-var __wbg_call_e5847d15cc228e4f = _yew_app_bg.default.__wbg_call_e5847d15cc228e4f;
+var __wbg_call_e5847d15cc228e4f = _media_collection_viewer_bg.default.__wbg_call_e5847d15cc228e4f;
 exports.__wbg_call_e5847d15cc228e4f = __wbg_call_e5847d15cc228e4f;
-var __wbg_next_cf4ec627a2e85bac = _yew_app_bg.default.__wbg_next_cf4ec627a2e85bac;
+var __wbg_next_cf4ec627a2e85bac = _media_collection_viewer_bg.default.__wbg_next_cf4ec627a2e85bac;
 exports.__wbg_next_cf4ec627a2e85bac = __wbg_next_cf4ec627a2e85bac;
-var __wbg_next_f613b44647788059 = _yew_app_bg.default.__wbg_next_f613b44647788059;
+var __wbg_next_f613b44647788059 = _media_collection_viewer_bg.default.__wbg_next_f613b44647788059;
 exports.__wbg_next_f613b44647788059 = __wbg_next_f613b44647788059;
-var __wbg_done_4e046ac6e3b595e0 = _yew_app_bg.default.__wbg_done_4e046ac6e3b595e0;
+var __wbg_done_4e046ac6e3b595e0 = _media_collection_viewer_bg.default.__wbg_done_4e046ac6e3b595e0;
 exports.__wbg_done_4e046ac6e3b595e0 = __wbg_done_4e046ac6e3b595e0;
-var __wbg_value_6fa14ba8ee7b7c3d = _yew_app_bg.default.__wbg_value_6fa14ba8ee7b7c3d;
+var __wbg_value_6fa14ba8ee7b7c3d = _media_collection_viewer_bg.default.__wbg_value_6fa14ba8ee7b7c3d;
 exports.__wbg_value_6fa14ba8ee7b7c3d = __wbg_value_6fa14ba8ee7b7c3d;
-var __wbg_is_ff18d90ee51cb4a6 = _yew_app_bg.default.__wbg_is_ff18d90ee51cb4a6;
+var __wbg_is_ff18d90ee51cb4a6 = _media_collection_viewer_bg.default.__wbg_is_ff18d90ee51cb4a6;
 exports.__wbg_is_ff18d90ee51cb4a6 = __wbg_is_ff18d90ee51cb4a6;
-var __wbg_new_59986c8731bebaa1 = _yew_app_bg.default.__wbg_new_59986c8731bebaa1;
+var __wbg_new_59986c8731bebaa1 = _media_collection_viewer_bg.default.__wbg_new_59986c8731bebaa1;
 exports.__wbg_new_59986c8731bebaa1 = __wbg_new_59986c8731bebaa1;
-var __wbg_iterator_7d4f7917ab7aeca0 = _yew_app_bg.default.__wbg_iterator_7d4f7917ab7aeca0;
+var __wbg_iterator_7d4f7917ab7aeca0 = _media_collection_viewer_bg.default.__wbg_iterator_7d4f7917ab7aeca0;
 exports.__wbg_iterator_7d4f7917ab7aeca0 = __wbg_iterator_7d4f7917ab7aeca0;
-var __wbg_globalThis_1d843c4ad7b6a1f5 = _yew_app_bg.default.__wbg_globalThis_1d843c4ad7b6a1f5;
+var __wbg_globalThis_1d843c4ad7b6a1f5 = _media_collection_viewer_bg.default.__wbg_globalThis_1d843c4ad7b6a1f5;
 exports.__wbg_globalThis_1d843c4ad7b6a1f5 = __wbg_globalThis_1d843c4ad7b6a1f5;
-var __wbg_self_35a0fda3eb965abe = _yew_app_bg.default.__wbg_self_35a0fda3eb965abe;
+var __wbg_self_35a0fda3eb965abe = _media_collection_viewer_bg.default.__wbg_self_35a0fda3eb965abe;
 exports.__wbg_self_35a0fda3eb965abe = __wbg_self_35a0fda3eb965abe;
-var __wbg_window_88a6f88dd3a474f1 = _yew_app_bg.default.__wbg_window_88a6f88dd3a474f1;
+var __wbg_window_88a6f88dd3a474f1 = _media_collection_viewer_bg.default.__wbg_window_88a6f88dd3a474f1;
 exports.__wbg_window_88a6f88dd3a474f1 = __wbg_window_88a6f88dd3a474f1;
-var __wbg_global_294ce70448e8fbbf = _yew_app_bg.default.__wbg_global_294ce70448e8fbbf;
+var __wbg_global_294ce70448e8fbbf = _media_collection_viewer_bg.default.__wbg_global_294ce70448e8fbbf;
 exports.__wbg_global_294ce70448e8fbbf = __wbg_global_294ce70448e8fbbf;
-var __wbg_new_4e8d18dbf9cd5240 = _yew_app_bg.default.__wbg_new_4e8d18dbf9cd5240;
+var __wbg_new_4e8d18dbf9cd5240 = _media_collection_viewer_bg.default.__wbg_new_4e8d18dbf9cd5240;
 exports.__wbg_new_4e8d18dbf9cd5240 = __wbg_new_4e8d18dbf9cd5240;
-var __wbg_length_3a5138f465b971ad = _yew_app_bg.default.__wbg_length_3a5138f465b971ad;
+var __wbg_length_3a5138f465b971ad = _media_collection_viewer_bg.default.__wbg_length_3a5138f465b971ad;
 exports.__wbg_length_3a5138f465b971ad = __wbg_length_3a5138f465b971ad;
-var __wbg_set_4769de301eb521d7 = _yew_app_bg.default.__wbg_set_4769de301eb521d7;
+var __wbg_set_4769de301eb521d7 = _media_collection_viewer_bg.default.__wbg_set_4769de301eb521d7;
 exports.__wbg_set_4769de301eb521d7 = __wbg_set_4769de301eb521d7;
-var __wbindgen_is_function = _yew_app_bg.default.__wbindgen_is_function;
+var __wbindgen_is_function = _media_collection_viewer_bg.default.__wbindgen_is_function;
 exports.__wbindgen_is_function = __wbindgen_is_function;
-var __wbindgen_is_object = _yew_app_bg.default.__wbindgen_is_object;
+var __wbindgen_is_object = _media_collection_viewer_bg.default.__wbindgen_is_object;
 exports.__wbindgen_is_object = __wbindgen_is_object;
-var __wbg_buffer_0be9fb426f2dd82b = _yew_app_bg.default.__wbg_buffer_0be9fb426f2dd82b;
+var __wbg_buffer_0be9fb426f2dd82b = _media_collection_viewer_bg.default.__wbg_buffer_0be9fb426f2dd82b;
 exports.__wbg_buffer_0be9fb426f2dd82b = __wbg_buffer_0be9fb426f2dd82b;
-var __wbg_get_4e90ba4e3de362de = _yew_app_bg.default.__wbg_get_4e90ba4e3de362de;
+var __wbg_get_4e90ba4e3de362de = _media_collection_viewer_bg.default.__wbg_get_4e90ba4e3de362de;
 exports.__wbg_get_4e90ba4e3de362de = __wbg_get_4e90ba4e3de362de;
-var __wbg_set_7e15d36563072b19 = _yew_app_bg.default.__wbg_set_7e15d36563072b19;
+var __wbg_set_7e15d36563072b19 = _media_collection_viewer_bg.default.__wbg_set_7e15d36563072b19;
 exports.__wbg_set_7e15d36563072b19 = __wbg_set_7e15d36563072b19;
-var __wbindgen_string_get = _yew_app_bg.default.__wbindgen_string_get;
+var __wbindgen_string_get = _media_collection_viewer_bg.default.__wbindgen_string_get;
 exports.__wbindgen_string_get = __wbindgen_string_get;
-var __wbindgen_debug_string = _yew_app_bg.default.__wbindgen_debug_string;
+var __wbindgen_debug_string = _media_collection_viewer_bg.default.__wbindgen_debug_string;
 exports.__wbindgen_debug_string = __wbindgen_debug_string;
-var __wbindgen_throw = _yew_app_bg.default.__wbindgen_throw;
+var __wbindgen_throw = _media_collection_viewer_bg.default.__wbindgen_throw;
 exports.__wbindgen_throw = __wbindgen_throw;
-var __wbindgen_rethrow = _yew_app_bg.default.__wbindgen_rethrow;
+var __wbindgen_rethrow = _media_collection_viewer_bg.default.__wbindgen_rethrow;
 exports.__wbindgen_rethrow = __wbindgen_rethrow;
-var __wbindgen_memory = _yew_app_bg.default.__wbindgen_memory;
+var __wbindgen_memory = _media_collection_viewer_bg.default.__wbindgen_memory;
 exports.__wbindgen_memory = __wbindgen_memory;
-var __wbindgen_closure_wrapper6216 = _yew_app_bg.default.__wbindgen_closure_wrapper6216;
-exports.__wbindgen_closure_wrapper6216 = __wbindgen_closure_wrapper6216;
-var Home = _yew_app_bg.default.Home;
+var __wbindgen_closure_wrapper6266 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper6266;
+exports.__wbindgen_closure_wrapper6266 = __wbindgen_closure_wrapper6266;
+var Home = _media_collection_viewer_bg.default.Home;
 exports.Home = Home;
-},{"./pkg/yew_app_bg.wasm":"../pkg/yew_app_bg.wasm"}],"../node_modules/moment/moment.js":[function(require,module,exports) {
+},{"./pkg/media_collection_viewer_bg.wasm":"../pkg/media_collection_viewer_bg.wasm"}],"../node_modules/moment/moment.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
 //! moment.js
@@ -22256,6 +22256,38 @@ document.getElementById('jsonStart').onclick = function () {
       }]
     },
     options: opts
+  }); // audio_bitdepths
+
+  var ctx_audio_bitdepths = document.getElementById('audio_bitdepths').getContext('2d');
+  var chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
+  var audio_bitdepths = new chart_js_1.default(ctx_audio_bitdepths, {
+    type: 'pie',
+    data: {
+      labels: Object.keys(chart_audio_bitdepths),
+      datasets: [{
+        label: 'audio_bitdepths in collection',
+        data: Object.values(chart_audio_bitdepths),
+        backgroundColor: randCols,
+        borderWidth: 0
+      }]
+    },
+    options: opts
+  }); // video_bitdepths
+
+  var ctx_video_bitdepths = document.getElementById('video_bitdepths').getContext('2d');
+  var chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
+  var video_bitdepths = new chart_js_1.default(ctx_video_bitdepths, {
+    type: 'pie',
+    data: {
+      labels: Object.keys(chart_video_bitdepths),
+      datasets: [{
+        label: 'video_bitdepths in collection',
+        data: Object.values(chart_video_bitdepths),
+        backgroundColor: randCols,
+        borderWidth: 0
+      }]
+    },
+    options: opts
   });
 };
 },{"../Cargo.toml":"../Cargo.toml","chart.js":"../node_modules/chart.js/dist/Chart.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -22286,7 +22318,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "40013" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39899" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -22834,7 +22866,7 @@ function __wbg_adapter_26(arg0, arg1, arg2) {
     try {
         _assertNum(arg0);
         _assertNum(arg1);
-        wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h1ee0a5c1ddecede7(arg0, arg1, addBorrowedObject(arg2));
+        wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__ha268a06945bc62d0(arg0, arg1, addBorrowedObject(arg2));
     } finally {
         heap[stack_pointer++] = undefined;
     }
@@ -22970,10 +23002,22 @@ __exports.__wbg_querySelector_8ff6e717f918ac47 = handleError(function(arg0, arg1
     return isLikeNone(ret) ? 0 : addHeapObject(ret);
 });
 
-__exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = logError(function(arg0) {
-    var ret = getObject(arg0) instanceof HTMLSelectElement;
+__exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = logError(function(arg0) {
+    var ret = getObject(arg0) instanceof HTMLTextAreaElement;
     _assertBoolean(ret);
     return ret;
+});
+
+__exports.__wbg_value_4797b74b15a0bc19 = logError(function(arg0, arg1) {
+    var ret = getObject(arg1).value;
+    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    getInt32Memory0()[arg0 / 4 + 1] = len0;
+    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+});
+
+__exports.__wbg_setvalue_3ee783318a1b301d = logError(function(arg0, arg1, arg2) {
+    getObject(arg0).value = getStringFromWasm0(arg1, arg2);
 });
 
 __exports.__wbg_readyState_bbd368f2445baa64 = logError(function(arg0) {
@@ -23008,24 +23052,6 @@ __exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = logError(functio
 
 __exports.__wbg_settype_1772a824336d2b26 = logError(function(arg0, arg1, arg2) {
     getObject(arg0).type = getStringFromWasm0(arg1, arg2);
-});
-
-__exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = logError(function(arg0) {
-    var ret = getObject(arg0) instanceof HTMLTextAreaElement;
-    _assertBoolean(ret);
-    return ret;
-});
-
-__exports.__wbg_value_4797b74b15a0bc19 = logError(function(arg0, arg1) {
-    var ret = getObject(arg1).value;
-    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-    var len0 = WASM_VECTOR_LEN;
-    getInt32Memory0()[arg0 / 4 + 1] = len0;
-    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-});
-
-__exports.__wbg_setvalue_3ee783318a1b301d = logError(function(arg0, arg1, arg2) {
-    getObject(arg0).value = getStringFromWasm0(arg1, arg2);
 });
 
 __exports.__wbg_addEventListener_c11a938b8469ab06 = handleError(function(arg0, arg1, arg2, arg3, arg4) {
@@ -23065,17 +23091,6 @@ __exports.__wbg_value_98044d455b0093f7 = logError(function(arg0, arg1) {
 
 __exports.__wbg_setvalue_2924913056a0a03c = logError(function(arg0, arg1, arg2) {
     getObject(arg0).value = getStringFromWasm0(arg1, arg2);
-});
-
-__exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = logError(function(arg0) {
-    var ret = getObject(arg0) instanceof PopStateEvent;
-    _assertBoolean(ret);
-    return ret;
-});
-
-__exports.__wbg_state_2aaa93b4df2a0dfb = logError(function(arg0) {
-    var ret = getObject(arg0).state;
-    return addHeapObject(ret);
 });
 
 __exports.__wbg_namespaceURI_ba0083a6b53a9753 = logError(function(arg0, arg1) {
@@ -23151,30 +23166,6 @@ __exports.__wbg_replaceState_e09f9e7b6a27ff98 = handleError(function(arg0, arg1,
     getObject(arg0).replaceState(getObject(arg1), getStringFromWasm0(arg2, arg3), arg4 === 0 ? undefined : getStringFromWasm0(arg4, arg5));
 });
 
-__exports.__wbg_pathname_8af495f99520840d = handleError(function(arg0, arg1) {
-    var ret = getObject(arg1).pathname;
-    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-    var len0 = WASM_VECTOR_LEN;
-    getInt32Memory0()[arg0 / 4 + 1] = len0;
-    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-});
-
-__exports.__wbg_search_a349e283f79846d3 = handleError(function(arg0, arg1) {
-    var ret = getObject(arg1).search;
-    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-    var len0 = WASM_VECTOR_LEN;
-    getInt32Memory0()[arg0 / 4 + 1] = len0;
-    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-});
-
-__exports.__wbg_hash_5216e2863cc43a1d = handleError(function(arg0, arg1) {
-    var ret = getObject(arg1).hash;
-    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-    var len0 = WASM_VECTOR_LEN;
-    getInt32Memory0()[arg0 / 4 + 1] = len0;
-    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-});
-
 __exports.__wbg_nodeName_26b7083312486f0b = logError(function(arg0, arg1) {
     var ret = getObject(arg1).nodeName;
     var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
@@ -23205,6 +23196,47 @@ __exports.__wbg_insertBefore_30d17168293fa763 = handleError(function(arg0, arg1,
 __exports.__wbg_removeChild_77c0b65b7396e214 = handleError(function(arg0, arg1) {
     var ret = getObject(arg0).removeChild(getObject(arg1));
     return addHeapObject(ret);
+});
+
+__exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = logError(function(arg0) {
+    var ret = getObject(arg0) instanceof PopStateEvent;
+    _assertBoolean(ret);
+    return ret;
+});
+
+__exports.__wbg_state_2aaa93b4df2a0dfb = logError(function(arg0) {
+    var ret = getObject(arg0).state;
+    return addHeapObject(ret);
+});
+
+__exports.__wbg_pathname_8af495f99520840d = handleError(function(arg0, arg1) {
+    var ret = getObject(arg1).pathname;
+    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    getInt32Memory0()[arg0 / 4 + 1] = len0;
+    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+});
+
+__exports.__wbg_search_a349e283f79846d3 = handleError(function(arg0, arg1) {
+    var ret = getObject(arg1).search;
+    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    getInt32Memory0()[arg0 / 4 + 1] = len0;
+    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+});
+
+__exports.__wbg_hash_5216e2863cc43a1d = handleError(function(arg0, arg1) {
+    var ret = getObject(arg1).hash;
+    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    getInt32Memory0()[arg0 / 4 + 1] = len0;
+    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+});
+
+__exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = logError(function(arg0) {
+    var ret = getObject(arg0) instanceof HTMLSelectElement;
+    _assertBoolean(ret);
+    return ret;
 });
 
 __exports.__wbg_newnoargs_2349ba6aefe72376 = logError(function(arg0, arg1) {
@@ -23348,8 +23380,8 @@ __exports.__wbindgen_memory = function() {
     return addHeapObject(ret);
 };
 
-__exports.__wbindgen_closure_wrapper6216 = logError(function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 243, __wbg_adapter_26);
+__exports.__wbindgen_closure_wrapper6266 = logError(function(arg0, arg1, arg2) {
+    var ret = makeMutClosure(arg0, arg1, 242, __wbg_adapter_26);
     return addHeapObject(ret);
 });
 
@@ -23359,11 +23391,11 @@ __exports. Home =  Home;
           const fetchPromise = fetch(wasm_path);
           let resultPromise;
           if (typeof WebAssembly.instantiateStreaming === 'function') {
-              resultPromise = WebAssembly.instantiateStreaming(fetchPromise, { './yew_app_bg.js': __exports });
+              resultPromise = WebAssembly.instantiateStreaming(fetchPromise, { './media_collection_viewer_bg.js': __exports });
           } else {
               resultPromise = fetchPromise
               .then(response => response.arrayBuffer())
-              .then(buffer => WebAssembly.instantiate(buffer, { './yew_app_bg.js': __exports }));
+              .then(buffer => WebAssembly.instantiate(buffer, { './media_collection_viewer_bg.js': __exports }));
           }
           return resultPromise.then(({instance}) => {
               wasm = init.wasm = instance.exports;
@@ -23382,7 +23414,7 @@ __exports. Home =  Home;
                   }
               });
           })
-          .then(data => WebAssembly.instantiate(data, { './yew_app_bg': __exports }))
+          .then(data => WebAssembly.instantiate(data, { './media_collection_viewer_bg': __exports }))
           .then(({instance}) => {
               wasm = init.wasm = instance.exports;
               __exports.wasm = wasm;
@@ -23395,6 +23427,6 @@ __exports. Home =  Home;
       }
     
 },{"fs":"../node_modules/parcel-bundler/src/builtins/_empty.js"}],0:[function(require,module,exports) {
-var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("wasm",require("../node_modules/parcel-plugin-wasm.rs/wasm-loader.js"));b.load([["yew_app_bg.a31f2430.wasm","../pkg/yew_app_bg.wasm"]]).then(function(){require("index.ts");});
+var b=require("../node_modules/parcel-bundler/src/builtins/bundle-loader.js");b.register("wasm",require("../node_modules/parcel-plugin-wasm.rs/wasm-loader.js"));b.load([["media_collection_viewer_bg.6d4f5a20.wasm","../pkg/media_collection_viewer_bg.wasm"]]).then(function(){require("index.ts");});
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js",0], null)
 //# sourceMappingURL=/static.77de5100.js.map
