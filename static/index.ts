@@ -114,7 +114,7 @@ document.getElementById('jsonStart').onclick = function() {
   let chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
 
   let audio_bitdepths = new Chart(ctx_audio_bitdepths, {
-        type: 'bar',
+        type: 'pie',
         data: {
           labels: Object.keys(chart_audio_bitdepths),
           datasets: [{
@@ -123,7 +123,7 @@ document.getElementById('jsonStart').onclick = function() {
               backgroundColor: randCols,
               borderWidth: 0,
           }]},
-          options: bar_opts,     
+          options: opts,     
       });
 
 
@@ -132,7 +132,7 @@ document.getElementById('jsonStart').onclick = function() {
   let chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
 
   let video_bitdepths = new Chart(ctx_video_bitdepths, {
-        type: 'bar',
+        type: 'pie',
         data: {
           labels: Object.keys(chart_video_bitdepths),
           datasets: [{
@@ -141,7 +141,7 @@ document.getElementById('jsonStart').onclick = function() {
               backgroundColor: randCols,
               borderWidth: 0,
           }]},
-          options: bar_opts,
+          options: opts,
        
       });
 
@@ -163,6 +163,24 @@ document.getElementById('jsonStart').onclick = function() {
        
       });
 
+
+  // chroma_subsamplings
+  let ctx_chroma_subsamplings = document.getElementById('chroma_subsamplings').getContext('2d');
+  let chart_chroma_subsamplings = JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent);
+
+  let chroma_subsamplings = new Chart(ctx_chroma_subsamplings, {
+        type: 'pie',
+        data: {
+          labels: Object.keys(chart_chroma_subsamplings),
+          datasets: [{
+              label: 'Chroma subsampling',
+              data: Object.values(chart_chroma_subsamplings),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: opts,
+       
+      });
 
 };
 

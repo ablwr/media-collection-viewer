@@ -34,6 +34,7 @@ pub struct Home {
     audio_bitdepths: serde_json::Value,
     video_bitdepths: serde_json::Value,
     video_standards: serde_json::Value,
+    chroma_subsamplings: serde_json::Value,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -44,15 +45,6 @@ pub struct MediaInfo {
 #[derive(Serialize, Deserialize)]
 pub struct Media {
     track: Vec<Value>,
-}
-
-#[derive(Serialize, Deserialize)]
-pub struct Track {
-    // Can work on these next:
-    Format: String,
-    FileSize: String,
-    Duration: String,
-    BitDepth: String,
 }
 
 impl Component for Home {
@@ -71,7 +63,8 @@ impl Component for Home {
             video_codecs: json!(null),
             audio_bitdepths: json!(null),
             video_bitdepths: json!(null),
-            video_standards: json!(null)
+            video_standards: json!(null),
+            chroma_subsamplings: json!(null)
         }
     }
 
@@ -107,6 +100,7 @@ impl Component for Home {
                     self.audio_bitdepths = Home::audio_bitdepth_types(&v);
                     self.video_bitdepths = Home::video_bitdepth_types(&v);
                     self.video_standards = Home::video_standard_types(&v);
+                    self.chroma_subsamplings = Home::chroma_subsampling_types(&v);
                 };
                 true
             }
@@ -148,6 +142,7 @@ impl Component for Home {
                     <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
                     <span style="display:none;" id="chart_video_standards">{ &self.video_standards.to_string() }</span>
+                    <span style="display:none;" id="chart_chroma_subsamplings">{ &self.chroma_subsamplings.to_string() }</span>
                     <div id="all_the_charts">
                         // TODO: Throw this over to the JS in a proper way
                         <div>
@@ -181,7 +176,11 @@ impl Component for Home {
                         <div>
                             <h2>{ "Video standard" }</h2>
                             <canvas id="video_standards"></canvas>
-                        </div>                     
+                        </div> 
+                        <div>
+                            <h2>{ "Chroma subsampling" }</h2>
+                            <canvas id="chroma_subsamplings"></canvas>
+                        </div>                      
                     </div>
                 </main>
                 <footer>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></footer>
@@ -419,6 +418,41 @@ impl Home {
                         ttracks.push("None".to_string())
                     } else {
                         ttracks.push(ttt.get("Standard").unwrap().to_string());
+
+                    }
+                }
+            }
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+
+    fn chroma_subsampling_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Video" {
+                    ttt.get("ChromaSubsampling");
+                    if ttt.get("ChromaSubsampling") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("ChromaSubsampling").unwrap().to_string());
 
                     }
                 }
