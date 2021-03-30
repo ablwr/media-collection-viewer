@@ -82,7 +82,7 @@ impl Component for Home {
         match msg {
             Msg::SendJson(value) => {
                 // log::info!("");
-                self.json_filename = format!("File loading . . .");
+                self.json_filename = format!("File loading . . . please wait . . . ");
                 let file = value.first().unwrap().clone();
                 let callback = self.link.callback(Msg::FileLoaded);
                 let j = ReaderService::default().read_file(file, callback).unwrap();

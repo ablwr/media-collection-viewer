@@ -24,11 +24,10 @@ document.getElementById('jsonStart').onclick = function() {
   let chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
 
   let tracks = new Chart(ctx_tracks, {
-        type: 'pie',
+        type: 'bar',
         data: {
           labels: Object.keys(chart_tracks),
           datasets: [{
-              label: '# of Tracks per file',
               data: Object.values(chart_tracks),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -45,7 +44,6 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_formats),
           datasets: [{
-              label: 'Formats in collection',
               data: Object.values(chart_formats),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -62,7 +60,6 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_color_spaces),
           datasets: [{
-              label: 'color_spaces in collection',
               data: Object.values(chart_color_spaces),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -79,7 +76,6 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_audio_codecs),
           datasets: [{
-              label: 'audio_codecs in collection',
               data: Object.values(chart_audio_codecs),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -97,7 +93,6 @@ document.getElementById('jsonStart').onclick = function() {
         data: {
           labels: Object.keys(chart_video_codecs),
           datasets: [{
-              label: 'video_codecs in collection',
               data: Object.values(chart_video_codecs),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -112,11 +107,10 @@ document.getElementById('jsonStart').onclick = function() {
   let chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
 
   let audio_bitdepths = new Chart(ctx_audio_bitdepths, {
-        type: 'pie',
+        type: 'bar',
         data: {
           labels: Object.keys(chart_audio_bitdepths),
           datasets: [{
-              label: 'audio_bitdepths in collection',
               data: Object.values(chart_audio_bitdepths),
               backgroundColor: randCols,
               borderWidth: 0,
@@ -130,11 +124,10 @@ document.getElementById('jsonStart').onclick = function() {
   let chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
 
   let video_bitdepths = new Chart(ctx_video_bitdepths, {
-        type: 'pie',
+        type: 'bar',
         data: {
           labels: Object.keys(chart_video_bitdepths),
           datasets: [{
-              label: 'video_bitdepths in collection',
               data: Object.values(chart_video_bitdepths),
               backgroundColor: randCols,
               borderWidth: 0,
