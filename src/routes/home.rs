@@ -32,17 +32,17 @@ pub struct Home {
     video_codecs: serde_json::Value,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct MediaInfo {
     media: Media,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct Media {
     track: Vec<Value>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Serialize, Deserialize)]
 pub struct Track {
     // Can work on these next:
     Format: String,
@@ -127,9 +127,6 @@ impl Component for Home {
                         onchange=callback/>
                     <p>{ &self.json_filename.to_string() }</p>
                     <button class="button" id="jsonStart">{ "Build charts" }</button>
-                    // <p>{ "JSON results:" }
-                    // <textarea id="result"></textarea>
-                    // </p>
                     <span style="display:none;" id="chart_tracks">{ &self.tracks.to_string() }</span>
                     <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
                     <span style="display:none;" id="chart_audio_codecs">{ &self.audio_codecs.to_string() }</span>
@@ -159,6 +156,7 @@ impl Component for Home {
         }
     }
 }
+
 
 impl Home {
 

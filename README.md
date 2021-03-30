@@ -45,7 +45,6 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [] refactor!
 - [] cleaner delivery of JS objects to charts (right now is so "lol")
 - [] cleaner display of charts (update, not overwrite)
-- [] implement json fields for Tracks
 - [] Figure out how to display which files are in certain categories
 - [] Move TODOs to Issues tracker when at a reasonable beta stage
 

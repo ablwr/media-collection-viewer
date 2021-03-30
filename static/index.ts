@@ -1,4 +1,4 @@
-import { run, Home } from '../Cargo.toml'
+import { run } from '../Cargo.toml'
 import Chart from 'chart.js';
 
 // Start the show
@@ -88,7 +88,6 @@ document.getElementById('jsonStart').onclick = function() {
           options: opts,
        
       });
-
 
 
 };
