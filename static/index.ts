@@ -145,6 +145,25 @@ document.getElementById('jsonStart').onclick = function() {
        
       });
 
+  // video_standards
+  let ctx_video_standards = document.getElementById('video_standards').getContext('2d');
+  let chart_video_standards = JSON.parse(document.getElementById("chart_video_standards").textContent);
+
+  let video_standards = new Chart(ctx_video_standards, {
+        type: 'bar',
+        data: {
+          labels: Object.keys(chart_video_standards),
+          datasets: [{
+              label: 'Color depths',
+              data: Object.values(chart_video_standards),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: bar_opts,
+       
+      });
+
+
 };
 
 

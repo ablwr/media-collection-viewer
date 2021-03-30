@@ -33,6 +33,7 @@ pub struct Home {
     video_codecs: serde_json::Value,
     audio_bitdepths: serde_json::Value,
     video_bitdepths: serde_json::Value,
+    video_standards: serde_json::Value,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -69,7 +70,8 @@ impl Component for Home {
             audio_codecs: json!(null),
             video_codecs: json!(null),
             audio_bitdepths: json!(null),
-            video_bitdepths: json!(null)
+            video_bitdepths: json!(null),
+            video_standards: json!(null)
         }
     }
 
@@ -104,6 +106,7 @@ impl Component for Home {
                     self.video_codecs = Home::video_codec_types(&v);
                     self.audio_bitdepths = Home::audio_bitdepth_types(&v);
                     self.video_bitdepths = Home::video_bitdepth_types(&v);
+                    self.video_standards = Home::video_standard_types(&v);
                 };
                 true
             }
@@ -144,36 +147,41 @@ impl Component for Home {
                     <span style="display:none;" id="chart_audio_bitdepths">{ &self.audio_bitdepths.to_string() }</span>
                     <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
+                    <span style="display:none;" id="chart_video_standards">{ &self.video_standards.to_string() }</span>
                     <div id="all_the_charts">
                         // TODO: Throw this over to the JS in a proper way
                         <div>
-                            { "Tracks per file" }
+                            <h2>{ "Tracks per file" }</h2>
                             <canvas id="tracks"></canvas>
                         </div>
                         <div>
-                            { "Formats" }
+                            <h2>{ "Formats" }</h2>
                             <canvas id="formats"></canvas>
                         </div>
                         <div>
-                            { "Color spaces" }
+                            <h2>{ "Color spaces" }</h2>
                             <canvas id="color_spaces"></canvas>
                         </div>
                         <div>
-                            { "Audio codecs" }
+                            <h2>{ "Audio codecs" }</h2>
                             <canvas id="audio_codecs"></canvas>
                         </div>
                         <div>
-                            { "Audio bit depths" }
+                            <h2>{ "Audio bit depths" }</h2>
                             <canvas id="audio_bitdepths"></canvas>
                         </div>
                         <div>
-                            { "Video codecs" }
+                            <h2>{ "Video codecs" }</h2>
                             <canvas id="video_codecs"></canvas>
                         </div>
                         <div>
-                            { "Video color depths" }
+                            <h2>{ "Video color depths" }</h2>
                             <canvas id="video_bitdepths"></canvas>
-                        </div>                          
+                        </div>      
+                        <div>
+                            <h2>{ "Video standard" }</h2>
+                            <canvas id="video_standards"></canvas>
+                        </div>                     
                     </div>
                 </main>
                 <footer>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></footer>
@@ -377,6 +385,40 @@ impl Home {
                         ttracks.push("None".to_string())
                     } else {
                         ttracks.push(ttt.get("BitDepth").unwrap().to_string());
+
+                    }
+                }
+            }
+        };
+
+        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        for item in ttracks.iter() {
+            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+        };
+
+        #[derive(Deserialize)]
+        let result = json!(value_counts);
+        result
+    }
+
+    fn video_standard_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        };
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Video" {
+                    ttt.get("Standard");
+                    if ttt.get("Standard") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("Standard").unwrap().to_string());
 
                     }
                 }
