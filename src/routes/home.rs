@@ -5,6 +5,8 @@ use std::collections::HashMap;
 use yew::{html, ChangeData, Component, ComponentLink, Html, ShouldRender};
 use yew::services::reader::{File, FileData, ReaderService, ReaderTask};
 
+use crate::routes::about::About;
+
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = console)]
@@ -125,38 +127,7 @@ impl Component for Home {
                 <header class="app-header">
                     <h1>{"media collection viewer"}</h1>
                 </header>
-
-                <main id="about">
-                <div>
-                    <h2>{ "What is this?" }</h2>
-                    <p>
-                        { "This site generates charts that provide you with a high-level overview of your audio
-                           and/or video collections. Because all of the rendering happens on the client side (your
-                           browser), your data is not sent anywhere or collected." }
-                    </p>
-                </div>
-                <div>
-                    <h2>{ "How do I use this?" }</h2>
-                    <p>
-                        { "Upload a mediainfo.json. You can make one by running something like this: " }
-                        <code>{ "mediainfo path/to/files/ --Output=JSON > mediainfo.json" }</code>
-                        { " After confirmation of successful loading, press the button to build charts." }
-                    </p>
-                </div>
-                <div>
-                    <h2>{ "What else?" }</h2>
-                    <p>
-                        { "This is an unrefactored demo/proof-of-concept, expect bugs! 🐛 and please report any 
-                        unexpected behavior. For example, it's better to refresh the page before loading another 
-                        file because things get a little weird in ways I haven't cleaned up yet."}
-                    </p><p>
-                        {"For technical details and forthcoming features, check the " }
-                        <a href="https://github.com/ablwr/media-collection-viewer">{"README"}</a>{"."}
-                    </p>
-                </div>
-                </main>
-
-
+                <About />
                 <main>
                     <input type="file" 
                         id="jsonImport" 

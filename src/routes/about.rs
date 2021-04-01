@@ -21,11 +21,7 @@ impl Component for About {
 
     fn view(&self) -> Html {
         html! {
-            <div class="app">
-                <header class="app-header">
-                    <h1>{"media collection viewer"}</h1>
-                </header>
-                <main id="about">
+                <div id="about">
                 <div>
                     <h2>{ "What is this?" }</h2>
                     <p>
@@ -52,10 +48,8 @@ impl Component for About {
                         {"For technical details and forthcoming features, check the " }
                         <a href="https://github.com/ablwr/media-collection-viewer">{"README"}</a>{"."}
                     </p>
+                </div>  
                 </div>
-                    
-                </main>
-            </div>
         }
     }
 }
