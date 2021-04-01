@@ -27,7 +27,7 @@ impl Component for App {
     fn view(&self) -> Html {
         html! {
             <>
-                <Nav />
+                // <Nav />
                 <Router<AppRoute, ()>
                     render = Router::render(|switch: AppRoute | {
                         match switch {
