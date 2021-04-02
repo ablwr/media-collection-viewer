@@ -56,6 +56,7 @@ small {
 h1 {
   font-size: 4.20em;
   text-shadow: 3px 3px 0px #C57979, 6px 6px 0px #D6C337, 9px 9px 0px #2397A2, 14px 14px 0px #1D2D49;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -71,7 +72,7 @@ h2 {
   white-space: nowrap;
   background-color: #eaac8b;
   text-transform: none;
-  border: 1px solid white;
+  border: 1px solid #ccc;
   cursor: pointer;
   box-sizing: border-box;
   color: black;
@@ -84,21 +85,38 @@ h2 {
 
 #all_the_charts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  grid-template-rows: auto;
+  grid-template-columns: 1fr;
 }
 
-#all_the_charts > div {
+#all_the_charts > section {
   border: 2px solid white;
   margin: 0.5em;
   font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
 }
 
 #about {
   display: grid;
   grid-template-columns: repeat(3, 0.75fr); 
   grid-template-rows: auto; 
-  grid-gap: 4em;
-  padding: 4em;
+  grid-gap: 6em;
+  padding: 2em;
   text-align: left;
+}
+
+#about > div {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#jsonImport {
+    display: inline-block;
+    padding: 8px 12px; 
+    cursor: pointer;
+    background-color: #eaac8b;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    color: black;  
 }

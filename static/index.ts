@@ -19,13 +19,26 @@ const randCols = [
     "#d63031","#feca57","#5f27cd","#54a0ff","#01a3a4"
 ]
 
+let tracks, formats, color_spaces, audio_codecs, video_codecs, audio_bitdepths, 
+    video_bitdepths, video_standards, chroma_subsamplings;
+
 document.getElementById('jsonStart').onclick = function() {
 
-  // tracks 
-  let ctx_tracks = document.getElementById('tracks').getContext('2d');
-  let chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
+  if (tracks) {
+    tracks.destroy();
+    formats.destroy();
+    color_spaces.destroy();
+    audio_codecs.destroy();
+    video_codecs.destroy();
+    audio_bitdepths.destroy();
+    video_bitdepths.destroy();
+    video_standards.destroy();
+    chroma_subsamplings.destroy();
+  }
 
-  let tracks = new Chart(ctx_tracks, {
+  // tracks 
+  let chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
+  tracks = new Chart(document.getElementById('tracks').getContext('2d'), {
         type: 'bar',
         data: {
           labels: Object.keys(chart_tracks),
@@ -39,10 +52,8 @@ document.getElementById('jsonStart').onclick = function() {
       });
 
   // formats
-  let ctx_formats = document.getElementById('formats').getContext('2d');
   let chart_formats = JSON.parse(document.getElementById("chart_formats").textContent);
-
-  let formats = new Chart(ctx_formats, {
+  formats = new Chart(document.getElementById('formats').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_formats),
@@ -56,10 +67,8 @@ document.getElementById('jsonStart').onclick = function() {
       });
 
   // color_spaces
-  let ctx_color_spaces = document.getElementById('color_spaces').getContext('2d');
   let chart_color_spaces = JSON.parse(document.getElementById("chart_color_spaces").textContent);
-
-  let color_spaces = new Chart(ctx_color_spaces, {
+  color_spaces = new Chart(document.getElementById('color_spaces').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_color_spaces),
@@ -73,10 +82,8 @@ document.getElementById('jsonStart').onclick = function() {
       });
 
   // audio_codecs
-  let ctx_audio_codecs = document.getElementById('audio_codecs').getContext('2d');
   let chart_audio_codecs = JSON.parse(document.getElementById("chart_audio_codecs").textContent);
-
-  let audio_codecs = new Chart(ctx_audio_codecs, {
+  audio_codecs = new Chart(document.getElementById('audio_codecs').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_audio_codecs),
@@ -91,10 +98,8 @@ document.getElementById('jsonStart').onclick = function() {
 
 
   // video_codecs
-  let ctx_video_codecs = document.getElementById('video_codecs').getContext('2d');
   let chart_video_codecs = JSON.parse(document.getElementById("chart_video_codecs").textContent);
-
-  let video_codecs = new Chart(ctx_video_codecs, {
+  video_codecs = new Chart(document.getElementById('video_codecs').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_video_codecs),
@@ -105,15 +110,12 @@ document.getElementById('jsonStart').onclick = function() {
               borderWidth: 0,
           }]},
           options: opts,
-       
       });
 
 
   // audio_bitdepths
-  let ctx_audio_bitdepths = document.getElementById('audio_bitdepths').getContext('2d');
   let chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
-
-  let audio_bitdepths = new Chart(ctx_audio_bitdepths, {
+  audio_bitdepths = new Chart(document.getElementById('audio_bitdepths').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_audio_bitdepths),
@@ -128,10 +130,8 @@ document.getElementById('jsonStart').onclick = function() {
 
 
   // video_bitdepths
-  let ctx_video_bitdepths = document.getElementById('video_bitdepths').getContext('2d');
   let chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
-
-  let video_bitdepths = new Chart(ctx_video_bitdepths, {
+  video_bitdepths = new Chart(document.getElementById('video_bitdepths').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_video_bitdepths),
@@ -142,14 +142,11 @@ document.getElementById('jsonStart').onclick = function() {
               borderWidth: 0,
           }]},
           options: opts,
-       
       });
 
   // video_standards
-  let ctx_video_standards = document.getElementById('video_standards').getContext('2d');
   let chart_video_standards = JSON.parse(document.getElementById("chart_video_standards").textContent);
-
-  let video_standards = new Chart(ctx_video_standards, {
+  video_standards = new Chart(document.getElementById('video_standards').getContext('2d'), {
         type: 'bar',
         data: {
           labels: Object.keys(chart_video_standards),
@@ -160,15 +157,12 @@ document.getElementById('jsonStart').onclick = function() {
               borderWidth: 0,
           }]},
           options: bar_opts,
-       
       });
 
 
   // chroma_subsamplings
-  let ctx_chroma_subsamplings = document.getElementById('chroma_subsamplings').getContext('2d');
   let chart_chroma_subsamplings = JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent);
-
-  let chroma_subsamplings = new Chart(ctx_chroma_subsamplings, {
+  chroma_subsamplings = new Chart(document.getElementById('chroma_subsamplings').getContext('2d'), {
         type: 'pie',
         data: {
           labels: Object.keys(chart_chroma_subsamplings),
@@ -179,7 +173,6 @@ document.getElementById('jsonStart').onclick = function() {
               borderWidth: 0,
           }]},
           options: opts,
-       
       });
 
 };

@@ -6,24 +6,14 @@ use yew::{html, ChangeData, Component, ComponentLink, Html, ShouldRender};
 use yew::services::reader::{File, FileData, ReaderService, ReaderTask};
 
 use crate::routes::about::About;
+use crate::components::charts::Charts;
 
-#[wasm_bindgen]
-extern "C" {
-    #[wasm_bindgen(js_namespace = console)]
-    fn log(s: &str);
-}
-
-#[wasm_bindgen(inline_js = "export function sendJson(a) { return a; }")]
-extern "C" {
-    fn sendJson(a: String) -> String;
-}
 
 pub enum Msg {
     SendJson(Vec<File>),
     FileLoaded(FileData),
 }
 
-#[wasm_bindgen]
 pub struct Home {
     link: ComponentLink<Self>,
     tasks: Vec<ReaderTask>,
@@ -48,6 +38,7 @@ pub struct MediaInfo {
 pub struct Media {
     track: Vec<Value>,
 }
+
 
 impl Component for Home {
     type Message = Msg;
@@ -86,14 +77,14 @@ impl Component for Home {
                 self.tasks.push(j);
                 true
             }
-            Msg::FileLoaded(file) => {
-                self.json_filename = format!("File loaded: {:?}", file.name);
+            Msg::FileLoaded(file) => {        
                 let content = serde_json::from_slice(&*file.content).unwrap_or(vec![]);
                 let v: Vec<MediaInfo> = content;
                 if v.is_empty() {
-                    self.json_filename = "Err, are you sure that is MediaInfo JSON you got there?".to_string()
+                    self.json_filename = "Err, are you sure that is MediaInfo JSON you got there?".to_string();
                 } else {
-                    // bring the action
+                    self.json_filename = format!("File loaded: {:?}", file.name);
+
                     self.tracks = Home::number_of_tracks(&v);
                     self.formats = Home::formats_in_collection(&v);
                     self.color_spaces = Home::color_spaces_types(&v);
@@ -145,45 +136,7 @@ impl Component for Home {
                     <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
                     <span style="display:none;" id="chart_video_standards">{ &self.video_standards.to_string() }</span>
                     <span style="display:none;" id="chart_chroma_subsamplings">{ &self.chroma_subsamplings.to_string() }</span>
-                    <div id="all_the_charts">
-                        // TODO: Throw this over to the JS in a proper way
-                        <div>
-                            <h2>{ "Tracks per file" }</h2>
-                            <canvas id="tracks"></canvas>
-                        </div>
-                        <div>
-                            <h2>{ "Formats" }</h2>
-                            <canvas id="formats"></canvas>
-                        </div>
-                        <div>
-                            <h2>{ "Color spaces" }</h2>
-                            <canvas id="color_spaces"></canvas>
-                        </div>
-                        <div>
-                            <h2>{ "Audio codecs" }</h2>
-                            <canvas id="audio_codecs"></canvas>
-                        </div>
-                        <div>
-                            <h2>{ "Audio bit depths" }</h2>
-                            <canvas id="audio_bitdepths"></canvas>
-                        </div>
-                        <div>
-                            <h2>{ "Video codecs" }</h2>
-                            <canvas id="video_codecs"></canvas>
-                        </div>
-                        <div>
-                            <h2>{ "Video color depths" }</h2>
-                            <canvas id="video_bitdepths"></canvas>
-                        </div>      
-                        <div>
-                            <h2>{ "Video standard" }</h2>
-                            <canvas id="video_standards"></canvas>
-                        </div> 
-                        <div>
-                            <h2>{ "Chroma subsampling" }</h2>
-                            <canvas id="chroma_subsamplings"></canvas>
-                        </div>                      
-                    </div>
+                    <Charts/>
                 </main>
                 <footer>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></footer>
             </div>
