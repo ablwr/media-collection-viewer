@@ -8,7 +8,6 @@ use yew::services::reader::{File, FileData, ReaderService, ReaderTask};
 use crate::routes::about::About;
 use crate::components::charts::Charts;
 
-
 pub enum Msg {
     SendJson(Vec<File>),
     FileLoaded(FileData),
@@ -21,12 +20,14 @@ pub struct Home {
     tracks: serde_json::Value,
     formats: serde_json::Value,
     color_spaces: serde_json::Value,
+    dimensions: serde_json::Value,
     audio_codecs: serde_json::Value,
     video_codecs: serde_json::Value,
     audio_bitdepths: serde_json::Value,
     video_bitdepths: serde_json::Value,
     video_standards: serde_json::Value,
     chroma_subsamplings: serde_json::Value,
+    file_extensions: serde_json::Value,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -52,12 +53,14 @@ impl Component for Home {
             tracks: json!(null),
             formats: json!(null),
             color_spaces: json!(null),
+            dimensions: json!(null),
             audio_codecs: json!(null),
             video_codecs: json!(null),
             audio_bitdepths: json!(null),
             video_bitdepths: json!(null),
             video_standards: json!(null),
-            chroma_subsamplings: json!(null)
+            chroma_subsamplings: json!(null),
+            file_extensions: json!(null),
         }
     }
 
@@ -88,12 +91,14 @@ impl Component for Home {
                     self.tracks = Home::number_of_tracks(&v);
                     self.formats = Home::formats_in_collection(&v);
                     self.color_spaces = Home::color_spaces_types(&v);
+                    self.dimensions = Home::dimensions_types(&v);
                     self.audio_codecs = Home::audio_codec_types(&v);
                     self.video_codecs = Home::video_codec_types(&v);
                     self.audio_bitdepths = Home::audio_bitdepth_types(&v);
                     self.video_bitdepths = Home::video_bitdepth_types(&v);
                     self.video_standards = Home::video_standard_types(&v);
                     self.chroma_subsamplings = Home::chroma_subsampling_types(&v);
+                    self.file_extensions = Home::file_extensions_types(&v);
                 };
                 true
             }
@@ -130,12 +135,15 @@ impl Component for Home {
                     <span style="display:none;" id="chart_tracks">{ &self.tracks.to_string() }</span>
                     <span style="display:none;" id="chart_formats">{ &self.formats.to_string() }</span>
                     <span style="display:none;" id="chart_color_spaces">{ &self.color_spaces.to_string() }</span>
+                    <span style="display:none;" id="chart_dimensions">{ &self.dimensions.to_string() }</span>
                     <span style="display:none;" id="chart_audio_codecs">{ &self.audio_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_audio_bitdepths">{ &self.audio_bitdepths.to_string() }</span>
                     <span style="display:none;" id="chart_video_codecs">{ &self.video_codecs.to_string() }</span>
                     <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
                     <span style="display:none;" id="chart_video_standards">{ &self.video_standards.to_string() }</span>
                     <span style="display:none;" id="chart_chroma_subsamplings">{ &self.chroma_subsamplings.to_string() }</span>
+                    <span style="display:none;" id="chart_file_extensions">{ &self.file_extensions.to_string() }</span>
+                    
                     <Charts/>
                 </main>
                 <footer>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></footer>
@@ -147,21 +155,34 @@ impl Component for Home {
 
 impl Home {
 
-    fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
-        // could potentially use an array with known length here
-        let mut track_numbers = Vec::new();
-        for elem in v.iter() {
-            track_numbers.push(elem.media.track.len().to_string());
-        };
 
+    fn count_values(counts: Vec<String>) -> serde_json::Value {
         let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in track_numbers.iter() {
+        for item in counts.iter() {
             *value_counts.entry(String::from(item)).or_insert(0) += 1;
         };
+        json!(value_counts)
+    }
 
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+    fn get_to_tracks(v: &Vec<MediaInfo>) -> Vec<&Vec<serde_json::Value>> {
+        let mut medias = Vec::new();
+        for elem in v.iter() {
+            medias.push(&elem.media);
+        };
+        let mut tracks = Vec::new();
+        for t in &medias {
+            tracks.push(&t.track);
+        }; 
+        tracks.clone() 
+    }
+    
+    fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
+        // could potentially use an array with known length here
+        let mut counts = Vec::new();
+        for elem in v.iter() {
+            counts.push(elem.media.track.len().to_string());
+        };
+        Home::count_values(counts)
     }
 
 
@@ -179,27 +200,13 @@ impl Home {
             // First track is General
             ttracks.push(tt[0]["Format"].to_string());
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 
+
     fn color_spaces_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -214,27 +221,33 @@ impl Home {
                 }
             }
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 
+    fn dimensions_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let tracks = Home::get_to_tracks(&v);
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Video" {
+                    ttt.get("Width");
+                    if ttt.get("Width") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        let mut w = ttt.get("Width").unwrap().to_string();
+                        let mut h = ttt.get("Height").unwrap().to_string();
+                        let mut d = [w, h].join(" x ");
+                        ttracks.push(d.to_string());
+                    }
+                }
+            }
+        };
+        Home::count_values(ttracks)
+    }
+
     fn audio_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -244,27 +257,12 @@ impl Home {
                 }
             }
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 
     fn video_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -274,27 +272,12 @@ impl Home {
                 }
             }
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 
     fn audio_bitdepth_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -309,27 +292,12 @@ impl Home {
                 }
             }
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 
     fn video_bitdepth_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -344,26 +312,11 @@ impl Home {
                 }
             }
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
     fn video_standard_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -378,27 +331,12 @@ impl Home {
                 }
             }
         };
-
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 
     fn chroma_subsampling_types(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in tracks.iter() {
             for ttt in tt.iter() {
@@ -413,15 +351,27 @@ impl Home {
                 }
             }
         };
+        Home::count_values(ttracks)
+    }
 
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
-        for item in ttracks.iter() {
-            *value_counts.entry(String::from(item)).or_insert(0) += 1;
+
+    fn file_extensions_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let tracks = Home::get_to_tracks(&v);
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "General" {
+                    ttt.get("FileExtension");
+                    if ttt.get("FileExtension") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("FileExtension").unwrap().to_string());
+
+                    }
+                }
+            }
         };
-
-        #[derive(Deserialize)]
-        let result = json!(value_counts);
-        result
+        Home::count_values(ttracks)
     }
 
 

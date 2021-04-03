@@ -83,6 +83,11 @@ h2 {
   box-shadow: 0px 1px 0px 0px;
 }
 
+canvas {
+  max-width: 600px;
+  /*max-height: 600px;*/
+}
+
 #all_the_charts {
   display: grid;
   grid-template-columns: 1fr;
@@ -97,11 +102,15 @@ h2 {
   grid-template-rows: auto;
 }
 
+#all_the_charts > section > div {
+  height: auto;
+}
+
 #about {
   display: grid;
   grid-template-columns: repeat(3, 0.75fr); 
   grid-template-rows: auto; 
-  grid-gap: 6em;
+  grid-gap: 4em;
   padding: 2em;
   text-align: left;
 }

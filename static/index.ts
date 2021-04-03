@@ -4,8 +4,8 @@ import Chart from 'chart.js';
 // Start the show
 run()
 
-const opts = { legend: {display: true, position: "bottom", labels: {fontColor: "white", fontStyle: "bold"}}};
-const bar_opts = { legend: {display: false }, scales: {xAxes: [{ticks: {fontColor: "white",fontStyle: "bold"}}]}};
+const opts = { responsive: true, aspectRatio: 1.33, legend: {display: true, maxHeight: 500, position: "bottom", labels: {fontColor: "white", fontStyle: "bold"}}};
+const bar_opts = { responsive: true, aspectRatio: 1.33, legend: {display: false }, scales: {xAxes: [{ticks: {fontColor: "white",fontStyle: "bold"}}]}};
 
 const randCols = [
     "#25CCF7","#FD7272","#54a0ff","#00d2d3",
@@ -20,7 +20,7 @@ const randCols = [
 ]
 
 let tracks, formats, color_spaces, audio_codecs, video_codecs, audio_bitdepths, 
-    video_bitdepths, video_standards, chroma_subsamplings;
+    video_bitdepths, video_standards, chroma_subsamplings, file_extensions;
 
 document.getElementById('jsonStart').onclick = function() {
 
@@ -34,6 +34,7 @@ document.getElementById('jsonStart').onclick = function() {
     video_bitdepths.destroy();
     video_standards.destroy();
     chroma_subsamplings.destroy();
+    file_extensions.destroy();
   }
 
   // tracks 
@@ -79,6 +80,21 @@ document.getElementById('jsonStart').onclick = function() {
               borderWidth: 0,
           }]},
           options: opts,     
+      });
+
+  // dimensions
+  let chart_dimensions = JSON.parse(document.getElementById("chart_dimensions").textContent);
+  dimensions = new Chart(document.getElementById('dimensions').getContext('2d'), {
+        type: 'pie',
+        data: {
+          labels: Object.keys(chart_dimensions),
+          datasets: [{
+              label: 'Dimensions',
+              data: Object.values(chart_dimensions),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: opts,
       });
 
   // audio_codecs
@@ -169,6 +185,21 @@ document.getElementById('jsonStart').onclick = function() {
           datasets: [{
               label: 'Chroma subsampling',
               data: Object.values(chart_chroma_subsamplings),
+              backgroundColor: randCols,
+              borderWidth: 0,
+          }]},
+          options: opts,
+      });
+
+  // file_extensions
+  let chart_file_extensions = JSON.parse(document.getElementById("chart_file_extensions").textContent);
+  file_extensions = new Chart(document.getElementById('file_extensions').getContext('2d'), {
+        type: 'pie',
+        data: {
+          labels: Object.keys(chart_file_extensions),
+          datasets: [{
+              label: 'File extensions',
+              data: Object.values(chart_file_extensions),
               backgroundColor: randCols,
               borderWidth: 0,
           }]},

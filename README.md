@@ -28,8 +28,8 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] What are the bit depths (audio)?
 - [x] What are the color spaces?
 - [x] Standard? (NTSC, PAL, Other)
+- [x] What are the dimensions?
 - [] What are the duration outliers (videos very short or very long)?
-- [] What are the dimensions?
 - [] Which files have timecodes?
 - [] Any files in which audio duration and video duration differ?
 
@@ -42,6 +42,7 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] let user know when file is loading and loaded
 - [x] utilize 'about' page
 - [x] investigate other visualization options
+- [] teach viewer that AVI and avi are the same thing
 - [] handle mediainfo.json that contains only one file (no array, just object)
 - [] refactor!!!! for the love of god
 - [] cleaner delivery of JS objects to charts (right now is so "lol")

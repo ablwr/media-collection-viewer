@@ -22,7 +22,6 @@ impl Component for Charts {
     fn view(&self) -> Html {
         html! {
             <div id="all_the_charts">
-                // TODO: Throw this over to the JS in a proper way
                 <h2>{ "General" }</h2>
                 <section class="General">
                     <div>
@@ -32,6 +31,10 @@ impl Component for Charts {
                     <div>
                         <h3>{ "Formats" }</h3>
                         <canvas id="formats"></canvas>
+                    </div>
+                    <div>
+                        <h3>{ "File extensions" }</h3>
+                        <canvas id="file_extensions"></canvas>
                     </div>
                 </section>
                 <h2>{ "Video" }</h2>
@@ -47,15 +50,19 @@ impl Component for Charts {
                     <div>
                         <h3>{ "Video color depths" }</h3>
                         <canvas id="video_bitdepths"></canvas>
-                    </div>      
-                    <div>
-                        <h3>{ "Video standard" }</h3>
-                        <canvas id="video_standards"></canvas>
-                    </div> 
+                    </div>    
                     <div>
                         <h3>{ "Chroma subsampling" }</h3>
                         <canvas id="chroma_subsamplings"></canvas>
+                    </div>  
+                    <div>
+                        <h3>{ "Video standard" }</h3>
+                        <canvas id="video_standards"></canvas>
                     </div>
+                    <div>
+                        <h3>{ "Dimensions" }</h3>
+                        <canvas id="dimensions"></canvas>
+                    </div>        
                 </section>
                 <h2>{ "Audio" }</h2>
                 <section class="Audio">
