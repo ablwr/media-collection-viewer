@@ -54,6 +54,7 @@ small {
 h1 {
   font-size: 4.2em;
   text-shadow: 3px 3px 0px #C57979, 6px 6px 0px #D6C337, 9px 9px 0px #2397A2, 14px 14px 0px #1D2D49;
+  margin-bottom: 0;
 }
 
 h2 {
@@ -69,7 +70,7 @@ h2 {
   white-space: nowrap;
   background-color: #eaac8b;
   text-transform: none;
-  border: 1px solid white;
+  border: 1px solid #ccc;
   cursor: pointer;
   box-sizing: border-box;
   color: black;
@@ -80,16 +81,27 @@ h2 {
   box-shadow: 0px 1px 0px 0px;
 }
 
+canvas {
+  max-width: 600px;
+  /*max-height: 600px;*/
+}
+
 #all_the_charts {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#all_the_charts > section {
+  border: 2px solid white;
+  margin: 0.5em;
+  font-weight: bold;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: auto;
 }
 
-#all_the_charts > div {
-  border: 2px solid white;
-  margin: 0.5em;
-  font-weight: bold;
+#all_the_charts > section > div {
+  height: auto;
 }
 
 #about {
@@ -97,8 +109,23 @@ h2 {
   grid-template-columns: repeat(3, 0.75fr);
   grid-template-rows: auto;
   grid-gap: 4em;
-  padding: 4em;
+  padding: 2em;
   text-align: left;
+}
+
+#about > div {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#jsonImport {
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+  background-color: #eaac8b;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  color: black;
 }
 
 /*# sourceMappingURL=/styles.164d45a1.css.map */

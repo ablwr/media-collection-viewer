@@ -123,7 +123,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Home = exports.__wbindgen_closure_wrapper5552 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
+exports.__wbindgen_closure_wrapper5801 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
 
 var _media_collection_viewer_bg = _interopRequireDefault(require("./pkg/media_collection_viewer_bg.wasm"));
 
@@ -305,10 +305,8 @@ var __wbindgen_rethrow = _media_collection_viewer_bg.default.__wbindgen_rethrow;
 exports.__wbindgen_rethrow = __wbindgen_rethrow;
 var __wbindgen_memory = _media_collection_viewer_bg.default.__wbindgen_memory;
 exports.__wbindgen_memory = __wbindgen_memory;
-var __wbindgen_closure_wrapper5552 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper5552;
-exports.__wbindgen_closure_wrapper5552 = __wbindgen_closure_wrapper5552;
-var Home = _media_collection_viewer_bg.default.Home;
-exports.Home = Home;
+var __wbindgen_closure_wrapper5801 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper5801;
+exports.__wbindgen_closure_wrapper5801 = __wbindgen_closure_wrapper5801;
 },{"./pkg/media_collection_viewer_bg.wasm":"../pkg/media_collection_viewer_bg.wasm"}],"../node_modules/moment/moment.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -22179,8 +22177,11 @@ var chart_js_1 = __importDefault(require("chart.js")); // Start the show
 
 Cargo_toml_1.run();
 var opts = {
+  responsive: true,
+  aspectRatio: 1.33,
   legend: {
     display: true,
+    maxHeight: 500,
     position: "bottom",
     labels: {
       fontColor: "white",
@@ -22189,6 +22190,8 @@ var opts = {
   }
 };
 var bar_opts = {
+  responsive: true,
+  aspectRatio: 1.33,
   legend: {
     display: false
   },
@@ -22202,12 +22205,25 @@ var bar_opts = {
   }
 };
 var randCols = ["#25CCF7", "#FD7272", "#54a0ff", "#00d2d3", "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d", "#55efc4", "#81ecec", "#74b9ff", "#a29bfe", "#dfe6e9", "#00b894", "#00cec9", "#0984e3", "#6c5ce7", "#ffeaa7", "#fab1a0", "#ff7675", "#fd79a8", "#fdcb6e", "#e17055", "#d63031", "#feca57", "#5f27cd", "#54a0ff", "#01a3a4"];
+var tracks, formats, color_spaces, audio_codecs, video_codecs, audio_bitdepths, video_bitdepths, video_standards, chroma_subsamplings, file_extensions;
 
 document.getElementById('jsonStart').onclick = function () {
-  // tracks 
-  var ctx_tracks = document.getElementById('tracks').getContext('2d');
+  if (tracks) {
+    tracks.destroy();
+    formats.destroy();
+    color_spaces.destroy();
+    audio_codecs.destroy();
+    video_codecs.destroy();
+    audio_bitdepths.destroy();
+    video_bitdepths.destroy();
+    video_standards.destroy();
+    chroma_subsamplings.destroy();
+    file_extensions.destroy();
+  } // tracks 
+
+
   var chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
-  var tracks = new chart_js_1.default(ctx_tracks, {
+  tracks = new chart_js_1.default(document.getElementById('tracks').getContext('2d'), {
     type: 'bar',
     data: {
       labels: Object.keys(chart_tracks),
@@ -22221,9 +22237,8 @@ document.getElementById('jsonStart').onclick = function () {
     options: bar_opts
   }); // formats
 
-  var ctx_formats = document.getElementById('formats').getContext('2d');
   var chart_formats = JSON.parse(document.getElementById("chart_formats").textContent);
-  var formats = new chart_js_1.default(ctx_formats, {
+  formats = new chart_js_1.default(document.getElementById('formats').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_formats),
@@ -22237,9 +22252,8 @@ document.getElementById('jsonStart').onclick = function () {
     options: opts
   }); // color_spaces
 
-  var ctx_color_spaces = document.getElementById('color_spaces').getContext('2d');
   var chart_color_spaces = JSON.parse(document.getElementById("chart_color_spaces").textContent);
-  var color_spaces = new chart_js_1.default(ctx_color_spaces, {
+  color_spaces = new chart_js_1.default(document.getElementById('color_spaces').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_color_spaces),
@@ -22251,11 +22265,25 @@ document.getElementById('jsonStart').onclick = function () {
       }]
     },
     options: opts
+  }); // dimensions
+
+  var chart_dimensions = JSON.parse(document.getElementById("chart_dimensions").textContent);
+  dimensions = new chart_js_1.default(document.getElementById('dimensions').getContext('2d'), {
+    type: 'pie',
+    data: {
+      labels: Object.keys(chart_dimensions),
+      datasets: [{
+        label: 'Dimensions',
+        data: Object.values(chart_dimensions),
+        backgroundColor: randCols,
+        borderWidth: 0
+      }]
+    },
+    options: opts
   }); // audio_codecs
 
-  var ctx_audio_codecs = document.getElementById('audio_codecs').getContext('2d');
   var chart_audio_codecs = JSON.parse(document.getElementById("chart_audio_codecs").textContent);
-  var audio_codecs = new chart_js_1.default(ctx_audio_codecs, {
+  audio_codecs = new chart_js_1.default(document.getElementById('audio_codecs').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_audio_codecs),
@@ -22269,9 +22297,8 @@ document.getElementById('jsonStart').onclick = function () {
     options: opts
   }); // video_codecs
 
-  var ctx_video_codecs = document.getElementById('video_codecs').getContext('2d');
   var chart_video_codecs = JSON.parse(document.getElementById("chart_video_codecs").textContent);
-  var video_codecs = new chart_js_1.default(ctx_video_codecs, {
+  video_codecs = new chart_js_1.default(document.getElementById('video_codecs').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_video_codecs),
@@ -22285,9 +22312,8 @@ document.getElementById('jsonStart').onclick = function () {
     options: opts
   }); // audio_bitdepths
 
-  var ctx_audio_bitdepths = document.getElementById('audio_bitdepths').getContext('2d');
   var chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
-  var audio_bitdepths = new chart_js_1.default(ctx_audio_bitdepths, {
+  audio_bitdepths = new chart_js_1.default(document.getElementById('audio_bitdepths').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_audio_bitdepths),
@@ -22301,9 +22327,8 @@ document.getElementById('jsonStart').onclick = function () {
     options: opts
   }); // video_bitdepths
 
-  var ctx_video_bitdepths = document.getElementById('video_bitdepths').getContext('2d');
   var chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
-  var video_bitdepths = new chart_js_1.default(ctx_video_bitdepths, {
+  video_bitdepths = new chart_js_1.default(document.getElementById('video_bitdepths').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_video_bitdepths),
@@ -22317,9 +22342,8 @@ document.getElementById('jsonStart').onclick = function () {
     options: opts
   }); // video_standards
 
-  var ctx_video_standards = document.getElementById('video_standards').getContext('2d');
   var chart_video_standards = JSON.parse(document.getElementById("chart_video_standards").textContent);
-  var video_standards = new chart_js_1.default(ctx_video_standards, {
+  video_standards = new chart_js_1.default(document.getElementById('video_standards').getContext('2d'), {
     type: 'bar',
     data: {
       labels: Object.keys(chart_video_standards),
@@ -22333,15 +22357,29 @@ document.getElementById('jsonStart').onclick = function () {
     options: bar_opts
   }); // chroma_subsamplings
 
-  var ctx_chroma_subsamplings = document.getElementById('chroma_subsamplings').getContext('2d');
   var chart_chroma_subsamplings = JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent);
-  var chroma_subsamplings = new chart_js_1.default(ctx_chroma_subsamplings, {
+  chroma_subsamplings = new chart_js_1.default(document.getElementById('chroma_subsamplings').getContext('2d'), {
     type: 'pie',
     data: {
       labels: Object.keys(chart_chroma_subsamplings),
       datasets: [{
         label: 'Chroma subsampling',
         data: Object.values(chart_chroma_subsamplings),
+        backgroundColor: randCols,
+        borderWidth: 0
+      }]
+    },
+    options: opts
+  }); // file_extensions
+
+  var chart_file_extensions = JSON.parse(document.getElementById("chart_file_extensions").textContent);
+  file_extensions = new chart_js_1.default(document.getElementById('file_extensions').getContext('2d'), {
+    type: 'pie',
+    data: {
+      labels: Object.keys(chart_file_extensions),
+      datasets: [{
+        label: 'File extensions',
+        data: Object.values(chart_file_extensions),
         backgroundColor: randCols,
         borderWidth: 0
       }]
@@ -22377,7 +22415,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35919" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "45217" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -22947,26 +22985,6 @@ function handleError(f) {
         }
     };
 }
-/**
-*/
-class  Home {
-
-    constructor() {
-        throw new Error('cannot invoke `new` directly');
-    }
-
-    __destroy_into_raw() {
-        const ptr = this.ptr;
-        this.ptr = 0;
-
-        return ptr;
-    }
-
-    free() {
-        const ptr = this.__destroy_into_raw();
-        wasm.__wbg_home_free(ptr);
-    }
-}
 
 __exports.__wbindgen_string_new = function(arg0, arg1) {
     var ret = getStringFromWasm0(arg0, arg1);
@@ -23435,13 +23453,13 @@ __exports.__wbindgen_memory = function() {
     return addHeapObject(ret);
 };
 
-__exports.__wbindgen_closure_wrapper5552 = logError(function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 196, __wbg_adapter_26);
+__exports.__wbindgen_closure_wrapper5801 = logError(function(arg0, arg1, arg2) {
+    var ret = makeMutClosure(arg0, arg1, 219, __wbg_adapter_26);
     return addHeapObject(ret);
 });
 
 
-__exports. Home =  Home;
+
       function init(wasm_path) {
           const fetchPromise = fetch(wasm_path);
           let resultPromise;
