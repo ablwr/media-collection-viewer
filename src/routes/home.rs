@@ -84,7 +84,7 @@ impl Component for Home {
                 let content = serde_json::from_slice(&*file.content).unwrap_or(vec![]);
                 let v: Vec<MediaInfo> = content;
                 if v.is_empty() {
-                    self.json_filename = "Err, are you sure that is MediaInfo JSON you got there?".to_string();
+                    self.json_filename = "Err, are you sure that is valid JSON you got there? Please note that the MediaInfo version must be 18.08-1 or later!".to_string();
                 } else {
                     self.json_filename = format!("File loaded: {:?}", file.name);
 
@@ -155,6 +155,7 @@ impl Component for Home {
 
 impl Home {
 
+// Functions for abstraction of repeat tasks
 
     fn count_values(counts: Vec<String>) -> serde_json::Value {
         let mut value_counts : HashMap<String, i32> = HashMap::new();
@@ -175,7 +176,9 @@ impl Home {
         }; 
         tracks.clone() 
     }
-    
+
+// Functions getting JSONs
+
     fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
         // could potentially use an array with known length here
         let mut counts = Vec::new();
@@ -187,14 +190,7 @@ impl Home {
 
 
     fn formats_in_collection(v: &Vec<MediaInfo>) -> serde_json::Value {
-        let mut medias = Vec::new();
-        for elem in v.iter() {
-            medias.push(&elem.media);
-        };
-        let mut tracks = Vec::new();
-        for t in &medias {
-            tracks.push(&t.track);
-        };
+        let tracks = Home::get_to_tracks(&v);
         let mut ttracks = Vec::new();
         for tt in &tracks {
             // First track is General
@@ -202,7 +198,6 @@ impl Home {
         };
         Home::count_values(ttracks)
     }
-
 
 
     fn color_spaces_types(v: &Vec<MediaInfo>) -> serde_json::Value {
@@ -215,7 +210,7 @@ impl Home {
                     if ttt.get("ColorSpace") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("ColorSpace").unwrap().to_string());
+                        ttracks.push(ttt.get("ColorSpace").unwrap().as_str().unwrap().to_string());
 
                     }
                 }
@@ -235,8 +230,8 @@ impl Home {
                     if ttt.get("Width") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        let mut w = ttt.get("Width").unwrap().to_string();
-                        let mut h = ttt.get("Height").unwrap().to_string();
+                        let mut w = ttt.get("Width").unwrap().as_str().unwrap();
+                        let mut h = ttt.get("Height").unwrap().as_str().unwrap();
                         let mut d = [w, h].join(" x ");
                         ttracks.push(d.to_string());
                     }
@@ -253,7 +248,7 @@ impl Home {
             for ttt in tt.iter() {
                 if ttt.get("@type").unwrap() == "Audio" {
                     ttt.get("Format");
-                    ttracks.push(ttt.get("Format").unwrap().to_string());
+                    ttracks.push(ttt.get("Format").unwrap().as_str().unwrap().to_string());
                 }
             }
         };
@@ -268,7 +263,7 @@ impl Home {
             for ttt in tt.iter() {
                 if ttt.get("@type").unwrap() == "Video" {
                     ttt.get("Format");
-                    ttracks.push(ttt.get("Format").unwrap().to_string());
+                    ttracks.push(ttt.get("Format").unwrap().as_str().unwrap().to_string());
                 }
             }
         };
@@ -286,7 +281,7 @@ impl Home {
                     if ttt.get("BitDepth") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("BitDepth").unwrap().to_string());
+                        ttracks.push(ttt.get("BitDepth").unwrap().as_str().unwrap().to_string());
 
                     }
                 }
@@ -306,7 +301,7 @@ impl Home {
                     if ttt.get("BitDepth") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("BitDepth").unwrap().to_string());
+                        ttracks.push(ttt.get("BitDepth").unwrap().as_str().unwrap().to_string());
 
                     }
                 }
@@ -325,7 +320,7 @@ impl Home {
                     if ttt.get("Standard") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("Standard").unwrap().to_string());
+                        ttracks.push(ttt.get("Standard").unwrap().as_str().unwrap().to_string());
 
                     }
                 }
@@ -345,7 +340,7 @@ impl Home {
                     if ttt.get("ChromaSubsampling") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("ChromaSubsampling").unwrap().to_string());
+                        ttracks.push(ttt.get("ChromaSubsampling").unwrap().as_str().unwrap().to_string());
 
                     }
                 }
@@ -365,7 +360,7 @@ impl Home {
                     if ttt.get("FileExtension") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("FileExtension").unwrap().to_string());
+                        ttracks.push(ttt.get("FileExtension").unwrap().as_str().unwrap().to_string());
 
                     }
                 }

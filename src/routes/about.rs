@@ -34,6 +34,7 @@ impl Component for About {
                     <h2>{ "How do I use this?" }</h2>
                     <p>{ "Upload a mediainfo.json. You can make one by running something like this: " }</p>
                     <code>{ "mediainfo path/to/files/ --Output=JSON > mediainfo.json" }</code>
+                    <br/><p>{ " Note: You must use MediaInfo version 18.08-1 or later to get valid JSON" }</p>
                     <p>{ " After loaded, press the button to build charts." }</p>
                 </div>
                 <div>
