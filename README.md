@@ -29,9 +29,9 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] What are the color spaces?
 - [x] Standard? (NTSC, PAL, Other)
 - [x] What are the dimensions?
-- [] What are the duration outliers (videos very short or very long)?
-- [] Which files have timecodes?
-- [] Any files in which audio duration and video duration differ?
+- [ ] What are the duration outliers (videos very short or very long)?
+- [ ] Which files have timecodes?
+- [ ] Any files in which audio duration and video duration differ?
 
 ## TODO list
 
@@ -42,15 +42,15 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] let user know when file is loading and loaded
 - [x] utilize 'about' page
 - [x] investigate other visualization options
-- [] teach viewer that AVI and avi are the same thing
-- [] handle mediainfo.json that contains only one file (no array, just object)
-- [] refactor!!!! for the love of god
-- [] cleaner delivery of JS objects to charts (right now is so "lol")
-- [] cleaner display of charts (update, not overwrite)
-- [] create chart-builder mechanism to reduce LOC
-- [] build charts on load rather than with button click
-- [] Figure out how to display which files are in certain categories
-- [] Move TODOs to Issues tracker when at a reasonable beta stage
+- [ ] teach viewer that AVI and avi are the same thing
+- [ ] handle mediainfo.json that contains only one file (no array, just object)
+- [ ] refactor!!!! for the love of god
+- [ ] cleaner delivery of JS objects to charts (right now is so "lol")
+- [ ] cleaner display of charts (update, not overwrite)
+- [ ] create chart-builder mechanism to reduce LOC
+- [ ] build charts on load rather than with button click
+- [ ] Figure out how to display which files are in certain categories
+- [ ] Move TODOs to Issues tracker when at a reasonable beta stage
 
 ## Code
 - Rust
