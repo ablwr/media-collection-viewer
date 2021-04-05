@@ -20,7 +20,7 @@ const randCols = [
 ]
 
 let tracks, formats, color_spaces, audio_codecs, video_codecs, audio_bitdepths, 
-    video_bitdepths, video_standards, chroma_subsamplings, file_extensions;
+    video_bitdepths, video_standards, chroma_subsamplings, file_extensions, dimensions;
 
 document.getElementById('jsonStart').onclick = function() {
 
@@ -35,6 +35,7 @@ document.getElementById('jsonStart').onclick = function() {
     video_standards.destroy();
     chroma_subsamplings.destroy();
     file_extensions.destroy();
+    dimensions.destroy();
   }
 
   // tracks 
