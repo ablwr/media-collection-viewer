@@ -21,7 +21,7 @@ impl Component for Charts {
 
     fn view(&self) -> Html {
         html! {
-            <div id="all_the_charts">
+            <>
                 <h2>{ "General" }</h2>
                 <section class="General">
                     <div>
@@ -74,11 +74,8 @@ impl Component for Charts {
                         <h3>{ "Audio bit depths" }</h3>
                         <canvas id="audio_bitdepths"></canvas>
                     </div>
-                </section>
-
-                
-                                      
-            </div>
+                </section>                   
+            </>
         }
     }
 }

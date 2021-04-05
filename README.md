@@ -42,14 +42,14 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] let user know when file is loading and loaded
 - [x] utilize 'about' page
 - [x] investigate other visualization options
-- [] teach viewer that AVI and avi are the same thing
+- [x] cleaner display of charts (update, not overwrite)
+- [] teach viewer that AVI and avi are the same thing (or decide not to? sometimes this can fuck things up?)
 - [] handle mediainfo.json that contains only one file (no array, just object)
 - [] refactor!!!! for the love of god
 - [] cleaner delivery of JS objects to charts (right now is so "lol")
-- [] cleaner display of charts (update, not overwrite)
 - [] create chart-builder mechanism to reduce LOC
 - [] build charts on load rather than with button click
-- [] Figure out how to display which files are in certain categories
+- [] Figure out how to display which files are in certain categories (i.e. WHICH two files are NTSC instead of PAL?)
 - [] Move TODOs to Issues tracker when at a reasonable beta stage
 
 ## Code

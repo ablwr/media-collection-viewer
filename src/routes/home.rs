@@ -28,6 +28,7 @@ pub struct Home {
     video_standards: serde_json::Value,
     chroma_subsamplings: serde_json::Value,
     file_extensions: serde_json::Value,
+    longest_shortest: String,
 }
 
 #[derive(Serialize, Deserialize)]
@@ -61,6 +62,7 @@ impl Component for Home {
             video_standards: json!(null),
             chroma_subsamplings: json!(null),
             file_extensions: json!(null),
+            longest_shortest: String::new(),
         }
     }
 
@@ -99,6 +101,7 @@ impl Component for Home {
                     self.video_standards = Home::video_standard_types(&v);
                     self.chroma_subsamplings = Home::chroma_subsampling_types(&v);
                     self.file_extensions = Home::file_extensions_types(&v);
+                    self.longest_shortest = Home::longest_shortest(&v);
                 };
                 true
             }
@@ -142,9 +145,18 @@ impl Component for Home {
                     <span style="display:none;" id="chart_video_bitdepths">{ &self.video_bitdepths.to_string() }</span>
                     <span style="display:none;" id="chart_video_standards">{ &self.video_standards.to_string() }</span>
                     <span style="display:none;" id="chart_chroma_subsamplings">{ &self.chroma_subsamplings.to_string() }</span>
-                    <span style="display:none;" id="chart_file_extensions">{ &self.file_extensions.to_string() }</span>
-                    
-                    <Charts/>
+                    <span style="display:none;" id="chart_file_extensions">{ &self.file_extensions.to_string() }</span>                    
+                    <div id="all_the_charts">
+                        <Charts/>
+                        <h2>{ "Superlatives / Experimental 👩‍🔬" }</h2>
+                        <section class="Superlatives">
+                            <div>
+                                <h3>{ "Longest / Shortest" }</h3>
+                                <span id="chart_longest_shortest">{ &self.longest_shortest }</span>
+                            </div>
+                        </section>
+                        
+                    </div>
                 </main>
                 <footer>{"By @ablwr: "}<a href="https://github.com/ablwr/media-collection-viewer">{"source"}</a></footer>
             </div>
@@ -367,6 +379,26 @@ impl Home {
             }
         };
         Home::count_values(ttracks)
+    }
+
+
+    fn longest_shortest(v: &Vec<MediaInfo>) -> String {
+        let tracks = Home::get_to_tracks(&v);
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "General" {
+                    if ttt.get("Duration") != None {
+                        let s: f64 = ttt.get("Duration").unwrap().as_str().unwrap().parse().unwrap();
+                        ttracks.push(s);
+                    }
+                }
+            }
+        };
+        ttracks.sort_by(|a, b| a.partial_cmp(b).unwrap());
+        // log::info!("{:?}",ttracks);
+        let info: String = format!("Shortest: {:?}, Longest: {:?}", ttracks.first().unwrap().to_string(), ttracks.last().unwrap().to_string());
+        info
     }
 
 
