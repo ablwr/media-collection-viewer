@@ -34,13 +34,16 @@ impl Component for About {
                     <h2>{ "How do I use this?" }</h2>
                     <p>{ "Upload a mediainfo.json. You can make one by running something like this: " }</p>
                     <code>{ "mediainfo path/to/files/ --Output=JSON > mediainfo.json" }</code>
-                    <br/><p>{ " Note: You must use MediaInfo version 18.08-1 or later to get valid JSON" }</p>
+                    <p>{ "You can also download the "}
+                      <a href="https://mediaarea.net/en/MediaInfo">{"MediaInfo GUI"}</a>
+                      {", select JSON from View, and save that data as a file."}</p>
                     <p>{ " After loaded, press the button to build charts." }</p>
                 </div>
                 <div>
                     <h2>{ "What else?" }</h2>
+                    <p>{ " Note: You must use MediaInfo version 18.08-1 or later to get valid JSON." }</p>
                     <p>
-                        { "This is an unrefactored demo/proof-of-concept, expect bugs! 🐛 and please report any 
+                        { "This is still experimental, expect bugs and changes! 🐛 and please report any 
                         unexpected behavior."}
                     </p>
                     <p>

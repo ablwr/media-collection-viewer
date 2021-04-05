@@ -41,7 +41,7 @@ document.getElementById('jsonStart').onclick = function() {
   // tracks 
   let chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
   tracks = new Chart(document.getElementById('tracks').getContext('2d'), {
-        type: 'bar',
+        type: 'pie',
         data: {
           labels: Object.keys(chart_tracks),
           datasets: [{

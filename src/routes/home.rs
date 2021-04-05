@@ -396,7 +396,6 @@ impl Home {
             }
         };
         ttracks.sort_by(|a, b| a.partial_cmp(b).unwrap());
-        // log::info!("{:?}",ttracks);
         let info: String = format!("Shortest: {:?}, Longest: {:?}", ttracks.first().unwrap().to_string(), ttracks.last().unwrap().to_string());
         info
     }

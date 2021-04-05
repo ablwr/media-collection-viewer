@@ -43,7 +43,6 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] utilize 'about' page
 - [x] investigate other visualization options
 - [x] cleaner display of charts (update, not overwrite)
-- [ ] teach viewer that AVI and avi are the same thing (or decide not to? sometimes this can fuck things up?)
 - [ ] handle mediainfo.json that contains only one file (no array, just object)
 - [ ] refactor!!!! for the love of god
 - [ ] cleaner delivery of JS objects to charts (right now is so "lol")
