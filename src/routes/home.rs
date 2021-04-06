@@ -1,5 +1,5 @@
 use serde::{Deserialize, Serialize};
-use serde_json::{json, Value};
+use serde_json::{Value};
 use yew::{html, ChangeData, Component, ComponentLink, Html, ShouldRender};
 use yew::services::reader::{File, FileData, ReaderService, ReaderTask};
 

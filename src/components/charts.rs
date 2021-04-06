@@ -1,5 +1,5 @@
 use yew::prelude::*;
-use serde_json::{json, Value};
+use serde_json::{json};
 use std::collections::HashMap;
 
 use crate::routes::home::MediaInfo;
@@ -112,7 +112,6 @@ impl Component for Charts {
         }
     }
 }
-
 
 
 impl Charts {
@@ -349,6 +348,5 @@ impl Charts {
         let info: String = format!("Shortest: {:?}, Longest: {:?}", ttracks.first().unwrap_or(&0.0).to_string(), ttracks.last().unwrap_or(&0.0).to_string());
         info
     }
-
 
 }

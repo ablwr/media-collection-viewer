@@ -43,8 +43,6 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [x] utilize 'about' page
 - [x] investigate other visualization options
 - [x] cleaner display of charts (update, not overwrite)
-- [ ] handle mediainfo.json that contains only one file (no array, just object)
-- [ ] refactor!!!! for the love of god
 - [ ] cleaner delivery of JS objects to charts (right now is so "lol")
 - [ ] create chart-builder mechanism to reduce LOC
 - [ ] build charts on load rather than with button click
