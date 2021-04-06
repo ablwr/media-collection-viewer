@@ -50,7 +50,7 @@ document.getElementById('jsonStart').onclick = function() {
               backgroundColor: randCols,
               borderWidth: 0,
           }]},
-          options: bar_opts,    
+          options: opts,    
       });
 
   // formats
