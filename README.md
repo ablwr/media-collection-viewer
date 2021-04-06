@@ -33,22 +33,6 @@ Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON >
 - [ ] Which files have timecodes?
 - [ ] Any files in which audio duration and video duration differ?
 
-## TODO list
-
-- [x] Test uploaded JS can roundtrip through WASM to Rust and back to browser  
-- [x] Build JSON in Rust to send to browser  
-- [x] Build chart out of delivered JSON
-- [x] warn if not getting desired input
-- [x] let user know when file is loading and loaded
-- [x] utilize 'about' page
-- [x] investigate other visualization options
-- [x] cleaner display of charts (update, not overwrite)
-- [ ] cleaner delivery of JS objects to charts (right now is so "lol")
-- [ ] create chart-builder mechanism to reduce LOC
-- [ ] build charts on load rather than with button click
-- [ ] Figure out how to display which files are in certain categories (i.e. WHICH two files are NTSC instead of PAL?)
-- [ ] Move TODOs to Issues tracker when at a reasonable beta stage
-
 ## Code
 - Rust
 - WASM
