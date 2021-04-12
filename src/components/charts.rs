@@ -9,7 +9,6 @@ pub struct Props {
     pub json_data: Vec<MediaInfo>,
 }
 
-
 pub struct Charts {
     json_data: Vec<MediaInfo>,
 }
@@ -95,6 +94,10 @@ impl Component for Charts {
                         <h3>{ "Longest / Shortest" }</h3>
                         <span id="chart_longest_shortest">{ Charts::longest_shortest(&self.json_data) }</span>
                     </div>
+                    <div>
+                        <h3>{ "Other data" }</h3>
+                        <canvas id="other_data"></canvas>
+                    </div>
                 </section>
                 // just don't look at this...!!!
                 <span style="display:none;" id="chart_tracks">{ Charts::number_of_tracks(&self.json_data) }</span>
@@ -107,7 +110,8 @@ impl Component for Charts {
                 <span style="display:none;" id="chart_video_bitdepths">{ Charts::video_bitdepth_types(&self.json_data) }</span>
                 <span style="display:none;" id="chart_video_standards">{ Charts::video_standard_types(&self.json_data) }</span>
                 <span style="display:none;" id="chart_chroma_subsamplings">{ Charts::chroma_subsampling_types(&self.json_data) }</span>
-                <span style="display:none;" id="chart_file_extensions">{ Charts::file_extensions_types(&self.json_data) }</span>              
+                <span style="display:none;" id="chart_file_extensions">{ Charts::file_extensions_types(&self.json_data) }</span>
+                <span style="display:none;" id="chart_other_data">{ Charts::other_data_types(&self.json_data) }</span>              
             </div>
         }
     }
@@ -348,5 +352,28 @@ impl Charts {
         let info: String = format!("Shortest: {:?}, Longest: {:?}", ttracks.first().unwrap_or(&0.0).to_string(), ttracks.last().unwrap_or(&0.0).to_string());
         info
     }
+
+
+    fn other_data_types(v: &Vec<MediaInfo>) -> serde_json::Value {
+        let tracks = Charts::get_to_tracks(&v);
+        let mut ttracks = Vec::new();
+        for tt in tracks.iter() {
+            for ttt in tt.iter() {
+                if ttt.get("@type").unwrap() == "Other" {
+                    ttt.get("FileExtension");
+                    if ttt.get("FileExtension") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("FileExtension").unwrap().as_str().unwrap().to_string());
+
+                    }
+                }
+            }
+        };
+        Charts::count_values(ttracks)
+    }
+
+
+
 
 }

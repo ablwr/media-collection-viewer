@@ -20,7 +20,24 @@ const randCols = [
 ]
 
 let tracks, formats, color_spaces, audio_codecs, video_codecs, audio_bitdepths, 
-    video_bitdepths, video_standards, chroma_subsamplings, file_extensions, dimensions;
+    video_bitdepths, video_standards, chroma_subsamplings, file_extensions, dimensions,
+    other_data;
+
+
+let buildChart = function(name, label, data, opts) {
+  new Chart(document.getElementById(name).getContext('2d'), {
+    type: 'pie',
+    data: {
+      labels: Object.keys(data),
+      datasets: [{
+          label: label,
+          data: Object.values(data),
+          backgroundColor: randCols,
+          borderWidth: 0,
+      }]},
+      options: opts,    
+  });
+}
 
 document.getElementById('jsonStart').onclick = function() {
 
@@ -36,176 +53,23 @@ document.getElementById('jsonStart').onclick = function() {
     chroma_subsamplings.destroy();
     file_extensions.destroy();
     dimensions.destroy();
+    other_data.destroy();
+
   }
 
   // tracks 
-  let chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
-  tracks = new Chart(document.getElementById('tracks').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_tracks),
-          datasets: [{
-              label: '# of Tracks per file',
-              data: Object.values(chart_tracks),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,    
-      });
-
-  // formats
-  let chart_formats = JSON.parse(document.getElementById("chart_formats").textContent);
-  formats = new Chart(document.getElementById('formats').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_formats),
-          datasets: [{
-              label: 'Formats',
-              data: Object.values(chart_formats),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,     
-      });
-
-  // color_spaces
-  let chart_color_spaces = JSON.parse(document.getElementById("chart_color_spaces").textContent);
-  color_spaces = new Chart(document.getElementById('color_spaces').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_color_spaces),
-          datasets: [{
-              label: 'Colorspaces',
-              data: Object.values(chart_color_spaces),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,     
-      });
-
-  // dimensions
-  let chart_dimensions = JSON.parse(document.getElementById("chart_dimensions").textContent);
-  dimensions = new Chart(document.getElementById('dimensions').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_dimensions),
-          datasets: [{
-              label: 'Dimensions',
-              data: Object.values(chart_dimensions),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,
-      });
-
-  // audio_codecs
-  let chart_audio_codecs = JSON.parse(document.getElementById("chart_audio_codecs").textContent);
-  audio_codecs = new Chart(document.getElementById('audio_codecs').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_audio_codecs),
-          datasets: [{
-              label: 'Audio codecs',
-              data: Object.values(chart_audio_codecs),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,     
-      });
-
-
-  // video_codecs
-  let chart_video_codecs = JSON.parse(document.getElementById("chart_video_codecs").textContent);
-  video_codecs = new Chart(document.getElementById('video_codecs').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_video_codecs),
-          datasets: [{
-              label: 'Video codecs',
-              data: Object.values(chart_video_codecs),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,
-      });
-
-
-  // audio_bitdepths
-  let chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
-  audio_bitdepths = new Chart(document.getElementById('audio_bitdepths').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_audio_bitdepths),
-          datasets: [{
-              label: 'Audio bit depths',
-              data: Object.values(chart_audio_bitdepths),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,     
-      });
-
-
-  // video_bitdepths
-  let chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
-  video_bitdepths = new Chart(document.getElementById('video_bitdepths').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_video_bitdepths),
-          datasets: [{
-              label: 'Color depths',
-              data: Object.values(chart_video_bitdepths),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,
-      });
-
-  // video_standards
-  let chart_video_standards = JSON.parse(document.getElementById("chart_video_standards").textContent);
-  video_standards = new Chart(document.getElementById('video_standards').getContext('2d'), {
-        type: 'bar',
-        data: {
-          labels: Object.keys(chart_video_standards),
-          datasets: [{
-              label: 'Color depths',
-              data: Object.values(chart_video_standards),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: bar_opts,
-      });
-
-
-  // chroma_subsamplings
-  let chart_chroma_subsamplings = JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent);
-  chroma_subsamplings = new Chart(document.getElementById('chroma_subsamplings').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_chroma_subsamplings),
-          datasets: [{
-              label: 'Chroma subsampling',
-              data: Object.values(chart_chroma_subsamplings),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,
-      });
-
-  // file_extensions
-  let chart_file_extensions = JSON.parse(document.getElementById("chart_file_extensions").textContent);
-  file_extensions = new Chart(document.getElementById('file_extensions').getContext('2d'), {
-        type: 'pie',
-        data: {
-          labels: Object.keys(chart_file_extensions),
-          datasets: [{
-              label: 'File extensions',
-              data: Object.values(chart_file_extensions),
-              backgroundColor: randCols,
-              borderWidth: 0,
-          }]},
-          options: opts,
-      });
+  buildChart("tracks", "# of Tracks per file", JSON.parse(document.getElementById("chart_tracks").textContent), opts)
+  buildChart("formats", "Formats", JSON.parse(document.getElementById("chart_formats").textContent), opts)
+  buildChart("color_spaces", "Colorspaces", JSON.parse(document.getElementById("chart_color_spaces").textContent), opts)
+  buildChart("dimensions", "Dimensions", JSON.parse(document.getElementById("chart_dimensions").textContent), opts)
+  buildChart("audio_codecs", "Audio codecs", JSON.parse(document.getElementById("chart_audio_codecs").textContent), opts)
+  buildChart("video_codecs", "Video codecs", JSON.parse(document.getElementById("chart_video_codecs").textContent), opts)
+  buildChart("audio_bitdepths", "Audio bit depths", JSON.parse(document.getElementById("chart_audio_bitdepths").textContent), opts)
+  buildChart("video_bitdepths", "Video bit depths", JSON.parse(document.getElementById("chart_video_bitdepths").textContent), opts)
+  buildChart("video_standards", "Video standards", JSON.parse(document.getElementById("chart_video_standards").textContent), bar_opts)
+  buildChart("chroma_subsamplings", "Chroma subsamplings", JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent), opts)
+  buildChart("file_extensions", "File extensions", JSON.parse(document.getElementById("chart_file_extensions").textContent), opts)
+  buildChart("other_data", "Other data", JSON.parse(document.getElementById("chart_other_data").textContent), opts)
 
 };
 
