@@ -1,14 +1,12 @@
 # Media Collection Viewer
 
-Early WIP!
-
 Demo is [live](http://bits.ashleyblewer.com/media-collection-viewer/index.html)
 
 ## Description
 
 Upload a mediainfo.json (`mediainfo ~/path/to/audiovideo/files/* --Output=JSON > mediainfo.json`) to get charts that provide you with a high-level overview of your collections.
 
-**WIP -- can't guarantee success! 😅**
+**Prototype -- can't guarantee success! 😅**
 
 ## Project goals
 
