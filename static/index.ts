@@ -20,7 +20,7 @@ const randCols = [
 ]
 
 function buildChart({ name, label, data, opts }: { name: string; label: string; data: {}; opts: {}; }): void {
-  const ctx = document.getElementById(name).getContext('2d');
+  const ctx: HTMLCanvasElement = (document.getElementById(name) as HTMLCanvasElement).getContext('2d');
   return new Chart(ctx, {
     type: 'pie',
     data: {
