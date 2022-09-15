@@ -1,6 +1,6 @@
-use yew::prelude::*;
-use serde_json::{json};
+use serde_json::json;
 use std::collections::HashMap;
+use yew::prelude::*;
 
 use crate::routes::home::MediaInfo;
 
@@ -63,11 +63,11 @@ impl Component for Charts {
                     <div>
                         <h3>{ "Video color depths" }</h3>
                         <canvas id="video_bitdepths"></canvas>
-                    </div>    
+                    </div>
                     <div>
                         <h3>{ "Chroma subsampling" }</h3>
                         <canvas id="chroma_subsamplings"></canvas>
-                    </div>  
+                    </div>
                     <div>
                         <h3>{ "Video standard" }</h3>
                         <canvas id="video_standards"></canvas>
@@ -75,7 +75,7 @@ impl Component for Charts {
                     <div>
                         <h3>{ "Dimensions" }</h3>
                         <canvas id="dimensions"></canvas>
-                    </div>        
+                    </div>
                 </section>
                 <h2>{ "Audio" }</h2>
                 <section class="Audio">
@@ -111,22 +111,20 @@ impl Component for Charts {
                 <span style="display:none;" id="chart_video_standards">{ Charts::video_standard_types(&self.json_data) }</span>
                 <span style="display:none;" id="chart_chroma_subsamplings">{ Charts::chroma_subsampling_types(&self.json_data) }</span>
                 <span style="display:none;" id="chart_file_extensions">{ Charts::file_extensions_types(&self.json_data) }</span>
-                <span style="display:none;" id="chart_other_data">{ Charts::other_data_types(&self.json_data) }</span>              
+                <span style="display:none;" id="chart_other_data">{ Charts::other_data_types(&self.json_data) }</span>
             </div>
         }
     }
 }
 
-
 impl Charts {
-
-// Functions for abstraction of repeat tasks
+    // Functions for abstraction of repeat tasks
 
     fn count_values(counts: Vec<String>) -> serde_json::Value {
-        let mut value_counts : HashMap<String, i32> = HashMap::new();
+        let mut value_counts: HashMap<String, i32> = HashMap::new();
         for item in counts.iter() {
             *value_counts.entry(String::from(item)).or_insert(0) += 1;
-        };
+        }
         json!(value_counts)
     }
 
@@ -134,25 +132,24 @@ impl Charts {
         let mut medias = Vec::new();
         for elem in v.iter() {
             medias.push(&elem.media);
-        };
+        }
         let mut tracks = Vec::new();
         for t in &medias {
             tracks.push(&t.track);
-        }; 
-        tracks.clone() 
+        }
+        tracks.clone()
     }
 
-// Functions getting JSONs
+    // Functions getting JSONs
 
     fn number_of_tracks(v: &Vec<MediaInfo>) -> serde_json::Value {
         // could potentially use an array with known length here
         let mut counts = Vec::new();
         for elem in v.iter() {
             counts.push(elem.media.track.len().to_string());
-        };
+        }
         Charts::count_values(counts)
     }
-
 
     fn formats_in_collection(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -160,10 +157,9 @@ impl Charts {
         for tt in &tracks {
             // First track is General
             ttracks.push(tt[0]["Format"].to_string());
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn color_spaces_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -176,14 +172,12 @@ impl Charts {
                         ttracks.push("None".to_string())
                     } else {
                         ttracks.push(ttt.get("ColorSpace").unwrap().as_str().unwrap().to_string());
-
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn dimensions_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -202,7 +196,7 @@ impl Charts {
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
 
@@ -213,13 +207,16 @@ impl Charts {
             for ttt in tt.iter() {
                 if ttt.get("@type").unwrap() == "Audio" {
                     ttt.get("Format");
-                    ttracks.push(ttt.get("Format").unwrap().as_str().unwrap().to_string());
+                    if ttt.get("Format") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("Format").unwrap().as_str().unwrap().to_string());
+                    }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn video_codec_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -228,13 +225,16 @@ impl Charts {
             for ttt in tt.iter() {
                 if ttt.get("@type").unwrap() == "Video" {
                     ttt.get("Format");
-                    ttracks.push(ttt.get("Format").unwrap().as_str().unwrap().to_string());
+                    if ttt.get("Format") == None {
+                        ttracks.push("None".to_string())
+                    } else {
+                        ttracks.push(ttt.get("Format").unwrap().as_str().unwrap().to_string());
+                    }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn audio_bitdepth_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -247,14 +247,12 @@ impl Charts {
                         ttracks.push("None".to_string())
                     } else {
                         ttracks.push(ttt.get("BitDepth").unwrap().as_str().unwrap().to_string());
-
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn video_bitdepth_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -267,11 +265,10 @@ impl Charts {
                         ttracks.push("None".to_string())
                     } else {
                         ttracks.push(ttt.get("BitDepth").unwrap().as_str().unwrap().to_string());
-
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
 
@@ -286,14 +283,12 @@ impl Charts {
                         ttracks.push("None".to_string())
                     } else {
                         ttracks.push(ttt.get("Standard").unwrap().as_str().unwrap().to_string());
-
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn chroma_subsampling_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -305,15 +300,19 @@ impl Charts {
                     if ttt.get("ChromaSubsampling") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("ChromaSubsampling").unwrap().as_str().unwrap().to_string());
-
+                        ttracks.push(
+                            ttt.get("ChromaSubsampling")
+                                .unwrap()
+                                .as_str()
+                                .unwrap()
+                                .to_string(),
+                        );
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn file_extensions_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -325,15 +324,19 @@ impl Charts {
                     if ttt.get("FileExtension") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("FileExtension").unwrap().as_str().unwrap().to_string());
-
+                        ttracks.push(
+                            ttt.get("FileExtension")
+                                .unwrap()
+                                .as_str()
+                                .unwrap()
+                                .to_string(),
+                        );
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
 
     fn longest_shortest(v: &Vec<MediaInfo>) -> String {
         let tracks = Charts::get_to_tracks(&v);
@@ -342,17 +345,26 @@ impl Charts {
             for ttt in tt.iter() {
                 if ttt.get("@type").unwrap() == "General" {
                     if ttt.get("Duration") != None {
-                        let s: f64 = ttt.get("Duration").unwrap().as_str().unwrap().parse().unwrap();
+                        let s: f64 = ttt
+                            .get("Duration")
+                            .unwrap()
+                            .as_str()
+                            .unwrap()
+                            .parse()
+                            .unwrap();
                         ttracks.push(s);
                     }
                 }
             }
-        };
+        }
         ttracks.sort_by(|a, b| a.partial_cmp(b).unwrap());
-        let info: String = format!("Shortest: {:?}, Longest: {:?}", ttracks.first().unwrap_or(&0.0).to_string(), ttracks.last().unwrap_or(&0.0).to_string());
+        let info: String = format!(
+            "Shortest: {:?}, Longest: {:?}",
+            ttracks.first().unwrap_or(&0.0).to_string(),
+            ttracks.last().unwrap_or(&0.0).to_string()
+        );
         info
     }
-
 
     fn other_data_types(v: &Vec<MediaInfo>) -> serde_json::Value {
         let tracks = Charts::get_to_tracks(&v);
@@ -364,16 +376,17 @@ impl Charts {
                     if ttt.get("FileExtension") == None {
                         ttracks.push("None".to_string())
                     } else {
-                        ttracks.push(ttt.get("FileExtension").unwrap().as_str().unwrap().to_string());
-
+                        ttracks.push(
+                            ttt.get("FileExtension")
+                                .unwrap()
+                                .as_str()
+                                .unwrap()
+                                .to_string(),
+                        );
                     }
                 }
             }
-        };
+        }
         Charts::count_values(ttracks)
     }
-
-
-
-
 }
