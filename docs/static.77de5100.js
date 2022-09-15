@@ -123,7 +123,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.__wbindgen_closure_wrapper6081 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
+exports.__wbindgen_closure_wrapper6537 = exports.__wbindgen_memory = exports.__wbindgen_rethrow = exports.__wbindgen_throw = exports.__wbindgen_debug_string = exports.__wbindgen_string_get = exports.__wbindgen_is_object = exports.__wbindgen_is_function = exports.__wbg_buffer_0be9fb426f2dd82b = exports.__wbg_set_7e15d36563072b19 = exports.__wbg_get_4e90ba4e3de362de = exports.__wbg_set_4769de301eb521d7 = exports.__wbg_length_3a5138f465b971ad = exports.__wbg_new_4e8d18dbf9cd5240 = exports.__wbg_global_294ce70448e8fbbf = exports.__wbg_window_88a6f88dd3a474f1 = exports.__wbg_self_35a0fda3eb965abe = exports.__wbg_globalThis_1d843c4ad7b6a1f5 = exports.__wbg_iterator_7d4f7917ab7aeca0 = exports.__wbg_new_59986c8731bebaa1 = exports.__wbg_is_ff18d90ee51cb4a6 = exports.__wbg_value_6fa14ba8ee7b7c3d = exports.__wbg_done_4e046ac6e3b595e0 = exports.__wbg_next_f613b44647788059 = exports.__wbg_next_cf4ec627a2e85bac = exports.__wbg_call_e5847d15cc228e4f = exports.__wbg_newnoargs_2349ba6aefe72376 = exports.__wbg_hash_5216e2863cc43a1d = exports.__wbg_search_a349e283f79846d3 = exports.__wbg_pathname_8af495f99520840d = exports.__wbg_removeChild_77c0b65b7396e214 = exports.__wbg_insertBefore_30d17168293fa763 = exports.__wbg_appendChild_57f30a01b30ec33c = exports.__wbg_setnodeValue_83c9aa40c199e1ba = exports.__wbg_lastChild_d4077e79715ffef3 = exports.__wbg_nodeName_26b7083312486f0b = exports.__wbg_replaceState_e09f9e7b6a27ff98 = exports.__wbg_pushState_eab490ab8ea16a5c = exports.__wbg_state_c5f09613223fcf75 = exports.__wbg_state_2aaa93b4df2a0dfb = exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = exports.__wbg_name_7fb80412dbdda69f = exports.__wbg_warn_d690657941b2fb03 = exports.__wbg_log_85c7cea9571ff239 = exports.__wbg_info_07dc241a251b7f5c = exports.__wbg_error_331a3f8d096876a6 = exports.__wbg_error_e25c602bf2cc97d2 = exports.__wbg_debug_0f124e055a86b759 = exports.__wbg_setAttribute_5349d84c3833cecd = exports.__wbg_removeAttribute_ab52d40b0c7386a7 = exports.__wbg_getAttribute_6667be6e53765116 = exports.__wbg_namespaceURI_ba0083a6b53a9753 = exports.__wbg_setvalue_2924913056a0a03c = exports.__wbg_value_98044d455b0093f7 = exports.__wbg_settype_dfbbea62b5fa060d = exports.__wbg_files_da35b00935138e11 = exports.__wbg_setchecked_e9a4b8ce0e28b973 = exports.__wbg_instanceof_HtmlInputElement_631f8bb677bb0897 = exports.__wbg_removeEventListener_992337883d25d832 = exports.__wbg_addEventListener_c11a938b8469ab06 = exports.__wbg_settype_1772a824336d2b26 = exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = exports.__wbg_setvalue_3ee783318a1b301d = exports.__wbg_value_4797b74b15a0bc19 = exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = exports.__wbg_abort_28298b60cd255be3 = exports.__wbg_new_1aec7e30c22078b2 = exports.__wbg_result_4b2fe68f50eb97b2 = exports.__wbg_readyState_bbd368f2445baa64 = exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = exports.__wbg_querySelector_8ff6e717f918ac47 = exports.__wbg_createTextNode_cd0249d33c7e5c4a = exports.__wbg_createElementNS_ecbbee6419005089 = exports.__wbg_createElement_9291c0306f179f1e = exports.__wbg_history_38e3ca3e154afe9e = exports.__wbg_location_778c846b1cb79400 = exports.__wbg_document_85584f745133c6ad = exports.__wbg_instanceof_Window_5993230e7331f098 = exports.__wbindgen_object_drop_ref = exports.__wbg_stack_558ba5917b466edd = exports.__wbg_new_59cb74e423758ede = exports.__wbg_error_4bb6c2a97407129a = exports.__wbindgen_cb_drop = exports.__wbindgen_is_undefined = exports.__wbindgen_object_clone_ref = exports.__wbindgen_string_new = exports.run = exports.default = void 0;
 
 var _media_collection_viewer_bg = _interopRequireDefault(require("./pkg/media_collection_viewer_bg.wasm"));
 
@@ -165,12 +165,8 @@ var __wbg_createTextNode_cd0249d33c7e5c4a = _media_collection_viewer_bg.default.
 exports.__wbg_createTextNode_cd0249d33c7e5c4a = __wbg_createTextNode_cd0249d33c7e5c4a;
 var __wbg_querySelector_8ff6e717f918ac47 = _media_collection_viewer_bg.default.__wbg_querySelector_8ff6e717f918ac47;
 exports.__wbg_querySelector_8ff6e717f918ac47 = __wbg_querySelector_8ff6e717f918ac47;
-var __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
-exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
-var __wbg_value_4797b74b15a0bc19 = _media_collection_viewer_bg.default.__wbg_value_4797b74b15a0bc19;
-exports.__wbg_value_4797b74b15a0bc19 = __wbg_value_4797b74b15a0bc19;
-var __wbg_setvalue_3ee783318a1b301d = _media_collection_viewer_bg.default.__wbg_setvalue_3ee783318a1b301d;
-exports.__wbg_setvalue_3ee783318a1b301d = __wbg_setvalue_3ee783318a1b301d;
+var __wbg_instanceof_HtmlSelectElement_de6f753927121f12 = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlSelectElement_de6f753927121f12;
+exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = __wbg_instanceof_HtmlSelectElement_de6f753927121f12;
 var __wbg_readyState_bbd368f2445baa64 = _media_collection_viewer_bg.default.__wbg_readyState_bbd368f2445baa64;
 exports.__wbg_readyState_bbd368f2445baa64 = __wbg_readyState_bbd368f2445baa64;
 var __wbg_result_4b2fe68f50eb97b2 = _media_collection_viewer_bg.default.__wbg_result_4b2fe68f50eb97b2;
@@ -181,6 +177,12 @@ var __wbg_abort_28298b60cd255be3 = _media_collection_viewer_bg.default.__wbg_abo
 exports.__wbg_abort_28298b60cd255be3 = __wbg_abort_28298b60cd255be3;
 var __wbg_readAsArrayBuffer_20b419fbd2426286 = _media_collection_viewer_bg.default.__wbg_readAsArrayBuffer_20b419fbd2426286;
 exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = __wbg_readAsArrayBuffer_20b419fbd2426286;
+var __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
+exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = __wbg_instanceof_HtmlTextAreaElement_85330633857ee50e;
+var __wbg_value_4797b74b15a0bc19 = _media_collection_viewer_bg.default.__wbg_value_4797b74b15a0bc19;
+exports.__wbg_value_4797b74b15a0bc19 = __wbg_value_4797b74b15a0bc19;
+var __wbg_setvalue_3ee783318a1b301d = _media_collection_viewer_bg.default.__wbg_setvalue_3ee783318a1b301d;
+exports.__wbg_setvalue_3ee783318a1b301d = __wbg_setvalue_3ee783318a1b301d;
 var __wbg_instanceof_HtmlButtonElement_87846abf00da2deb = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb;
 exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = __wbg_instanceof_HtmlButtonElement_87846abf00da2deb;
 var __wbg_settype_1772a824336d2b26 = _media_collection_viewer_bg.default.__wbg_settype_1772a824336d2b26;
@@ -223,6 +225,10 @@ var __wbg_warn_d690657941b2fb03 = _media_collection_viewer_bg.default.__wbg_warn
 exports.__wbg_warn_d690657941b2fb03 = __wbg_warn_d690657941b2fb03;
 var __wbg_name_7fb80412dbdda69f = _media_collection_viewer_bg.default.__wbg_name_7fb80412dbdda69f;
 exports.__wbg_name_7fb80412dbdda69f = __wbg_name_7fb80412dbdda69f;
+var __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = _media_collection_viewer_bg.default.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
+exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
+var __wbg_state_2aaa93b4df2a0dfb = _media_collection_viewer_bg.default.__wbg_state_2aaa93b4df2a0dfb;
+exports.__wbg_state_2aaa93b4df2a0dfb = __wbg_state_2aaa93b4df2a0dfb;
 var __wbg_state_c5f09613223fcf75 = _media_collection_viewer_bg.default.__wbg_state_c5f09613223fcf75;
 exports.__wbg_state_c5f09613223fcf75 = __wbg_state_c5f09613223fcf75;
 var __wbg_pushState_eab490ab8ea16a5c = _media_collection_viewer_bg.default.__wbg_pushState_eab490ab8ea16a5c;
@@ -241,18 +247,12 @@ var __wbg_insertBefore_30d17168293fa763 = _media_collection_viewer_bg.default.__
 exports.__wbg_insertBefore_30d17168293fa763 = __wbg_insertBefore_30d17168293fa763;
 var __wbg_removeChild_77c0b65b7396e214 = _media_collection_viewer_bg.default.__wbg_removeChild_77c0b65b7396e214;
 exports.__wbg_removeChild_77c0b65b7396e214 = __wbg_removeChild_77c0b65b7396e214;
-var __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = _media_collection_viewer_bg.default.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
-exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = __wbg_instanceof_PopStateEvent_563408e8b5fbfaf8;
-var __wbg_state_2aaa93b4df2a0dfb = _media_collection_viewer_bg.default.__wbg_state_2aaa93b4df2a0dfb;
-exports.__wbg_state_2aaa93b4df2a0dfb = __wbg_state_2aaa93b4df2a0dfb;
 var __wbg_pathname_8af495f99520840d = _media_collection_viewer_bg.default.__wbg_pathname_8af495f99520840d;
 exports.__wbg_pathname_8af495f99520840d = __wbg_pathname_8af495f99520840d;
 var __wbg_search_a349e283f79846d3 = _media_collection_viewer_bg.default.__wbg_search_a349e283f79846d3;
 exports.__wbg_search_a349e283f79846d3 = __wbg_search_a349e283f79846d3;
 var __wbg_hash_5216e2863cc43a1d = _media_collection_viewer_bg.default.__wbg_hash_5216e2863cc43a1d;
 exports.__wbg_hash_5216e2863cc43a1d = __wbg_hash_5216e2863cc43a1d;
-var __wbg_instanceof_HtmlSelectElement_de6f753927121f12 = _media_collection_viewer_bg.default.__wbg_instanceof_HtmlSelectElement_de6f753927121f12;
-exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = __wbg_instanceof_HtmlSelectElement_de6f753927121f12;
 var __wbg_newnoargs_2349ba6aefe72376 = _media_collection_viewer_bg.default.__wbg_newnoargs_2349ba6aefe72376;
 exports.__wbg_newnoargs_2349ba6aefe72376 = __wbg_newnoargs_2349ba6aefe72376;
 var __wbg_call_e5847d15cc228e4f = _media_collection_viewer_bg.default.__wbg_call_e5847d15cc228e4f;
@@ -285,16 +285,16 @@ var __wbg_length_3a5138f465b971ad = _media_collection_viewer_bg.default.__wbg_le
 exports.__wbg_length_3a5138f465b971ad = __wbg_length_3a5138f465b971ad;
 var __wbg_set_4769de301eb521d7 = _media_collection_viewer_bg.default.__wbg_set_4769de301eb521d7;
 exports.__wbg_set_4769de301eb521d7 = __wbg_set_4769de301eb521d7;
-var __wbindgen_is_function = _media_collection_viewer_bg.default.__wbindgen_is_function;
-exports.__wbindgen_is_function = __wbindgen_is_function;
-var __wbindgen_is_object = _media_collection_viewer_bg.default.__wbindgen_is_object;
-exports.__wbindgen_is_object = __wbindgen_is_object;
-var __wbg_buffer_0be9fb426f2dd82b = _media_collection_viewer_bg.default.__wbg_buffer_0be9fb426f2dd82b;
-exports.__wbg_buffer_0be9fb426f2dd82b = __wbg_buffer_0be9fb426f2dd82b;
 var __wbg_get_4e90ba4e3de362de = _media_collection_viewer_bg.default.__wbg_get_4e90ba4e3de362de;
 exports.__wbg_get_4e90ba4e3de362de = __wbg_get_4e90ba4e3de362de;
 var __wbg_set_7e15d36563072b19 = _media_collection_viewer_bg.default.__wbg_set_7e15d36563072b19;
 exports.__wbg_set_7e15d36563072b19 = __wbg_set_7e15d36563072b19;
+var __wbg_buffer_0be9fb426f2dd82b = _media_collection_viewer_bg.default.__wbg_buffer_0be9fb426f2dd82b;
+exports.__wbg_buffer_0be9fb426f2dd82b = __wbg_buffer_0be9fb426f2dd82b;
+var __wbindgen_is_function = _media_collection_viewer_bg.default.__wbindgen_is_function;
+exports.__wbindgen_is_function = __wbindgen_is_function;
+var __wbindgen_is_object = _media_collection_viewer_bg.default.__wbindgen_is_object;
+exports.__wbindgen_is_object = __wbindgen_is_object;
 var __wbindgen_string_get = _media_collection_viewer_bg.default.__wbindgen_string_get;
 exports.__wbindgen_string_get = __wbindgen_string_get;
 var __wbindgen_debug_string = _media_collection_viewer_bg.default.__wbindgen_debug_string;
@@ -305,8 +305,8 @@ var __wbindgen_rethrow = _media_collection_viewer_bg.default.__wbindgen_rethrow;
 exports.__wbindgen_rethrow = __wbindgen_rethrow;
 var __wbindgen_memory = _media_collection_viewer_bg.default.__wbindgen_memory;
 exports.__wbindgen_memory = __wbindgen_memory;
-var __wbindgen_closure_wrapper6081 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper6081;
-exports.__wbindgen_closure_wrapper6081 = __wbindgen_closure_wrapper6081;
+var __wbindgen_closure_wrapper6537 = _media_collection_viewer_bg.default.__wbindgen_closure_wrapper6537;
+exports.__wbindgen_closure_wrapper6537 = __wbindgen_closure_wrapper6537;
 },{"./pkg/media_collection_viewer_bg.wasm":"../pkg/media_collection_viewer_bg.wasm"}],"../node_modules/moment/moment.js":[function(require,module,exports) {
 var define;
 var global = arguments[3];
@@ -22205,187 +22205,100 @@ var bar_opts = {
   }
 };
 var randCols = ["#25CCF7", "#FD7272", "#54a0ff", "#00d2d3", "#1abc9c", "#2ecc71", "#3498db", "#9b59b6", "#34495e", "#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50", "#f1c40f", "#e67e22", "#e74c3c", "#ecf0f1", "#95a5a6", "#f39c12", "#d35400", "#c0392b", "#bdc3c7", "#7f8c8d", "#55efc4", "#81ecec", "#74b9ff", "#a29bfe", "#dfe6e9", "#00b894", "#00cec9", "#0984e3", "#6c5ce7", "#ffeaa7", "#fab1a0", "#ff7675", "#fd79a8", "#fdcb6e", "#e17055", "#d63031", "#feca57", "#5f27cd", "#54a0ff", "#01a3a4"];
-var tracks, formats, color_spaces, audio_codecs, video_codecs, audio_bitdepths, video_bitdepths, video_standards, chroma_subsamplings, file_extensions, dimensions;
+
+function buildChart(_a) {
+  var name = _a.name,
+      label = _a.label,
+      data = _a.data,
+      opts = _a.opts;
+  var ctx = document.getElementById(name).getContext('2d');
+  return new chart_js_1.default(ctx, {
+    type: 'pie',
+    data: {
+      labels: Object.keys(data),
+      datasets: [{
+        label: label,
+        data: Object.values(data),
+        backgroundColor: randCols,
+        borderWidth: 0
+      }]
+    },
+    options: opts
+  });
+}
 
 document.getElementById('jsonStart').onclick = function () {
-  if (tracks) {
-    tracks.destroy();
-    formats.destroy();
-    color_spaces.destroy();
-    audio_codecs.destroy();
-    video_codecs.destroy();
-    audio_bitdepths.destroy();
-    video_bitdepths.destroy();
-    video_standards.destroy();
-    chroma_subsamplings.destroy();
-    file_extensions.destroy();
-    dimensions.destroy();
-  } // tracks 
-
-
-  var chart_tracks = JSON.parse(document.getElementById("chart_tracks").textContent);
-  tracks = new chart_js_1.default(document.getElementById('tracks').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_tracks),
-      datasets: [{
-        label: '# of Tracks per file',
-        data: Object.values(chart_tracks),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // formats
-
-  var chart_formats = JSON.parse(document.getElementById("chart_formats").textContent);
-  formats = new chart_js_1.default(document.getElementById('formats').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_formats),
-      datasets: [{
-        label: 'Formats',
-        data: Object.values(chart_formats),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // color_spaces
-
-  var chart_color_spaces = JSON.parse(document.getElementById("chart_color_spaces").textContent);
-  color_spaces = new chart_js_1.default(document.getElementById('color_spaces').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_color_spaces),
-      datasets: [{
-        label: 'Colorspaces',
-        data: Object.values(chart_color_spaces),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // dimensions
-
-  var chart_dimensions = JSON.parse(document.getElementById("chart_dimensions").textContent);
-  dimensions = new chart_js_1.default(document.getElementById('dimensions').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_dimensions),
-      datasets: [{
-        label: 'Dimensions',
-        data: Object.values(chart_dimensions),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // audio_codecs
-
-  var chart_audio_codecs = JSON.parse(document.getElementById("chart_audio_codecs").textContent);
-  audio_codecs = new chart_js_1.default(document.getElementById('audio_codecs').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_audio_codecs),
-      datasets: [{
-        label: 'Audio codecs',
-        data: Object.values(chart_audio_codecs),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // video_codecs
-
-  var chart_video_codecs = JSON.parse(document.getElementById("chart_video_codecs").textContent);
-  video_codecs = new chart_js_1.default(document.getElementById('video_codecs').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_video_codecs),
-      datasets: [{
-        label: 'Video codecs',
-        data: Object.values(chart_video_codecs),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // audio_bitdepths
-
-  var chart_audio_bitdepths = JSON.parse(document.getElementById("chart_audio_bitdepths").textContent);
-  audio_bitdepths = new chart_js_1.default(document.getElementById('audio_bitdepths').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_audio_bitdepths),
-      datasets: [{
-        label: 'Audio bit depths',
-        data: Object.values(chart_audio_bitdepths),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // video_bitdepths
-
-  var chart_video_bitdepths = JSON.parse(document.getElementById("chart_video_bitdepths").textContent);
-  video_bitdepths = new chart_js_1.default(document.getElementById('video_bitdepths').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_video_bitdepths),
-      datasets: [{
-        label: 'Color depths',
-        data: Object.values(chart_video_bitdepths),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // video_standards
-
-  var chart_video_standards = JSON.parse(document.getElementById("chart_video_standards").textContent);
-  video_standards = new chart_js_1.default(document.getElementById('video_standards').getContext('2d'), {
-    type: 'bar',
-    data: {
-      labels: Object.keys(chart_video_standards),
-      datasets: [{
-        label: 'Color depths',
-        data: Object.values(chart_video_standards),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: bar_opts
-  }); // chroma_subsamplings
-
-  var chart_chroma_subsamplings = JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent);
-  chroma_subsamplings = new chart_js_1.default(document.getElementById('chroma_subsamplings').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_chroma_subsamplings),
-      datasets: [{
-        label: 'Chroma subsampling',
-        data: Object.values(chart_chroma_subsamplings),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
-  }); // file_extensions
-
-  var chart_file_extensions = JSON.parse(document.getElementById("chart_file_extensions").textContent);
-  file_extensions = new chart_js_1.default(document.getElementById('file_extensions').getContext('2d'), {
-    type: 'pie',
-    data: {
-      labels: Object.keys(chart_file_extensions),
-      datasets: [{
-        label: 'File extensions',
-        data: Object.values(chart_file_extensions),
-        backgroundColor: randCols,
-        borderWidth: 0
-      }]
-    },
-    options: opts
+  buildChart({
+    name: "tracks",
+    label: "# of Tracks per file",
+    data: JSON.parse(document.getElementById("chart_tracks").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "formats",
+    label: "Formats",
+    data: JSON.parse(document.getElementById("chart_formats").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "color_spaces",
+    label: "Colorspaces",
+    data: JSON.parse(document.getElementById("chart_color_spaces").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "dimensions",
+    label: "Dimensions",
+    data: JSON.parse(document.getElementById("chart_dimensions").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "audio_codecs",
+    label: "Audio codecs",
+    data: JSON.parse(document.getElementById("chart_audio_codecs").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "video_codecs",
+    label: "Video codecs",
+    data: JSON.parse(document.getElementById("chart_video_codecs").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "audio_bitdepths",
+    label: "Audio bit depths",
+    data: JSON.parse(document.getElementById("chart_audio_bitdepths").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "video_bitdepths",
+    label: "Video bit depths",
+    data: JSON.parse(document.getElementById("chart_video_bitdepths").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "video_standards",
+    label: "Video standards",
+    data: JSON.parse(document.getElementById("chart_video_standards").textContent),
+    opts: bar_opts
+  });
+  buildChart({
+    name: "chroma_subsamplings",
+    label: "Chroma subsamplings",
+    data: JSON.parse(document.getElementById("chart_chroma_subsamplings").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "file_extensions",
+    label: "File extensions",
+    data: JSON.parse(document.getElementById("chart_file_extensions").textContent),
+    opts: opts
+  });
+  buildChart({
+    name: "other_data",
+    label: "Other data",
+    data: JSON.parse(document.getElementById("chart_other_data").textContent),
+    opts: opts
   });
 };
 },{"../Cargo.toml":"../Cargo.toml","chart.js":"../node_modules/chart.js/dist/Chart.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -22416,7 +22329,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "43127" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35855" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -22711,7 +22624,7 @@ LazyPromise.prototype.catch = function (onError) {
 
 },{}],"../node_modules/parcel-plugin-wasm.rs/wasm-loader.js":[function(require,module,exports) {
 var global = arguments[3];
-var __dirname = "/home/ashley/Development/projects/media-collection-folder/media-collection-viewer/node_modules/parcel-plugin-wasm.rs";
+var __dirname = "/home/ashley/Development/projects/media-collection-viewer/node_modules/parcel-plugin-wasm.rs";
 var wasm;const __exports = {};
 
 const lTextDecoder = typeof TextDecoder === 'undefined' ? (0, module.require)('util').TextDecoder : TextDecoder;
@@ -22964,7 +22877,7 @@ function __wbg_adapter_26(arg0, arg1, arg2) {
     try {
         _assertNum(arg0);
         _assertNum(arg1);
-        wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__ha268a06945bc62d0(arg0, arg1, addBorrowedObject(arg2));
+        wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hfed5b5d525b3b948(arg0, arg1, addBorrowedObject(arg2));
     } finally {
         heap[stack_pointer++] = undefined;
     }
@@ -23080,22 +22993,10 @@ __exports.__wbg_querySelector_8ff6e717f918ac47 = handleError(function(arg0, arg1
     return isLikeNone(ret) ? 0 : addHeapObject(ret);
 });
 
-__exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = logError(function(arg0) {
-    var ret = getObject(arg0) instanceof HTMLTextAreaElement;
+__exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = logError(function(arg0) {
+    var ret = getObject(arg0) instanceof HTMLSelectElement;
     _assertBoolean(ret);
     return ret;
-});
-
-__exports.__wbg_value_4797b74b15a0bc19 = logError(function(arg0, arg1) {
-    var ret = getObject(arg1).value;
-    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
-    var len0 = WASM_VECTOR_LEN;
-    getInt32Memory0()[arg0 / 4 + 1] = len0;
-    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-});
-
-__exports.__wbg_setvalue_3ee783318a1b301d = logError(function(arg0, arg1, arg2) {
-    getObject(arg0).value = getStringFromWasm0(arg1, arg2);
 });
 
 __exports.__wbg_readyState_bbd368f2445baa64 = logError(function(arg0) {
@@ -23120,6 +23021,24 @@ __exports.__wbg_abort_28298b60cd255be3 = logError(function(arg0) {
 
 __exports.__wbg_readAsArrayBuffer_20b419fbd2426286 = handleError(function(arg0, arg1) {
     getObject(arg0).readAsArrayBuffer(getObject(arg1));
+});
+
+__exports.__wbg_instanceof_HtmlTextAreaElement_85330633857ee50e = logError(function(arg0) {
+    var ret = getObject(arg0) instanceof HTMLTextAreaElement;
+    _assertBoolean(ret);
+    return ret;
+});
+
+__exports.__wbg_value_4797b74b15a0bc19 = logError(function(arg0, arg1) {
+    var ret = getObject(arg1).value;
+    var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    getInt32Memory0()[arg0 / 4 + 1] = len0;
+    getInt32Memory0()[arg0 / 4 + 0] = ptr0;
+});
+
+__exports.__wbg_setvalue_3ee783318a1b301d = logError(function(arg0, arg1, arg2) {
+    getObject(arg0).value = getStringFromWasm0(arg1, arg2);
 });
 
 __exports.__wbg_instanceof_HtmlButtonElement_87846abf00da2deb = logError(function(arg0) {
@@ -23227,6 +23146,17 @@ __exports.__wbg_name_7fb80412dbdda69f = logError(function(arg0, arg1) {
     getInt32Memory0()[arg0 / 4 + 0] = ptr0;
 });
 
+__exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = logError(function(arg0) {
+    var ret = getObject(arg0) instanceof PopStateEvent;
+    _assertBoolean(ret);
+    return ret;
+});
+
+__exports.__wbg_state_2aaa93b4df2a0dfb = logError(function(arg0) {
+    var ret = getObject(arg0).state;
+    return addHeapObject(ret);
+});
+
 __exports.__wbg_state_c5f09613223fcf75 = handleError(function(arg0) {
     var ret = getObject(arg0).state;
     return addHeapObject(ret);
@@ -23272,17 +23202,6 @@ __exports.__wbg_removeChild_77c0b65b7396e214 = handleError(function(arg0, arg1) 
     return addHeapObject(ret);
 });
 
-__exports.__wbg_instanceof_PopStateEvent_563408e8b5fbfaf8 = logError(function(arg0) {
-    var ret = getObject(arg0) instanceof PopStateEvent;
-    _assertBoolean(ret);
-    return ret;
-});
-
-__exports.__wbg_state_2aaa93b4df2a0dfb = logError(function(arg0) {
-    var ret = getObject(arg0).state;
-    return addHeapObject(ret);
-});
-
 __exports.__wbg_pathname_8af495f99520840d = handleError(function(arg0, arg1) {
     var ret = getObject(arg1).pathname;
     var ptr0 = passStringToWasm0(ret, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
@@ -23305,12 +23224,6 @@ __exports.__wbg_hash_5216e2863cc43a1d = handleError(function(arg0, arg1) {
     var len0 = WASM_VECTOR_LEN;
     getInt32Memory0()[arg0 / 4 + 1] = len0;
     getInt32Memory0()[arg0 / 4 + 0] = ptr0;
-});
-
-__exports.__wbg_instanceof_HtmlSelectElement_de6f753927121f12 = logError(function(arg0) {
-    var ret = getObject(arg0) instanceof HTMLSelectElement;
-    _assertBoolean(ret);
-    return ret;
 });
 
 __exports.__wbg_newnoargs_2349ba6aefe72376 = logError(function(arg0, arg1) {
@@ -23395,6 +23308,22 @@ __exports.__wbg_set_4769de301eb521d7 = logError(function(arg0, arg1, arg2) {
     getObject(arg0).set(getObject(arg1), arg2 >>> 0);
 });
 
+__exports.__wbg_get_4e90ba4e3de362de = handleError(function(arg0, arg1) {
+    var ret = Reflect.get(getObject(arg0), getObject(arg1));
+    return addHeapObject(ret);
+});
+
+__exports.__wbg_set_7e15d36563072b19 = handleError(function(arg0, arg1, arg2) {
+    var ret = Reflect.set(getObject(arg0), getObject(arg1), getObject(arg2));
+    _assertBoolean(ret);
+    return ret;
+});
+
+__exports.__wbg_buffer_0be9fb426f2dd82b = logError(function(arg0) {
+    var ret = getObject(arg0).buffer;
+    return addHeapObject(ret);
+});
+
 __exports.__wbindgen_is_function = function(arg0) {
     var ret = typeof(getObject(arg0)) === 'function';
     _assertBoolean(ret);
@@ -23407,22 +23336,6 @@ __exports.__wbindgen_is_object = function(arg0) {
     _assertBoolean(ret);
     return ret;
 };
-
-__exports.__wbg_buffer_0be9fb426f2dd82b = logError(function(arg0) {
-    var ret = getObject(arg0).buffer;
-    return addHeapObject(ret);
-});
-
-__exports.__wbg_get_4e90ba4e3de362de = handleError(function(arg0, arg1) {
-    var ret = Reflect.get(getObject(arg0), getObject(arg1));
-    return addHeapObject(ret);
-});
-
-__exports.__wbg_set_7e15d36563072b19 = handleError(function(arg0, arg1, arg2) {
-    var ret = Reflect.set(getObject(arg0), getObject(arg1), getObject(arg2));
-    _assertBoolean(ret);
-    return ret;
-});
 
 __exports.__wbindgen_string_get = function(arg0, arg1) {
     const obj = getObject(arg1);
@@ -23454,8 +23367,8 @@ __exports.__wbindgen_memory = function() {
     return addHeapObject(ret);
 };
 
-__exports.__wbindgen_closure_wrapper6081 = logError(function(arg0, arg1, arg2) {
-    var ret = makeMutClosure(arg0, arg1, 222, __wbg_adapter_26);
+__exports.__wbindgen_closure_wrapper6537 = logError(function(arg0, arg1, arg2) {
+    var ret = makeMutClosure(arg0, arg1, 282, __wbg_adapter_26);
     return addHeapObject(ret);
 });
 
